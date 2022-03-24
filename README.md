@@ -7,12 +7,6 @@ Bio
   ![homepage wireframe](https://i.imgur.com/Tnhg3sV.png)
   ![albumpage wireframe](https://i.imgur.com/BP7TUFr.png)
 
-<!-- <img src="https://i.imgur.com/Tnhg3sV.png" width="350">
-<img src="https://i.imgur.com/VvhJO6W.png" width="350">
-
-<img src="https://i.imgur.com/BP7TUFr.png" width="350">
-<img src="https://i.imgur.com/6BoVwJw.png" width="350"> -->
-
 [Initial wireframe](https://whimsical.com/unit3-vinyls-6zyZNh3iqyYjLDyb22qC8Q)
 
 ---
