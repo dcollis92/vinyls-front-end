@@ -27,7 +27,6 @@ const App = () => {
 
   return (
     <>
-      <h1>sanity check</h1>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
