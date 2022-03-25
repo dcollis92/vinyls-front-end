@@ -7,8 +7,8 @@ const RecordList = (props) => {
   
   useEffect(() => {
     recordService.getAllRecords()
-    .then(records => console.log(records))
-  })
+    .then(recordData => setRecords(recordData.results))
+  },[])
   return (  
     <>
       <h2>Records</h2>
