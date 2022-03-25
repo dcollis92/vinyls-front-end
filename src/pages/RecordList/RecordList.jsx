@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
-// import RecordDetails
-// import getRecords
+import * as recordService from '../../services/recordService'
+
 
 const RecordList = (props) => {
-  // const [records, setRecords] = useState([])
+  const [records, setRecords] = useState([])
   
   useEffect(() => {
-    // getRecords()
-    //.then(recordData => console.log(recordData))
+    recordService.getAllRecords()
+    .then(records => console.log(records))
   })
   return (  
     <>
