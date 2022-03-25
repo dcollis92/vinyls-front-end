@@ -37,9 +37,19 @@
   }
 }
 
+body {
+  color: darkslategray;
+  font-family: 'Futura Std';
+}
+
+h1 {
+  font-style: italic;
+}
+
 nav {
+  background-color:#dfe6ed;
   display: flex;
   flex-direction: row;
-  border: 2px solid black;
+  border: 2px solid darkgray;
 
 }
