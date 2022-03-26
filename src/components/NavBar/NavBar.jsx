@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SearchForm from '../SearchForm/SearchForm'
 import * as recordService from '../../services/recordService'
 
 const NavBar = (props) => {
@@ -11,16 +12,19 @@ const NavBar = (props) => {
     <>
       {props.user ?
         <nav>
-          <ul>
-            <li>Welcome, {props.user.name}</li>
-            <li><Link to="/recordlist">Records</Link></li>
-            <li><Link to="/profiles">Profiles</Link></li>
-            <li><Link to="/changePassword">Change Password</Link></li>
-            <li><Link to="" onClick={props.handleLogout}>LOG OUT</Link></li>
-            <form className="search" onSubmit={handleSubmitSearch}>
+            <p>Welcome, {props.user.name}</p>
+            <a><Link to="/recordlist">Records</Link></a>
+            <a><Link to="/profiles">Profiles</Link></a>
+            <a><Link to="/changePassword">Change Password</Link></a>
+            <a><Link to="" onClick={props.handleLogout}>LOG OUT</Link></a>
+            <SearchForm />
+            {/* <form className="search" onSubmit={handleSubmitSearch}>
               <input onChange={props.handleSetSearch} value={props.search} name="query" type="search" placeholder="Search" />
             </form>
-          </ul>
+            <div className="container">
+            <input type="text" placeholder="Search Album or Artist..." />
+            <div className="search"></div> */}
+          {/* </div> */}
         </nav>
       :
         <nav>
