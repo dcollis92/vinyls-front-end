@@ -7,9 +7,9 @@ const SearchForm = (props) => {
   const [formData, setFormData] = useState({query: ''})
   const navigate = useNavigate()
 
-  const handleRecordSearch = formData => {
+  const handleRecordSearch = queryString => {
     console.log('hitting');
-    getAllRecords(formData)
+    getAllRecords(queryString)
     .then(recordResults => setFormData(recordResults.results))
   }
 
@@ -20,7 +20,7 @@ const SearchForm = (props) => {
   const handleSubmitSearch = evt => {
     console.log(formData.query);
     evt.preventDefault()
-    handleRecordSearch(formData)
+    handleRecordSearch(formData.query)
     navigate('/recordSearch')
   }
   return (
