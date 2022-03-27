@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { getAllRecords } from '../../services/recordService';
+import { useNavigate } from 'react-router-dom';
 import './SearchForm.scss';
 
 const SearchForm = (props) => {
   const [formData, setFormData] = useState({query: ''})
+  const navigate = useNavigate()
 
   const handleRecordSearch = formData => {
     console.log('hitting');
@@ -19,6 +21,7 @@ const SearchForm = (props) => {
     console.log(formData.query);
     evt.preventDefault()
     handleRecordSearch(formData)
+    navigate('/recordSearch')
   }
   return (
     <>
