@@ -4,10 +4,10 @@ import * as recordService from '../../services/recordService'
 
 const NavBar = (props) => {
 
-  const handleSubmitSearch = evt => {
-    evt.preventDefault()
-    props.handleSubmitSearch()
-  }
+  // const handleSubmitSearch = evt => {
+  //   evt.preventDefault()
+  //   props.handleSubmitSearch()
+  // }
   return (
     <>
       {props.user ?
