@@ -14,7 +14,7 @@ const SearchForm = (props) => {
     props.handleRecordSearch(formData)
   }
   return (
-    <main>
+    <>
       <div className="searchbar">
         {/* <form className="search" onSubmit={handleSubmitSearch}>
         <input onChange={props.handleSetSearch} value={props.search} name="query" type="search" placeholder="Search" />
@@ -24,7 +24,7 @@ const SearchForm = (props) => {
           <div className="search"></div>
         </div>
       </div>
-    </main>
+    </>
   )
 }
 
