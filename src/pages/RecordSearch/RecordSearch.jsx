@@ -14,7 +14,7 @@ const RecordSearch = (props) => {
   }
 
   return (
-    <>
+    <main>
       <h3>recids</h3>
       <SearchForm handleRecordSearch={handleRecordSearch} />
       {records.length ?
@@ -27,7 +27,7 @@ const RecordSearch = (props) => {
       <h3>search for a record, ya bish</h3>
       } 
   
-    </>
+    </main>
   );
 }
 

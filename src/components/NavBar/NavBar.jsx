@@ -9,7 +9,7 @@ const NavBar = (props) => {
   //   props.handleSubmitSearch()
   // }
   return (
-    <>
+    <main>
       {props.user ?
         <nav>
             <p>Welcome, {props.user.name}</p>
@@ -34,7 +34,7 @@ const NavBar = (props) => {
           </ul>
         </nav>
       }
-    </>
+    </main>
   )
 }
 
