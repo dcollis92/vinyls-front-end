@@ -17,7 +17,7 @@ const NavBar = (props) => {
             <a><Link to="/profiles">Profiles</Link></a>
             <a><Link to="/changePassword">Change Password</Link></a>
             <a><Link to="" onClick={props.handleLogout}>LOG OUT</Link></a>
-            <SearchForm />
+            <SearchForm handleSubmitSearch={props.handleSubmitSearch} handleSetSearch={props.handleSetSearch}  />
             {/* <form className="search" onSubmit={handleSubmitSearch}>
               <input onChange={props.handleSetSearch} value={props.search} name="query" type="search" placeholder="Search" />
             </form>

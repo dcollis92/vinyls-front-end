@@ -1,17 +1,24 @@
 import { useState } from 'react'
+import { getAllRecords } from '../../services/recordService';
 import './SearchForm.scss';
 
 const SearchForm = (props) => {
   const [formData, setFormData] = useState({query: ''})
 
+  const handleRecordSearch = formData => {
+    console.log('hitting');
+    getAllRecords(formData)
+    .then(recordResults => setFormData(recordResults.results))
+  }
+
   const handleSetSearch = evt => {
     setFormData({...formData, [evt.target.name] : evt.target.value})
   }
 
-
-  const handleSubmit = evt => {
+  const handleSubmitSearch = evt => {
+    console.log(formData.query);
     evt.preventDefault()
-    props.handleRecordSearch(formData)
+    handleRecordSearch(formData)
   }
   return (
     <>
@@ -19,8 +26,10 @@ const SearchForm = (props) => {
         {/* <form className="search" onSubmit={handleSubmitSearch}>
         <input onChange={props.handleSetSearch} value={props.search} name="query" type="search" placeholder="Search" />
         </form> */}
-        <div className="container" onSubmit={handleSubmit}>
+        <div className="container" >
+          <form onSubmit={handleSubmitSearch}>
           <input onChange={handleSetSearch} value={formData.query} name="query" type="search" placeholder="Search Album or Artist..." />
+          </form>
           <div className="search"></div>
         </div>
       </div>

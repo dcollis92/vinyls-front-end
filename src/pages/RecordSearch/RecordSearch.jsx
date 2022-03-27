@@ -1,22 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SearchForm from '../../components/SearchForm/SearchForm';
 import { getAllRecords } from '../../services/recordService';
 import RecordCover from '../../components/RecordCover/RecordCover';
 
 const RecordSearch = (props) => {
-  const [search, setSearch] = useState({query: ''})
-  const [searchResults, setSearchResults] = useState({artists: [], albums: []})
   const [records, setRecords] = useState([])
 
-  const handleRecordSearch = formData => {
-    getAllRecords(formData)
-    .then(recordResults => setRecords(recordResults.results))
-  }
+  // const handleRecordSearch = formData => {
+  //   console.log('hitting');
+  //   getAllRecords(formData)
+  //   .then(recordResults => setRecords(recordResults.results))
+  // }
+
+  // useEffect(formData => {
+  //   getAllRecords(formData)
+  //   .then(recordData => setRecords(recordData.results))
+  // },[])
 
   return (
     <main>
       <h3>recids</h3>
-      <SearchForm handleRecordSearch={handleRecordSearch} />
+      {/* <SearchForm handleRecordSearch={handleRecordSearch}  /> */}
       {records.length ?
       <>
         {records.map(record =>
