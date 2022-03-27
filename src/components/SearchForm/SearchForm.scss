@@ -11,10 +11,13 @@ html, body {
   height: 100%;
 }
 
-// .searchbar {
-//   position: fixed;
-  
-// }
+.searchbar {
+  display: flex;
+  object-fit: contain;
+  position: absolute;
+  top: 45px;
+  justify-content: right;
+}
 
 .container {
   position: absolute;
@@ -34,7 +37,7 @@ html, body {
     left: 0;
     width: 80px;
     height: 80px;
-    background: darkslategray;
+    background: #293845;
     border-radius: 50%;
     transition: all 1s;
     z-index: 4;
@@ -84,7 +87,7 @@ html, body {
     height: 50px;
     outline: none;
     border: none;
-    background: darkslategray;
+    background: #293845;
     color: white;
     padding: 0 80px 0 20px;
     border-radius: 30px;
