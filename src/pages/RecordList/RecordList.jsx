@@ -11,9 +11,9 @@ import * as recordService from '../../services/recordService'
 //     .then(recordData => setRecords(recordData.results))
 //   },[])
 //   return (  
-//     <>
+//     <main>
 //       <h2>Records</h2>
-//     </>
+//     </main>
 //   );
 // }
  

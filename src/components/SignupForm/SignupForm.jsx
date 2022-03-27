@@ -39,66 +39,66 @@ const SignupForm = props => {
 
   return (
     <main>
-    <form
-      autoComplete="off"
-      onSubmit={handleSubmit}
-      className={styles.container}
-    >
-      <div className={styles.inputContainer}>
-        <label htmlFor="name" className={styles.label}>Name</label>
-        <input
-          type="text"
-          autoComplete="off"
-          id="name"
-          value={name}
-          name="name"
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
-        <input
-          type="text"
-          autoComplete="off"
-          id="email"
-          value={email}
-          name="email"
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
-        <input
-          type="password"
-          autoComplete="off"
-          id="password"
-          value={password}
-          name="password"
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="confirm" className={styles.label}>
-          Confirm Password
-        </label>
-        <input
-          type="password"
-          autoComplete="off"
-          id="confirm"
-          value={passwordConf}
-          name="passwordConf"
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <button disabled={isFormInvalid()} className={styles.button}>
-          Sign Up
-        </button>
-        <Link to="/">
-          <button>Cancel</button>
-        </Link>
-      </div>
-    </form>
+      <form
+        autoComplete="off"
+        onSubmit={handleSubmit}
+        className={styles.container}
+      >
+        <div className={styles.inputContainer}>
+          <label htmlFor="name" className={styles.label}>Name</label>
+          <input
+            type="text"
+            autoComplete="off"
+            id="name"
+            value={name}
+            name="name"
+            onChange={handleChange}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <label htmlFor="email" className={styles.label}>Email</label>
+          <input
+            type="text"
+            autoComplete="off"
+            id="email"
+            value={email}
+            name="email"
+            onChange={handleChange}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <label htmlFor="password" className={styles.label}>Password</label>
+          <input
+            type="password"
+            autoComplete="off"
+            id="password"
+            value={password}
+            name="password"
+            onChange={handleChange}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <label htmlFor="confirm" className={styles.label}>
+            Confirm Password
+          </label>
+          <input
+            type="password"
+            autoComplete="off"
+            id="confirm"
+            value={passwordConf}
+            name="passwordConf"
+            onChange={handleChange}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <button disabled={isFormInvalid()} className={styles.button}>
+            Sign Up
+          </button>
+          <Link to="/">
+            <button>Cancel</button>
+          </Link>
+        </div>
+      </form>
     </main>
   )
 }
