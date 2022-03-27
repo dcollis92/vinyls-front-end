@@ -37,6 +37,7 @@ const ChangePasswordForm = props => {
   }
 
   return (
+    <main>
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
@@ -88,6 +89,7 @@ const ChangePasswordForm = props => {
         </Link>
       </div>
     </form>
+    </main>
   )
 }
 

@@ -5,6 +5,7 @@ import * as recordService from '../../services/recordService'
 // const RecordList = (props) => {
 //   const [records, setRecords] = useState([])
   
+
 //   useEffect(() => {
 //     recordService.getAllRecords()
 //     .then(recordData => setRecords(recordData.results))
