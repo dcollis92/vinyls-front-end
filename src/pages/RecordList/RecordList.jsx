@@ -46,4 +46,5 @@ const RecordList = (records, handleRemoveRecord, handleAddRecord, profile) => {
     </>
   );
 }
+
 export default RecordList;
