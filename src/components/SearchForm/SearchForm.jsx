@@ -26,12 +26,9 @@ const SearchForm = (props) => {
   return (
     <>
       <div className="searchbar">
-        {/* <form className="search" onSubmit={handleSubmitSearch}>
-        <input onChange={props.handleSetSearch} value={props.search} name="query" type="search" placeholder="Search" />
-        </form> */}
         <div className="container" >
           <form onSubmit={handleSubmitSearch}>
-          <input onChange={handleSetSearch} value={formData.query} name="query" type="search" placeholder="Search Album or Artist..." />
+          <input onChange={handleSetSearch} value={formData.query} name="query" type="search" placeholder="Search..." />
           </form>
           <div className="search"></div>
         </div>

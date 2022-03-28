@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import SearchForm from '../SearchForm/SearchForm'
 import * as recordService from '../../services/recordService'
+import { Nav, Navbar, Container }  from 'react-bootstrap'
 
 const NavBar = (props) => {
 
@@ -11,21 +12,28 @@ const NavBar = (props) => {
   return (
     <main>
       {props.user ?
-        <nav>
-            <p>Welcome, {props.user.name}</p>
-            <a><Link to="/recordlist">Records</Link></a>
-            <a><Link to="/profiles">Profiles</Link></a>
-            <a><Link to="/changePassword">Change Password</Link></a>
-            <a><Link to="" onClick={props.handleLogout}>LOG OUT</Link></a>
-            <SearchForm handleSubmitSearch={props.handleSubmitSearch} handleSetSearch={props.handleSetSearch}  />
-            {/* <form className="search" onSubmit={handleSubmitSearch}>
-              <input onChange={props.handleSetSearch} value={props.search} name="query" type="search" placeholder="Search" />
-            </form>
-            <div className="container">
-            <input type="text" placeholder="Search Album or Artist..." />
-            <div className="search"></div> */}
-          {/* </div> */}
-        </nav>
+        <Navbar collapseOnSelect expand="xl" bg="
+        #dfe6ed" >
+        <Container>
+        <Navbar.Brand href="/">
+          <img alt="" src="./vinyls-logo.png"
+          width="100%"
+          // height=""
+          className="d-inline-block align-top"
+        />{' '}</Navbar.Brand>
+        <SearchForm handleSubmitSearch={props.handleSubmitSearch} handleSetSearch={props.handleSetSearch}  />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/recordlist">Records</Nav.Link>
+            <Nav.Link href="/profiles">Profiles</Nav.Link>
+            <Nav.Link href="/changePassword">Change Password</Nav.Link>
+            <Nav.Link href="" onClick={props.handleLogout}>Log Out</Nav.Link>
+            
+          </Nav>
+        </Navbar.Collapse>
+        </Container>
+      </Navbar>
       :
         <nav>
           <ul>
