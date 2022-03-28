@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './SignupForm.module.css'
 import * as authService from '../../services/authService'
-import { Form, Button, Table } from 'react-bootstrap'
+import { Form, Button } from 'react-bootstrap'
 
 const SignupForm = props => {
   const navigate = useNavigate()
@@ -110,6 +110,7 @@ const SignupForm = props => {
             type="submit">
             Sign Up
           </Button>
+          <Button href="/">Cancel</Button>
       </Form>
     </main> 
   )
