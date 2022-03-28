@@ -10,6 +10,7 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
 import RecordSearch from './pages/RecordSearch/RecordSearch';
 import * as recordService from './services/recordService'
+import RecordDetails from './pages/RecordDetails/RecordDetails'
 
 
 const App = () => {
@@ -79,7 +80,9 @@ const App = () => {
         element={<RecordSearch 
         records={records}
         />} 
-        />        
+        />
+        <Route path="/record"
+        element={<RecordDetails />}/>        
       </Routes>
     </>
   )

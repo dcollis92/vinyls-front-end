@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom'
+import Record from '../../components/Record/Record';
 
 const RecordDetails = () => {
   const location = useLocation()
@@ -6,11 +7,9 @@ const RecordDetails = () => {
 
   return (
     <>
-    <h2>{record.title}</h2>
-      <img src={record.cover_image} alt=""/>
-      <h3> {record.title} </h3>    
+      <Record key={record.title} record={record} />
     </>
   )
-} 
+}
 
 export default RecordDetails;
