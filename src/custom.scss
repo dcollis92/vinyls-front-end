@@ -1,10 +1,13 @@
 /* The following block can be included in a custom.scss */
-
+$custom-color: #dfe6ed;
 /* make the customizations */
 $theme-colors: (
-    "info": tomato,
-    "danger": teal
+    "secondary": #dfe6ed,
+    "danger": teal,
+    "custom-color": $custom-color,
 );
+
+
 
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";
