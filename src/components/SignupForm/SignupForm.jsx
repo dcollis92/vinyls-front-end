@@ -47,8 +47,8 @@ const SignupForm = props => {
           <Form.Group className="mb-3">
           <Form.Label 
             htmlFor="name" 
-            className={styles.label}
-            >Username</Form.Label>
+            className={styles.label}>
+            Username</Form.Label>
           <Form.Control 
             type="text" 
             autoComplete="off"
@@ -61,8 +61,8 @@ const SignupForm = props => {
           <Form.Group className="mb-3">
           <Form.Label 
             htmlFor="email" 
-            className={styles.label}
-            >Email Address</Form.Label>
+            className={styles.label}>
+            Email Address</Form.Label>
           <Form.Control 
             type="email" 
             autoComplete="off"
@@ -78,8 +78,8 @@ const SignupForm = props => {
           <Form.Group className="mb-3">
             <Form.Label 
               htmlFor="password"
-              className={styles.label}
-              >Password</Form.Label>
+              className={styles.label}>
+              Password</Form.Label>
             <Form.Control 
               type="password" 
               autoComplete="off"
@@ -92,8 +92,8 @@ const SignupForm = props => {
           <Form.Group className="mb-3">
             <Form.Label 
               htmlFor="confirm"
-              className={styles.label}
-              >Password</Form.Label>
+              className={styles.label}>
+              Password</Form.Label>
             <Form.Control 
               type="password" 
               autoComplete="off"
@@ -108,8 +108,7 @@ const SignupForm = props => {
             className={styles.button}
             variant="primary" 
             type="submit">
-            Sign Up
-          </Button>
+            Sign Up</Button>
           <Button href="/">Cancel</Button>
       </Form>
     </main> 
