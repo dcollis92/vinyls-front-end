@@ -8,9 +8,7 @@ const RecordDetails = () => {
     <>
     <h2>{record.title}</h2>
       <img src={record.cover_image} alt=""/>
-      <h3>
-        {record.title}        
-      </h3>    
+      <h3> {record.title} </h3>    
     </>
   )
 } 
