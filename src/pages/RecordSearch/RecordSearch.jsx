@@ -12,11 +12,11 @@ const RecordSearch = (props) => {
   //   .then(recordResults => setRecords(recordResults.results))
   // }
 
-  useEffect(formData => {
-    getAllRecords()       
-    .then(recordData => setRecords(recordData.results))
+  // useEffect(formData => {
+  //   getAllRecords()       
+  //   .then(recordData => setRecords(recordData.results))
     
-  },[])
+  // },[])
 
   return (
     <main>

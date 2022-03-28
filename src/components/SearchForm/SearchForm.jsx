@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { getAllRecords } from '../../services/recordService';
 import { useNavigate } from 'react-router-dom';
 import './SearchForm.scss';
+import {Button, Form, FormControl} from 'react-bootstrap'
 
 const SearchForm = (props) => {
   const [formData, setFormData] = useState({query: ''})
@@ -25,14 +26,26 @@ const SearchForm = (props) => {
   }
   return (
     <>
-      <div className="searchbar">
+    <Form className="d-flex" onSubmit={handleSubmitSearch}>
+        <FormControl 
+          onChange={handleSetSearch} 
+          value={formData.query} 
+          name="query" 
+          type="search"
+          placeholder="Search..."
+          className="me-2"
+          aria-label="Search"
+        />
+        <Button variant="outline-success">Search</Button>
+      </Form>
+      {/* <div className="searchbar">
         <div className="container" >
           <form onSubmit={handleSubmitSearch}>
           <input onChange={handleSetSearch} value={formData.query} name="query" type="search" placeholder="Search..." />
-          </form>
           <div className="search"></div>
+          </form>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
