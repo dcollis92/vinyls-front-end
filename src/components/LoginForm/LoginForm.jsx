@@ -37,8 +37,8 @@ const LoginForm = props => {
           <Form.Group className="mb-3">
           <Form.Label 
             htmlFor="email" 
-            className={styles.label}
-            >Email Address</Form.Label>
+            className={styles.label}>
+            Email Address</Form.Label>
           <Form.Control 
             type="email" 
             autoComplete="off"
@@ -51,8 +51,8 @@ const LoginForm = props => {
           <Form.Group className="mb-3">
             <Form.Label 
               htmlFor="password"
-              className={styles.label}
-              >Password</Form.Label>
+              className={styles.label}>
+              Password</Form.Label>
             <Form.Control 
               type="password" 
               autoComplete="off"
@@ -67,8 +67,7 @@ const LoginForm = props => {
             className={styles.button}
             variant="primary" 
             type="submit">
-            Log In
-          </Button>
+            Log In</Button>
           <Button href="/">Cancel</Button>
       </Form>
     </main>

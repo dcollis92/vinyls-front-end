@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './ChangePasswordForm.module.css'
 import * as authService from '../../services/authService'
+import { Form, Button } from 'react-bootstrap'
 
 const ChangePasswordForm = props => {
   const navigate = useNavigate()
@@ -38,56 +39,60 @@ const ChangePasswordForm = props => {
 
   return (
     <main>
-      <form
+      <Form
         autoComplete="off"
         onSubmit={handleSubmit}
         className={styles.container}>
-        <div className={styles.inputContainer}>
-          <label htmlFor="password" className={styles.label}>Current Password</label>
-          <input
-            type="password"
+        <Form.Group className="mb-3">
+          <Form.Label 
+            htmlFor="password" 
+            className={styles.label}>
+            Current Password</Form.Label>
+          <Form.Control 
+            type="password" 
             autoComplete="off"
             id="password"
             value={pw}
             name="pw"
             onChange={handleChange}
-          />
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="newPassword" className={styles.label}>
-            New Password
-          </label>
-          <input
-            type="password"
+            placeholder="Enter Current Password" />  
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label 
+            htmlFor="newPassword" 
+            className={styles.label}>
+            New Password</Form.Label>
+          <Form.Control 
+            type="password" 
             autoComplete="off"
             id="newPassword"
             value={newPw}
             name="newPw"
             onChange={handleChange}
-          />
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="newPasswordConf" className={styles.label}>
-            Confirm New Password
-          </label>
-          <input
-            type="password"
+            placeholder="Enter New Password" />  
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label 
+            htmlFor="newPasswordConf" 
+            className={styles.label}>
+            New Password</Form.Label>
+          <Form.Control 
+            type="password" 
             autoComplete="off"
             id="newPasswordConf"
             value={newPwConf}
             name="newPwConf"
             onChange={handleChange}
-          />
-        </div>
-        <div className={styles.inputContainer}>
-          <button disabled={isFormInvalid()} className={styles.button}>
-            Change Password
-          </button>
-          <Link to="/">
-            <button>Cancel</button>
-          </Link>
-        </div>
-      </form>
+            placeholder="Re-Enter New Password" />  
+        </Form.Group>
+        <Button 
+          disabled={isFormInvalid()} 
+          className={styles.button}
+          variant="primary" 
+          type="submit">
+          Change Password</Button>
+        <Button href="/">Cancel</Button>
+      </Form>
     </main>
   )
 }
