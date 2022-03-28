@@ -16,11 +16,10 @@ html, body {
   object-fit: contain;
   position: absolute;
   top: 45px;
+  left: 50%;
   justify-content: right;
-}
-
-.container {
-  position: absolute;
+  .container {
+  position: inherit;
   margin: auto;
   top: 0;
   left: 0;
@@ -29,7 +28,7 @@ html, body {
   width: 300px;
   height: 100px;
   .search {
-    position: absolute;
+    position: inherit;
     margin: auto;
     top: 0;
     right: 0;
@@ -74,60 +73,64 @@ html, body {
       transition: all .5s;
     }
   }
-  input {
-    font-family: 'Futura';
-    font-style: italic;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    outline: none;
-    border: none;
-    background: #293845;
-    color: white;
-    padding: 0 80px 0 20px;
-    border-radius: 30px;
-    transition: all 1s;
-    opacity: 0;
-    z-index: 5;
-    font-weight: bolder;
-    letter-spacing: 0.1em;
-    &:hover {
-      cursor: pointer;
-    }
-    &:focus {
-      width: 300px;
-      opacity: 1;
-      cursor: text;
-    }
-    &:focus ~ .search {
-      right: -250px;
-      background: #151515;
-      z-index: 6;
-      &::before {
+    form {
+      all: inherit;
+      input {
+        font-family: 'Futura';
+        font-style: italic;
+        position: absolute;
+        margin: auto;
         top: 0;
+        right: 0;
+        bottom: 0;
         left: 0;
-        width: 25px;
-      }
-      &::after {
-        top: 0;
-        left: 0;
-        width: 25px;
-        height: 2px;
+        width: 50px;
+        height: 50px;
+        outline: none;
         border: none;
-        background: white;
-        border-radius: 0%;
-        transform: rotate(-45deg);
+        background: #293845;
+        color: white;
+        padding: 0 80px 0 20px;
+        border-radius: 30px;
+        transition: all 1s;
+        opacity: 0;
+        z-index: 5;
+        font-weight: bolder;
+        letter-spacing: 0.1em;
+        &:hover {
+          cursor: pointer;
+        }
+        &:focus {
+          width: 300px;
+          opacity: 1;
+          cursor: text;
+        }
+        &:focus ~ .search {
+          right: -250px;
+          background: #151515;
+          z-index: 6;
+          &::before {
+            top: 0;
+            left: 0;
+            width: 25px;
+          }
+          &::after {
+            top: 0;
+            left: 0;
+            width: 25px;
+            height: 2px;
+            border: none;
+            background: white;
+            border-radius: 0%;
+            transform: rotate(-45deg);
+          }
+        }
+        &::placeholder {
+          color: white;
+          opacity: 0.5;
+          font-weight: bolder;
+        }
       }
-    }
-    &::placeholder {
-      color: white;
-      opacity: 0.5;
-      font-weight: bolder;
     }
   }
 }
