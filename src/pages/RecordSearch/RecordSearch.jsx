@@ -15,7 +15,7 @@ const RecordSearch = (props) => {
   useEffect(formData => {
     getAllRecords()       
     .then(recordData => setRecords(recordData.results))
-    console.log(RecordCover)
+    
   },[])
 
   return (
