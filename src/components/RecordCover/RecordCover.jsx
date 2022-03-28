@@ -9,5 +9,5 @@ const RecordCover = (props) => {
     </main>
   );
 }
- 
+
 export default RecordCover;
