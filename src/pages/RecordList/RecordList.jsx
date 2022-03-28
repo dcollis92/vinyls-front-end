@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import * as recordService from '../../services/recordService'
+// import { useState, useEffect } from 'react'
+// import * as recordService from '../../services/recordService'
 
 
 // const RecordList = (props) => {
