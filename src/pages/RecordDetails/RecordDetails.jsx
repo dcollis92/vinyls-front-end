@@ -6,12 +6,11 @@ const RecordDetails = () => {
 
   return (
     <>
-    <div className="record">
+    <h2>{record.title}</h2>
+      <img src={record.cover_image} />
       <h3>
-        {record.title}
-        {record.artists}
-      </h3>
-    </div>
+        {record.title}        
+      </h3>    
     </>
   )
 } 

@@ -9,6 +9,7 @@ const Record = ({record}) => {
         className='card-link'
       >
         <div className="record">
+          <img src={record.cover_image} />
           <p>{record.title}</p>
         </div>
       </Link>
