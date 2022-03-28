@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import SearchForm from '../../components/SearchForm/SearchForm';
 import { getAllRecords } from '../../services/recordService';
-import RecordCover from '../../components/RecordCover/RecordCover';
+import Record from '../../components/Record/Record';
 
 const RecordSearch = ({records}) => {
   
@@ -12,7 +12,7 @@ const RecordSearch = ({records}) => {
       {records.length ?
       <>
         {records.map(record =>            
-          <RecordCover key={record.title} record={record} />
+          <Record key={record.title} record={record} />
         )}
       </>
       :
