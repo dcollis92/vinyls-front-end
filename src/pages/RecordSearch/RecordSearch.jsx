@@ -12,10 +12,11 @@ const RecordSearch = (props) => {
   //   .then(recordResults => setRecords(recordResults.results))
   // }
 
-  // useEffect(formData => {
-  //   getAllRecords(formData)
-  //   .then(recordData => setRecords(recordData.results))
-  // },[])
+  useEffect(formData => {
+    getAllRecords()       
+    .then(recordData => setRecords(recordData.results))
+    console.log(RecordCover)
+  },[])
 
   return (
     <main>
@@ -23,7 +24,7 @@ const RecordSearch = (props) => {
       {/* <SearchForm handleRecordSearch={handleRecordSearch}  /> */}
       {records.length ?
       <>
-        {records.map(record =>
+        {records.map(record =>            
           <RecordCover key={record.title} record={record} />
         )}
       </>
