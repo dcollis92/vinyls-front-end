@@ -1,8 +1,23 @@
 .navbar {
   background-color: #dfe6ed;
+  color: #293845;
   font-family: 'Futura Std';
-  input, button {
+  border: 2px solid #9eadba;
+  input, button, link {
     font-family: 'Futura Std';
     font-style: italic;
+    border: 2px solid #9eadba;
+    color: #293845;
   }
+}
+
+.btn-outline-success:hover {
+  background-color: #293845;
+  border: 1px solid #9eadba;
+  color: #dfe6ed;
+}
+
+.form-control,
+.btn-outline-success {
+  border-radius: 15px/45px;
 }

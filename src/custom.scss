@@ -1,11 +1,21 @@
 /* The following block can be included in a custom.scss */
 $custom-color: #dfe6ed;
+
+$--color-button-hover: #23272f;
+
 /* make the customizations */
 $theme-colors: (
     "secondary": #dfe6ed,
-    "danger": teal,
-    "custom-color": $custom-color,
+    "danger": black,
 );
+
+// body {
+//   button:hover {
+//     background-color: #293845;
+//     color: #dfe6ed;
+//   }
+// }
+
 
 
 

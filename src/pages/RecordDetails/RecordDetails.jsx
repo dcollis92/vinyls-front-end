@@ -7,7 +7,7 @@ const RecordDetails = () => {
   return (
     <>
     <h2>{record.title}</h2>
-      <img src={record.cover_image} />
+      <img alt='' src={record.cover_image} />
       <h3>
         {record.title}        
       </h3>    
