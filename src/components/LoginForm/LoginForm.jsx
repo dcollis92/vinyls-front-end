@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './LoginForm.module.css'
 import * as authService from '../../services/authService'
+import { Form, Button } from 'react-bootstrap'
+
 
 const LoginForm = props => {
   const [formData, setFormData] = useState({
@@ -28,40 +30,47 @@ const LoginForm = props => {
 
   return (
     <main>
-      <form
+      <Form 
         autoComplete="off"
         onSubmit={handleSubmit}
-        className={styles.container}
-      >
-        <div className={styles.inputContainer}>
-          <label htmlFor="email" className={styles.label}>Email</label>
-          <input
-            type="text"
+        className={styles.container} >
+          <Form.Group className="mb-3">
+          <Form.Label 
+            htmlFor="email" 
+            className={styles.label}
+            >Email Address</Form.Label>
+          <Form.Control 
+            type="email" 
             autoComplete="off"
             id="email"
             value={formData.email}
             name="email"
             onChange={handleChange}
-          />
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="password" className={styles.label}>Password</label>
-          <input
-            type="password"
-            autoComplete="off"
-            id="password"
-            value={formData.pw}
-            name="pw"
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <button className={styles.button}>Log In</button>
-          <Link to="/">
-            <button>Cancel</button>
-          </Link>
-        </div>
-      </form>
+            placeholder="Enter Email" />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label 
+              htmlFor="password"
+              className={styles.label}
+              >Password</Form.Label>
+            <Form.Control 
+              type="password" 
+              autoComplete="off"
+              id="password"
+              value={formData.pw}
+              name="pw"
+              onChange={handleChange}
+              placeholder="Enter Password" />
+          </Form.Group>
+          <Button 
+            // disabled={isFormInvalid()} 
+            className={styles.button}
+            variant="primary" 
+            type="submit">
+            Log In
+          </Button>
+          <Button href="/">Cancel</Button>
+      </Form>
     </main>
   )
 }
