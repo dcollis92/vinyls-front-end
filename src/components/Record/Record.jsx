@@ -24,3 +24,5 @@ const Record = ({record, handleRemoveRecord, handleAddRecord, profile}) => {
 }
 
 export default Record;
+
+export default Record;

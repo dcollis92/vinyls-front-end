@@ -8,10 +8,13 @@ import './NavBar.scss';
 
 const NavBar = (props) => {
 
+  const navigate = useNavigate()
+
   const handleSubmitSearch = evt => {
     console.log('hitttttt')
     evt.preventDefault()
     props.handleSubmitSearch()
+    navigate('/recordSearch')
   }
 
   return (
