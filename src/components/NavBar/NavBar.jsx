@@ -1,15 +1,19 @@
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom'
 import SearchForm from '../SearchForm/SearchForm'
 import * as recordService from '../../services/recordService'
-import { Nav, Navbar, Button, Container }  from 'react-bootstrap'
+import { Nav, Navbar, Button, Form, FormControl, Container }  from 'react-bootstrap'
 import './NavBar.scss';
+
 
 const NavBar = (props) => {
 
-  // const handleSubmitSearch = evt => {
-  //   evt.preventDefault()
-  //   props.handleSubmitSearch()
-  // }
+  const handleSubmitSearch = evt => {
+    console.log('hitttttt')
+    evt.preventDefault()
+    props.handleSubmitSearch()
+  }
+
   return (
     <main>
       {props.user ?
@@ -29,7 +33,18 @@ const NavBar = (props) => {
             <Nav.Link href="/changePassword">Change Password</Nav.Link>
             <Nav.Link href="" onClick={props.handleLogout}>Log Out</Nav.Link>
           </Nav>
-          <SearchForm handleSubmitSearch={props.handleSubmitSearch} handleSetSearch={props.handleSetSearch} />
+          <Form className="d-flex" onSubmit={handleSubmitSearch}>
+            <FormControl 
+              onChange={props.handleSetSearch} 
+              value={props.search.query} 
+              name="query" 
+              type="search"
+              placeholder="Search..."
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form>
         </Navbar.Collapse>
         </Container>
       </Navbar>

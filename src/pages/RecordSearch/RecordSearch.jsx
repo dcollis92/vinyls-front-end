@@ -4,7 +4,7 @@ import { getAllRecords } from '../../services/recordService';
 import RecordCover from '../../components/RecordCover/RecordCover';
 
 const RecordSearch = (props) => {
-  const [records, setRecords] = useState([])
+  // const [records, setRecords] = useState([])
 
   // const handleRecordSearch = formData => {
   //   console.log('hitting');
@@ -22,15 +22,15 @@ const RecordSearch = (props) => {
     <main>
       <h3>recids</h3>
       {/* <SearchForm handleRecordSearch={handleRecordSearch}  /> */}
-      {records.length ?
+      {/* {records.length ? */}
       <>
-        {records.map(record =>            
+        {/* {records.map(record =>            
           <RecordCover key={record.title} record={record} />
-        )}
+        )} */}
       </>
       :
       <h3>search for a record, ya bish</h3>
-      } 
+      
   
     </main>
   );

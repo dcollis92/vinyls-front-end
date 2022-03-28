@@ -1,5 +1,5 @@
 import './App.scss';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
@@ -9,12 +9,38 @@ import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
 import RecordSearch from './pages/RecordSearch/RecordSearch';
-//import RecordList from './pages/RecordList/RecordList'
+import * as recordService from './services/recordService'
 
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
+  const [records, setRecords] = useState([])
+  const [search, setSearch] = useState({query: ''})
+
+  // const handleRecordSearch = () => {
+  //   recordService.getAllRecords(search.query)
+  //   .then(recordResults => setRecords(recordResults.results))
+  // }
+
+  // useEffect(queryString => {
+  //   console.log('hitting UE');
+  //   recordService.getAllRecords(queryString)
+  //   .then(recordResults => setRecords(recordResults.results))
+  // }, [])
+
+  const handleSetSearch = evt => {
+    console.log('hitting handlesetsearch');
+    setSearch({...search, [evt.target.name] : evt.target.value})
+  }
+
+
+  const handleSubmitSearch = evt => {
+    console.log('hitting handlesubmitsearch');
+    recordService.getAllRecords(search.query)
+    .then(recordResults => setRecords(recordResults.results))
+    navigate('/recordSearch')
+  }
 
   const handleLogout = () => {
     authService.logout()
@@ -28,7 +54,9 @@ const App = () => {
 
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout} />
+      <NavBar user={user} handleLogout={handleLogout}
+      search={search}
+      handleSubmitSearch={handleSubmitSearch} handleSetSearch={handleSetSearch} />
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
         <Route
