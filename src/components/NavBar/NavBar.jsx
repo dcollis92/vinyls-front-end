@@ -63,7 +63,7 @@ const NavBar = (props) => {
         <Container>
         <Navbar.Brand href="/">
           <img alt="" src="./vinyls-logo.png"
-          width="100%"
+          width="50%"
           className="d-inline-block align-top"
         />{' '}</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

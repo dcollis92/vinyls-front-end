@@ -9,7 +9,7 @@ const RecordDetails = () => {
   return (
     <main className='record-details'>
       <Record key={record.title} record={record} />
-      
+      <p>{record.title}</p>
     </main>
   )
 }
