@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 
 const Record = ({record, handleRemoveRecord, handleAddRecord, profile}) => {
+
+  
   return (
     <>
     
