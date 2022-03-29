@@ -35,7 +35,7 @@ const RecordList = (records, handleRemoveRecord, handleAddRecord, profile) => {
         </div>
       </>
       :
-      <>
+
         <div>
           {records.map(record =>
             <Record handleRemoveRecord={handleRemoveRecord} profile={profile} handleAddRecord={handleAddRecord} key={record.id} record={record}/>  
