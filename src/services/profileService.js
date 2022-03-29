@@ -18,15 +18,15 @@ function getProfile(id) {
 
 function addRecord(record) {
   console.log(record)
-  // return fetch(`${BASE_URL}/addRecord`, {
-  //   method: "POST",
-  //   headers: {
-  //     'Authorization': `Bearer ${tokenService.getToken()}`,
-  //     'Content-Type': 'application/json'
-  //   },
-  //   body: JSON.stringify(record)
-  // })
-  // .then(res => res.json())
+  return fetch(`${BASE_URL}/addRecord`, {
+    method: "POST",
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(record)
+  })
+  .then(res => res.json())
 }
 
 
