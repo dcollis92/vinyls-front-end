@@ -37,7 +37,7 @@ const RecordList = (records, handleRemoveRecord, handleAddRecord, profile) => {
       :
       <>
         <div className='record-container'>
-          {villagers.map(record =>
+          {records.map(record =>
             <Record handleRemoveRecord={handleRemoveRecord} profile={profile} handleAddRecord={handleAddRecord} key={record.id} record={record}/>  
           )}
         </div>
