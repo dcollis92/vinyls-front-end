@@ -9,4 +9,28 @@ async function getAllProfiles() {
   return await res.json()
 }
 
-export { getAllProfiles }
+function getProfile(id) {
+  return fetch (`${BASE_URL}/${id}`, {
+    headers: { Authorization: `Bearer ${tokenService.getToken()}` },
+  })
+  .then(res => res.json())
+}
+
+function addRecord(record) {
+  return fetch(`${BASE_URL}/addRecord`, {
+    method: "POST",
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(record)
+  })
+  .then(res => res.json())
+}
+
+
+export { 
+  getAllProfiles, 
+  getProfile,
+  addRecord
+}

@@ -8,6 +8,7 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
+// import * as profileService from './services/profileService'
 import RecordSearch from './pages/RecordSearch/RecordSearch';
 import * as recordService from './services/recordService'
 import RecordDetails from './pages/RecordDetails/RecordDetails'
@@ -15,6 +16,7 @@ import RecordDetails from './pages/RecordDetails/RecordDetails'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
+  // const [profile, setProfile] = useState({})
   const navigate = useNavigate()
   const [records, setRecords] = useState([])
   const [search, setSearch] = useState({query: ''})
