@@ -12,6 +12,7 @@ import * as profileService from './services/profileService'
 import RecordSearch from './pages/RecordSearch/RecordSearch';
 import * as recordService from './services/recordService'
 import RecordDetails from './pages/RecordDetails/RecordDetails'
+import ArtistDetails from './pages/ArtistDetails/ArtistDetails'
 
 
 const App = () => {
@@ -101,6 +102,8 @@ const App = () => {
         />
         <Route path="/record"
         element={<RecordDetails records={records} handleAddRecord={handleAddRecord} />}/>        
+        <Route path="/artist"
+        element={<ArtistDetails records={records} />}/>   
       </Routes>
     </>
   )
