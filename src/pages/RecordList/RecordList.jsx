@@ -17,7 +17,7 @@ const RecordList = (records, handleRemoveRecord, handleAddRecord, profile) => {
   }
 
   return (
-    <main className='record-list'>
+    <main className='record-collection'>
       <h2>Record List</h2>
       <input 
         type="text"
@@ -28,7 +28,7 @@ const RecordList = (records, handleRemoveRecord, handleAddRecord, profile) => {
       
       {search.query ? 
       <>
-        <div className='record-container'>
+        <div>
           {searchResults.map(record =>
             <Record handleRemoveRecord={handleRemoveRecord} profile={profile} handleAddRecord={handleAddRecord} key={record.id} record={record}/>  
           )}
@@ -36,8 +36,8 @@ const RecordList = (records, handleRemoveRecord, handleAddRecord, profile) => {
       </>
       :
       <>
-        <div className='record-container'>
-          {villagers.map(record =>
+        <div>
+          {records.map(record =>
             <Record handleRemoveRecord={handleRemoveRecord} profile={profile} handleAddRecord={handleAddRecord} key={record.id} record={record}/>  
           )}
         </div>

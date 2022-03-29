@@ -16,24 +16,29 @@ const RecordSearch = ({records}) => {
 
   return (
     <main>
-      <h3>Records</h3>
-      {records.length ?
-        <>
-          {console.log(searchResults)}
-          {searchResults.map(record =>     
-            <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-              <Record key={record.title} record={record} />
-              </Card.Body>
-            </Card>       
-            
-          )}
-        </>
-        :
-        <h2>No Matching Records</h2>
-      
-      }
+      <div className='search-display container'>
+        <div className='row'>
+          <div className></div>
+        <h3>Search Results</h3>
+        {records.length ?
+          <>
+            {console.log(searchResults)}
+            {searchResults.map(record =>     
+              <Card className='container'>
+                <Card.Img variant="top" src="" />
+                <Card.Body>
+                <Record key={record.title} record={record} />
+                </Card.Body>
+              </Card>       
+              
+            )}
+          </>
+          :
+          <h2>No Matching Records</h2>
+        
+        }
+        </div>
+      </div>
     </main>
   );
 }
