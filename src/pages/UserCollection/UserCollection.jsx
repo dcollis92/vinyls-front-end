@@ -1,8 +1,8 @@
-import './RecordList.scss';
+import './UserCollection.scss';
 import { useState, useEffect } from 'react'
 import Record from '../../components/Record/Record'
 
-const RecordList = (records, handleRemoveRecord, handleAddRecord, profile) => {
+const UserCollection = (records, handleRemoveRecord, handleAddRecord, profile) => {
   const [search, setSearch] = useState({query: ''})
   const [records, setRecords] = useState([])
   
@@ -15,37 +15,37 @@ const RecordList = (records, handleRemoveRecord, handleAddRecord, profile) => {
   const handleSearch = evt => {
     setSearch({...search, [evt.target.name]: evt.target.value.toLowerCase()})
   }
+// WUT DIS TIMMY???? I CANT NO STYLE NO THANG
 
   return (
-    <main className='record-collection'>
-      <h2>Record List</h2>
+    <main className='user-collection'>
+      <h2>Record Collection</h2>
       <input 
         type="text"
         name="query" 
         value={search.query}
         onChange={handleSearch}
       />
-      
+    
       {search.query ? 
       <>
-        <div>
+        <div className=''>
           {searchResults.map(record =>
             <Record handleRemoveRecord={handleRemoveRecord} profile={profile} handleAddRecord={handleAddRecord} key={record.id} record={record}/>  
           )}
         </div>
       </>
       :
-
-        <div>
+      <>
+        <div className=''>
           {records.map(record =>
             <Record handleRemoveRecord={handleRemoveRecord} profile={profile} handleAddRecord={handleAddRecord} key={record.id} record={record}/>  
           )}
         </div>
       </>
-
       }
     </main>
   );
 }
 
-export default RecordList;
+export default UserCollection;
