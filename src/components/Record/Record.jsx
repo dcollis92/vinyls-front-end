@@ -11,7 +11,7 @@ const Record = ({record, handleRemoveRecord, handleAddRecord, profile}) => {
       >
         <img src={record.cover_image} alt="" />
       </Link>            
-      <h3>{record.title}</h3>
+      <p>{record.title}</p>
       {/* {profile.records.some(profileRecord => profileRecord.title === record.title) ? 
       <button onClick={() => handleRemoveRecord(record.title)} className="btn">Remove</button>
       :
