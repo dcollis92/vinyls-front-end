@@ -21,8 +21,11 @@ const RecordSearch = ({records}) => {
 
   return (
     <main>
-      <h3>Records</h3>
-      {records.length ?
+      <div className='search-display container'>
+        <div className='row'>
+          <div className></div>
+        <h3>Search Results</h3>
+             {records.length ?
         <>
           {artistResults.map(record =>
               <Card>
@@ -45,6 +48,8 @@ const RecordSearch = ({records}) => {
         <h2>No Matching Records</h2>
       
       }
+        </div>
+      </div>
     </main>
   );
 }
