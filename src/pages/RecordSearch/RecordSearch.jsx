@@ -6,15 +6,21 @@ import Record from '../../components/Record/Record';
 import {Card} from 'react-bootstrap'
 
 const RecordSearch = ({records}) => {
+  const [searchResults, setSearchResults] = useState([])
+
   
+  useEffect(()=> {
+    const results = records.filter(record => record.type === "master" || record.type === "artist" )
+    setSearchResults(results)
+  }, [records])
 
   return (
     <main>
       <h3>Records</h3>
       {records.length ?
         <>
-          
-          {records.map(record =>     
+          {console.log(searchResults)}
+          {searchResults.map(record =>     
             <Card>
               <Card.Img variant="top" src="" />
               <Card.Body>
