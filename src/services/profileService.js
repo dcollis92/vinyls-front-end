@@ -17,15 +17,16 @@ function getProfile(id) {
 }
 
 function addRecord(record) {
-  return fetch(`${BASE_URL}/addRecord`, {
-    method: "POST",
-    headers: {
-      'Authorization': `Bearer ${tokenService.getToken()}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(record)
-  })
-  .then(res => res.json())
+  console.log(record)
+  // return fetch(`${BASE_URL}/addRecord`, {
+  //   method: "POST",
+  //   headers: {
+  //     'Authorization': `Bearer ${tokenService.getToken()}`,
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify(record)
+  // })
+  // .then(res => res.json())
 }
 
 
