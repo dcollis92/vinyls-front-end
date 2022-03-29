@@ -1,0 +1,12 @@
+.card {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 350px;
+  border: solid 2px #9eadba;
+  
+  .record {
+    align-items: center;
+    justify-content: center;
+  }
+}
+

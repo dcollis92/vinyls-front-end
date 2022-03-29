@@ -20,7 +20,7 @@ const NavBar = (props) => {
   return (
     <main>
       {props.user ?
-        <Navbar className='navbar' collapseOnSelect expand="xl" >
+        <Navbar sticky="top" className='navbar' collapseOnSelect expand="xl" >
         <Container>
         <Navbar.Brand href="/">
           <img alt="" src="./vinyls-logo.png"
@@ -31,10 +31,18 @@ const NavBar = (props) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/recordlist">Records</Nav.Link>
-            <Nav.Link href="/profiles">Profiles</Nav.Link>
-            <Nav.Link href="/changePassword">Change Password</Nav.Link>
-            <Nav.Link href="" onClick={props.handleLogout}>Log Out</Nav.Link>
+            <Nav.Link href="/recordlist">
+              <i class="fas fa-record-vinyl"></i> 
+              {' '}Records</Nav.Link>
+            <Nav.Link href="/profiles">
+              <i class="fas fa-user"></i>
+              {' '}Profiles</Nav.Link>
+            <Nav.Link href="/changePassword">
+              <i class="fas fa-unlock"></i>
+              {' '}Change Password</Nav.Link>
+            <Nav.Link href="" onClick={props.handleLogout}>
+              <i class="fas fa-right-from-bracket"></i>
+              {' '}Log Out</Nav.Link>
           </Nav>
           <Form className="d-flex" onSubmit={handleSubmitSearch}>
             <FormControl 

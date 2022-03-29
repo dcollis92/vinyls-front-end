@@ -1,3 +1,4 @@
+import './RecordList.scss';
 import { useState, useEffect } from 'react'
 import Record from '../../components/Record/Record'
 
@@ -16,7 +17,7 @@ const RecordList = (records, handleRemoveRecord, handleAddRecord, profile) => {
   }
 
   return (
-    <>
+    <main className='record-list'>
       <h2>Record List</h2>
       <input 
         type="text"
@@ -43,7 +44,7 @@ const RecordList = (records, handleRemoveRecord, handleAddRecord, profile) => {
       </>
 
       }
-    </>
+    </main>
   );
 }
 

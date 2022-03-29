@@ -1,24 +1,33 @@
+import './RecordSearch.scss';
 import { useState, useEffect } from 'react';
 import SearchForm from '../../components/SearchForm/SearchForm';
 import { getAllRecords } from '../../services/recordService';
 import Record from '../../components/Record/Record';
+import {Card} from 'react-bootstrap'
 
 const RecordSearch = ({records}) => {
   
 
   return (
     <main>
-      <h3>recids</h3>
+      <h3>Records</h3>
       {records.length ?
-      <>
-        {records.map(record =>            
-          <Record key={record.title} record={record} />
-        )}
-      </>
-      :
-      <h2>No Matching records</h2>
+        <>
+          
+          {records.map(record =>     
+            <Card>
+              <Card.Img variant="top" src="" />
+              <Card.Body>
+              <Record key={record.title} record={record} />
+              </Card.Body>
+            </Card>       
+            
+          )}
+        </>
+        :
+        <h2>No Matching Records</h2>
       
-        }
+      }
     </main>
   );
 }
