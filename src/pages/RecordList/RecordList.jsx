@@ -5,11 +5,11 @@ const RecordList = (records, handleRemoveRecord, handleAddRecord, profile) => {
   const [search, setSearch] = useState({query: ''})
   const [records, setRecords] = useState([])
   
-  useEffect(() => {
-    const results = records.filter(record => record.title.toLowerCase().include(search.query))
-    recordService.getAllRecords()
-    setSearchResults(results)
-  },[search])
+  // useEffect(() => {
+  //   const results = records.filter(record => record.title.toLowerCase().include(search.query))
+  //   recordService.getAllRecords()
+  //   setSearchResults(results)
+  // },[search])
 
   const handleSearch = evt => {
     setSearch({...search, [evt.target.name]: evt.target.value.toLowerCase()})

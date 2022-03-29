@@ -6,4 +6,9 @@ async function getAllRecords(searchParams) {
   return await res.json()
   }
 
-export { getAllRecords }
+function getRecordDetails(id) {
+   return fetch (`${BASE_URL}/${id}`)
+   .then(res => res.json())
+ }
+
+export { getAllRecords, getRecordDetails }
