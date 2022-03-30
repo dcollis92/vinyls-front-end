@@ -1,6 +1,7 @@
 import './RecordSearch.scss';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"
+import { Button } from 'react-bootstrap'
 import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
 // import { Card } from 'react-bootstrap'
@@ -60,7 +61,7 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord,  profile}) 
           </div>
           <div className='row'>
           {searchResults.map(record =>
-              <div className='col-md-4'>
+              <div className='col-md-4 col-sm-6 col-xs-12 text-center'>
                 <div className='single-record'>
                   <div className='record-img '>
                     <Record key={record.title} record={record} handleAddRecord={handleAddRecord}/>
@@ -74,9 +75,11 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord,  profile}) 
                       click here</Link></p>
                   </div>
                 </div>
-                <button onClick={() => handleAddRecord(record)} profile={profile}
-                className="btn">Add to Collection</button>  
-                <button onClick={() => handleRemoveRecord(profile.records._id)} profile={profile} className="btn">Remove</button>  
+                <Button onClick={() => handleAddRecord    (record)} profile={profile}variant="outline-success">
+                  Add to Collection</Button>
+                {/* <button onClick={() => handleAddRecord(record)} profile={profile}
+                className="btn-outline-light">Add to Collection</button>   */}
+                <Button onClick={() => handleRemoveRecord(profile.records._id)} profile={profile} variant="outline-success">Remove</Button>  
               </div>
           )}
           </div>
