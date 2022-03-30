@@ -31,16 +31,16 @@ const NavBar = (props) => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/recordlist">
-              <i class="fas fa-record-vinyl"></i> 
+              <i className="fas fa-record-vinyl"></i> 
               {' '}Records</Nav.Link>
             <Nav.Link href="/profiles">
-              <i class="fas fa-user"></i>
+              <i className="fas fa-user"></i>
               {' '}Profiles</Nav.Link>
             <Nav.Link href="/changePassword">
-              <i class="fas fa-unlock"></i>
+              <i className="fas fa-unlock"></i>
               {' '}Change Password</Nav.Link>
             <Nav.Link href="" onClick={props.handleLogout}>
-              <i class="fas fa-right-from-bracket"></i>
+              <i className="fas fa-right-from-bracket"></i>
               {' '}Log Out</Nav.Link>
           </Nav>
           <Form className="d-flex" onSubmit={handleSubmitSearch}>

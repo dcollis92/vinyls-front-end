@@ -3,6 +3,20 @@
   margin-bottom: 5%;
 }
 
+.result-container {
+  border: 2px solid black;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center
+}
+
+.result-container div {
+  margin: 10px;
+  ;
+}
+
 .single-record {
   position: relative;
   overflow: hidden;
@@ -10,8 +24,8 @@
 }
 
 .record-img {
-  // max-width: 250px;
-  // max-height: 250px;
+  max-width: 250px;
+  max-height: 250px;
   position: relative;
 }
 
@@ -47,7 +61,7 @@ transition: 0.9s
 .overlay-text {
   position: absolute;
   z-index: 15;
-  color: white;
+  color: black;
   top: 30%;
   text-align: center;
   padding-left: 30px;
@@ -56,6 +70,7 @@ transition: 0.9s
   transform: all 0.4s ease;
   // font-family: 'Futura-Std';
 }
+
 
 .single-record:hover .overlay-text {
   opacity: 1;
@@ -74,11 +89,16 @@ transition: 0.9s
 
 .single-record:hover h3 {
   top: 0;
+  .overlay-text {
+    top: 0;
+  }
 }
 
-.overlay-text p {
+.overlay-text h3 {
+  opacity: 1;
   position: relative;
   bottom: -22px;
+  margin: 0 auto;
   transition: all 1s ease;
 }
 
