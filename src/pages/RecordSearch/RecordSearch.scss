@@ -1,5 +1,5 @@
 .section-header {
-  margin-top: 10%;
+  margin-top: 5%;
   margin-bottom: 5%;
 }
 
@@ -14,19 +14,25 @@
 
 .result-container div {
   margin: 10px;
-  ;
+  
 }
 
 .single-record {
   position: relative;
   overflow: hidden;
+  max-width: 500px;
+  max-height: 500px;
   transition: all 0.3s ease;
+  object-fit: contain;
+  padding: 5px;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .record-img {
-  max-width: 250px;
-  max-height: 250px;
+  object-fit: contain;
   position: relative;
+  
 }
 
 .record-img:before {
@@ -67,7 +73,7 @@ transition: 0.9s
   padding-left: 30px;
   padding-right: 30px;
   opacity: 0;
-  transform: all 0.4s ease;
+  transition: all 0.4s ease;
   // font-family: 'Futura-Std';
 }
 
