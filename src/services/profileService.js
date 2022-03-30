@@ -29,9 +29,20 @@ function addRecord(record) {
   .then(res => res.json())
 }
 
+function removeRecord(recordMaster_id) {
+  console.log(recordMaster_id)
+  return fetch(`${BASE_URL}/${recordMaster_id}`, {
+    method: "PATCH",
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      }    
+  })
+  .then(res => res.json())
+}
 
 export { 
   getAllProfiles, 
   getProfile,
-  addRecord
+  addRecord,
+  removeRecord
 }

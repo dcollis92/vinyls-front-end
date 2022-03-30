@@ -72,38 +72,52 @@ const App = () => {
     })
   }
 
+  const handleRemoveRecord = master_id => {
+    profileService.removeRecord(master_id)
+    .then(updatedProfile => {
+      setProfile(updatedProfile)
+    })
+  }
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout}
       search={search}
       handleSubmitSearch={handleSubmitSearch} handleSetSearch={handleSetSearch} />
       <Routes>
-        <Route path="/" element={<Landing user={user} />} />
+        <Route path="/" element={<Landing user={user} 
+        />} />
         <Route
           path="/signup"
-          element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
-        />
+          element={<Signup handleSignupOrLogin={handleSignupOrLogin} 
+        />} />
         <Route
           path="/login"
-          element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
-        />
+          element={<Login handleSignupOrLogin={handleSignupOrLogin} 
+        />} />
         <Route
           path="/profiles"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
-        />
+          element={user ? <Profiles /> : <Navigate to="/login" 
+        />} />
         <Route
           path="/changePassword"
-          element={user ? <ChangePassword handleSignupOrLogin={handleSignupOrLogin}/> : <Navigate to="/login" />}
-        />
+          element={user ? <ChangePassword handleSignupOrLogin={handleSignupOrLogin}/> : <Navigate to="/login" 
+        />} />
         <Route path="/recordSearch" 
         element={<RecordSearch 
-        records={records} handleAddRecord={handleAddRecord}
-        />} 
-        />
+        records={records} 
+        profile={profile} 
+        handleAddRecord={handleAddRecord} 
+        handleRemoveRecord={handleRemoveRecord}
+        />} />
         <Route path="/record"
-        element={<RecordDetails records={records} handleAddRecord={handleAddRecord} />}/>        
+        element={<RecordDetails 
+        records={records} 
+        profile={profile}         
+        handleAddRecord={handleAddRecord} handleRemoveRecord={handleRemoveRecord}
+        />} /> 
         <Route path="/artist"
-        element={<ArtistDetails records={records} />}/>   
+        element={<ArtistDetails records={records} 
+        />}/>   
       </Routes>
     </>
   )
