@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 import { Button } from 'react-bootstrap'
 import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
-// import { Card } from 'react-bootstrap'
 
 const RecordSearch = ({records, handleAddRecord, handleRemoveRecord,  profile}) => {
   const [searchResults, setSearchResults] = useState([])
@@ -77,8 +76,6 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord,  profile}) 
                 </div>
                 <Button onClick={() => handleAddRecord    (record)} profile={profile}variant="outline-success">
                   Add to Collection</Button>
-                {/* <button onClick={() => handleAddRecord(record)} profile={profile}
-                className="btn-outline-light">Add to Collection</button>   */}
                 <Button onClick={() => handleRemoveRecord(profile.records._id)} profile={profile} variant="outline-success">Remove</Button>  
               </div>
           )}
