@@ -9,7 +9,6 @@ const RecordDetails = ({handleAddRecord}) => {
   return (
     <main className='record-details'>
       <Record key={record.title} record={record} handleAddRecord={handleAddRecord} />
-      
     </main>
   )
 }

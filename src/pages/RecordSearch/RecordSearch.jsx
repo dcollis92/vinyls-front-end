@@ -2,13 +2,13 @@ import './RecordSearch.scss';
 import { useState, useEffect } from 'react';
 import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
-import {Card} from 'react-bootstrap'
+// import { Card } from 'react-bootstrap'
 
 const RecordSearch = ({records}) => {
   const [searchResults, setSearchResults] = useState([])
   const [artistResults, setArtistResults] = useState([])
 
-  
+
   useEffect(()=> {
     const results = records.filter(record => record.type === "master")
     setSearchResults(results)
@@ -18,16 +18,67 @@ const RecordSearch = ({records}) => {
     const results = records.filter(record => record.type === "artist")
     setArtistResults(results)
   }, [records])
+  
 
   return (
     <main>
       <div className='search-display container'>
         <div className='row'>
-          <div className></div>
-        <h3>Search Results</h3>
-             {records.length ?
+          <div className='col-md-12'>
+            <div className='section-header text-center'>
+              <h1>Search Results</h1>
+            </div>
+          </div>
+        </div>
+          {records.length ?
         <>
+          <h2>Artists</h2>
           {artistResults.map(record =>
+            <div className='row'>
+              <div className='col-md-4 col-sm-6 col-xs-12'>
+                <div className='single-record'>
+                  <div className='record-img'>
+                    <Artist key={record.title} record={record} />
+                  </div>
+                </div>
+                <div className='overlay-text'>
+                  <h3>{record.title}</h3>
+                </div>
+              </div>
+            </div> 
+          )}
+          <h2>Records</h2>
+          {searchResults.map(record =>
+            <div className='row'>
+              <div className='col-md-4 col-sm-6 col-xs-12'>
+                <div className='single-record'>
+                  <div className='record-img'>
+                    <Record key={record.title} record={record} />
+                  </div>
+                </div>
+                <div className='overlay-text'>
+                  <h3>{record.title}</h3>
+                </div>
+              </div>
+            </div> 
+          )}
+        </>
+        :
+        <h2>No Matching Records</h2>
+      
+      }
+        
+      </div>
+    </main>
+  );
+}
+
+export default RecordSearch;
+
+
+/*
+OLD BOOTSTRAP CARD CODE, SOON TO BE DELETED
+{artistResults.map(record =>
               <Card>
               <Card.Img variant="top" src="" />
               <Card.Body>
@@ -43,15 +94,4 @@ const RecordSearch = ({records}) => {
               </Card.Body>
             </Card> 
           )}
-        </>
-        :
-        <h2>No Matching Records</h2>
-      
-      }
-        </div>
-      </div>
-    </main>
-  );
-}
-
-export default RecordSearch;
+*/

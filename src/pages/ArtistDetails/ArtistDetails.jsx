@@ -9,7 +9,7 @@ const ArtistDetails = () => {
   return (
     <main className='artist-details'>
       <Artist key={record.title} record={record} />
-      
+      <p>{record.title}</p>
     </main>
   )
 }
