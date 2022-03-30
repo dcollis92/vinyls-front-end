@@ -49,9 +49,9 @@
 }
 
 .single-record:hover .record-img:before {
-  visibility: visible;
-  transform: translateY(0%);
-}
+   visibility: visible;
+   transform: translateY(0%);
+ }
 
 .record-img img {
 width: 100%;
@@ -60,7 +60,7 @@ transition: 0.9s
 }
 
 .single-record:hover img {
-  // transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .overlay-text:before {
