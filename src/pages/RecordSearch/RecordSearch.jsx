@@ -1,10 +1,11 @@
 import './RecordSearch.scss';
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom"
+import { Button } from 'react-bootstrap'
 import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
-// import { Card } from 'react-bootstrap'
 
-const RecordSearch = ({records, handleAddRecord}) => {
+const RecordSearch = ({records, handleAddRecord, handleRemoveRecord,  profile}) => {
   const [searchResults, setSearchResults] = useState([])
   const [artistResults, setArtistResults] = useState([])
 
@@ -25,7 +26,7 @@ const RecordSearch = ({records, handleAddRecord}) => {
       <div className='search-display container'>
         <div className='row'>
           <div className='col-md-12'>
-            <div className='section-header text-center'>
+            <div className='results-header text-center'>
               <h1>Search Results</h1>
             </div>
           </div>
@@ -44,7 +45,11 @@ const RecordSearch = ({records, handleAddRecord}) => {
                   </div>
                   <div className='overlay-text'>
                     <h3>{record.title}</h3>
-                    <p>click here</p>
+                    <p><Link
+                      to='/artist'
+                      state={{record}}
+                      className='card-link'>
+                      click here</Link></p>
                   </div>
                 </div>
               </div>
@@ -55,18 +60,25 @@ const RecordSearch = ({records, handleAddRecord}) => {
           </div>
           <div className='row'>
           {searchResults.map(record =>
-              <div className='col-md-4'>
+              <div className='col-md-4 col-sm-6 col-xs-12 text-center'>
                 <div className='single-record'>
                   <div className='record-img '>
                     <Record key={record.title} record={record} handleAddRecord={handleAddRecord}/>
                   </div>
                   <div className='overlay-text'>
                     <h3>{record.title}</h3>
-                    <p>click here</p>
+                    <p><Link
+                      to='/record'
+                      state={{record}}
+                      className='card-link'>
+                      click here</Link></p>
                   </div>
                 </div>
-                {/* <button onClick={() => handleAddRecord(record)}
-      className="btn">Add to Collection</button> */}
+                <Button onClick={() => handleAddRecord(record)} 
+                  profile={profile} variant="outline-success">
+                  Add to Collection</Button>
+                <Button onClick={() => handleRemoveRecord
+                (profile.records._id)} profile={profile} variant="outline-success">Remove</Button>  
               </div>
           )}
           </div>
@@ -80,24 +92,3 @@ const RecordSearch = ({records, handleAddRecord}) => {
 }
 
 export default RecordSearch;
-
-
-/*
-OLD BOOTSTRAP CARD CODE, SOON TO BE DELETED
-{artistResults.map(record =>
-              <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-              <Artist key={record.title} record={record} />
-              </Card.Body>
-            </Card> 
-          )}
-          {searchResults.map(record =>
-              <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-              <Record key={record.title} record={record} />
-              </Card.Body>
-            </Card> 
-          )}
-*/

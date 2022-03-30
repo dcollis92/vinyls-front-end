@@ -29,6 +29,7 @@ function addRecord(record) {
   .then(res => res.json())
 }
 
+
 function removeRecord(recordsId) {
   console.log(recordsId)
   return fetch(`${BASE_URL}/${recordsId}`, {
