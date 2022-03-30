@@ -68,15 +68,17 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord,  profile}) 
                   <div className='overlay-text'>
                     <h3>{record.title}</h3>
                     <p><Link
-                      to='/artist'
+                      to='/record'
                       state={{record}}
                       className='card-link'>
                       click here</Link></p>
                   </div>
                 </div>
-                <Button onClick={() => handleAddRecord    (record)} profile={profile}variant="outline-success">
+                <Button onClick={() => handleAddRecord(record)} 
+                  profile={profile} variant="outline-success">
                   Add to Collection</Button>
-                <Button onClick={() => handleRemoveRecord(profile.records._id)} profile={profile} variant="outline-success">Remove</Button>  
+                <Button onClick={() => handleRemoveRecord
+                (profile.records._id)} profile={profile} variant="outline-success">Remove</Button>  
               </div>
           )}
           </div>
@@ -90,24 +92,3 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord,  profile}) 
 }
 
 export default RecordSearch;
-
-
-/*
-OLD BOOTSTRAP CARD CODE, SOON TO BE DELETED
-{artistResults.map(record =>
-              <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-              <Artist key={record.title} record={record} />
-              </Card.Body>
-            </Card> 
-          )}
-          {searchResults.map(record =>
-              <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-              <Record key={record.title} record={record} />
-              </Card.Body>
-            </Card> 
-          )}
-*/
