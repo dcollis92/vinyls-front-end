@@ -6,15 +6,17 @@ import Artist from '../../components/Artist/Artist';
 
 
 const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile}) => {
+
   const location = useLocation()
   const record = location.state.record
+  console.log(profile.records)
 
   return (
     <main className='record-details'>
       <div className='album-display'>
         <h2 className='text-center'>Album Details</h2>
         <div className='album'>
-          <Record key={record.title} record={record} handleAddRecord={handleAddRecord} handleRemoveRecord={handleRemoveRecord} />
+          <Record key={record.title} record={record} handleAddRecord={handleAddRecord} handleRemoveRecord={handleRemoveRecord} profile={profile} />
         </div>
         <div className='buttons'>
           <Button onClick={() => handleAddRecord(record)} 

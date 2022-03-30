@@ -36,11 +36,13 @@
     width: 100%;
   }
 
+
   .single-record:hover .record-img:before {
     visibility: visible;
     transform: translateY(0%);
     border-radius: 5%;
   }
+
 
   .record-img img {
     border-radius: 5%;
