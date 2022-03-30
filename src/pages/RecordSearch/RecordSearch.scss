@@ -3,35 +3,16 @@
   margin-bottom: 5%;
 }
 
-// .result-container {
-//   border: 2px solid black;
-//   width: 100%;
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-around;
-//   align-items: center
-// }
-
-// .result-container div {
-//   margin: 10px;
-  
-// }
 
 .single-record {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
   padding: 5px;
-  // max-width: 500px;
-  // max-height: 500px;
-  // object-fit: contain;
-  // background-position: center center;
-  // background-repeat: no-repeat;
 }
 
 .record-img {
   position: relative;
-  // object-fit: contain;
 }
 
 .record-img:before {
@@ -59,21 +40,17 @@ z-index: 10;
 transition: 0.9s
 }
 
-.single-record:hover img {
-  transform: scale(1.1);
-}
-
-.overlay-text:before {
+.overlay-text {
   position: absolute;
+  text-overflow: ellipsis;
   z-index: 15;
   color: #293845;
   top: 30%;
-  text-align: center;
+  // text-align: center;
   padding-left: 30px;
   padding-right: 30px;
   opacity: 0;
   transition: all 0.4s ease;
-  // font-family: 'Futura-Std';
 }
 
 .single-record:hover .overlay-text {
@@ -83,25 +60,37 @@ transition: 0.9s
 
 .overlay-text h3 {
   text-transform: uppercase;
-  // font-weight: 600;
+  font-weight: 600;
   transition: all 1s ease;
-  // font-size: 30px;
-  // margin: 5px 0 15px;
+  margin: 5px 0 15px;
   position: relative;
-  top: -100px;
+  top: -22px;
 }
 
 .single-record:hover h3 {
   top: 0;
 }
 
-.overlay-text {
+.overlay-text p {
   position: relative;
-  // bottom: -22px;
+  bottom: -22px;
   transition: all 1s ease;
-  // margin: 0 auto;
 }
 
-.single-record:hover {
+.single-record:hover p {
   bottom: 0
 }
+
+/* Portrait */
+// @media only screen 
+//   and (min-device-width: 320px) 
+//   and (max-device-width: 480px)
+//   and (-webkit-min-device-pixel-ratio: 2)
+//   and (orientation: portrait) {
+//     main {
+//       font-size: 50%;
+//     }
+//     .overlay-text {
+//       font-size: 50%;
+//     }
+// }
