@@ -35,10 +35,10 @@ const RecordSearch = ({records}) => {
           <div className='section-header text-center'>
           <h2>Artists</h2>
           </div>
-          <section className='result-container'>
+          <div className='row'>
           {artistResults.map(record =>
             // <div className=''>
-              <div className=''>
+              <div className='col-md-4 col-sm-6 col-xs-12'>
                 <div className='single-record'>
                   <div className='record-img'>
                     <Artist key={record.title} record={record} />
@@ -52,14 +52,14 @@ const RecordSearch = ({records}) => {
               </div>
             // </div> 
           )}
-          </section>
+          </div>
           <div className='section-header text-center'>
           <h2>Records</h2>
           </div>
-          <section className='result-container'>
+          <div className='row'>
           {searchResults.map(record =>
             // <div className=''>
-              <div className=''>
+              <div className='col-md-4'>
                 <div className='single-record'>
                   <div className='record-img'>
                     <Record key={record.title} record={record} />
@@ -71,7 +71,7 @@ const RecordSearch = ({records}) => {
               </div>
             // </div> 
           )}
-          </section>
+          </div>
         </>
         :
         <h2 className='text-center'>No Matching Records</h2>
