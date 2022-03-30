@@ -1,10 +1,11 @@
 import './RecordSearch.scss';
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom"
 import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
 // import { Card } from 'react-bootstrap'
 
-const RecordSearch = ({records, handleAddRecord}) => {
+const RecordSearch = ({records, handleAddRecord, handleRemoveRecord,  profile}) => {
   const [searchResults, setSearchResults] = useState([])
   const [artistResults, setArtistResults] = useState([])
 
@@ -44,7 +45,11 @@ const RecordSearch = ({records, handleAddRecord}) => {
                   </div>
                   <div className='overlay-text'>
                     <h3>{record.title}</h3>
-                    <p>click here</p>
+                    <p><Link
+                      to='/artist'
+                      state={{record}}
+                      className='card-link'>
+                      click here</Link></p>
                   </div>
                 </div>
               </div>
@@ -62,11 +67,16 @@ const RecordSearch = ({records, handleAddRecord}) => {
                   </div>
                   <div className='overlay-text'>
                     <h3>{record.title}</h3>
-                    <p>click here</p>
+                    <p><Link
+                      to='/artist'
+                      state={{record}}
+                      className='card-link'>
+                      click here</Link></p>
                   </div>
                 </div>
-                {/* <button onClick={() => handleAddRecord(record)}
-      className="btn">Add to Collection</button> */}
+                <button onClick={() => handleAddRecord(record)} profile={profile}
+                className="btn">Add to Collection</button>  
+                <button onClick={() => handleRemoveRecord(profile.records._id)} profile={profile} className="btn">Remove</button>  
               </div>
           )}
           </div>
