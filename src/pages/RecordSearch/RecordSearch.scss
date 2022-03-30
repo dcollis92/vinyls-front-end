@@ -1,8 +1,15 @@
 .section-header {
-  margin-top: 5%;
-  margin-bottom: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  // border: 3px solid #293845;
+  border-radius: 10%;
 }
 
+.results-header {
+  margin-top: 5%;
+  
+  justify-content: center;
+}
 
 .single-record {
   position: relative;
