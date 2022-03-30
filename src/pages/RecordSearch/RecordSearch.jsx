@@ -25,7 +25,7 @@ const RecordSearch = ({records, handleAddRecord}) => {
       <div className='search-display container'>
         <div className='row'>
           <div className='col-md-12'>
-            <div className='section-header text-center'>
+            <div className='results-header text-center'>
               <h1>Search Results</h1>
             </div>
           </div>

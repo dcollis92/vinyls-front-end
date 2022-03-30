@@ -69,8 +69,12 @@ const NavBar = (props) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/login">Log In</Nav.Link>
-            <Nav.Link href="/signup">Sign Up</Nav.Link>
+            <Nav.Link href="/login">
+            <i class="fas fa-key"></i>
+            {' '}Log In</Nav.Link>
+            <Nav.Link href="/signup">
+            <i class="fas fa-user-plus"></i>
+            {' '}Sign Up</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         </Container>
