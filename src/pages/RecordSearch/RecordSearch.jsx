@@ -42,8 +42,10 @@ const RecordSearch = ({records}) => {
                   </div>
                 </div>
                 <div className='overlay-text'>
-                  <h3>{record.title}</h3>
+                  <h3> {record.title} </h3>
                 </div>
+                {/* <button onClick={() => handleAddRecord(record)}
+      className="btn">Add to Collection</button> */}
               </div>
             </div> 
           )}
@@ -60,11 +62,12 @@ const RecordSearch = ({records}) => {
                   <h3>{record.title}</h3>
                 </div>
               </div>
+              <div className="w-100"></div>
             </div> 
           )}
         </>
         :
-        <h2>No Matching Records</h2>
+        <h2 className='text-center'>No Matching Records</h2>
       
       }
         
