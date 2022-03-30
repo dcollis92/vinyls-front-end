@@ -13,15 +13,16 @@ const Record = ({record, handleRemoveRecord, handleAddRecord, profile}) => {
         className='card-link'>
         <img src={record.cover_image} alt="" />
       </Link>            
-      <>
-      {/* <button onClick={() => handleAddRecord(record)} profile={profile}
-        className="btn">Add to Collection</button> */}
-      {/* {profile.records.some(profileRecord => profileRecord.master_id === record.master_id) 
-      ?
-        <button onClick={() => handleRemoveRecord(record.master_id)} profile={profile} className="btn">Remove</button>
-      :
-        
-      }   */}
+      <>   
+{/*       
+      {profile.records.some(profileRecord => profileRecord.master_id === record.master_id) 
+      ? */}
+      <button onClick={() => handleRemoveRecord(profile.records._id)} profile={profile} className="btn">Remove</button>  
+      
+      <button onClick={() => handleAddRecord(record)} profile={profile}
+        className="btn">Add to Collection</button>  
+      {/* } */}
+
       </>
       </div>      
     </>

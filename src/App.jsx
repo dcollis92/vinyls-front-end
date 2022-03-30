@@ -72,8 +72,8 @@ const App = () => {
     })
   }
 
-  const handleRemoveRecord = master_id => {
-    profileService.removeRecord(master_id)
+  const handleRemoveRecord = recordsId => {
+    profileService.removeRecord(recordsId)
     .then(updatedProfile => {
       setProfile(updatedProfile)
     })
