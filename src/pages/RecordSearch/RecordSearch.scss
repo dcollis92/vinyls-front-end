@@ -3,36 +3,35 @@
   margin-bottom: 5%;
 }
 
-.result-container {
-  border: 2px solid black;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center
-}
+// .result-container {
+//   border: 2px solid black;
+//   width: 100%;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-around;
+//   align-items: center
+// }
 
-.result-container div {
-  margin: 10px;
+// .result-container div {
+//   margin: 10px;
   
-}
+// }
 
 .single-record {
   position: relative;
   overflow: hidden;
-  max-width: 500px;
-  max-height: 500px;
   transition: all 0.3s ease;
-  object-fit: contain;
   padding: 5px;
-  background-position: center center;
-  background-repeat: no-repeat;
+  // max-width: 500px;
+  // max-height: 500px;
+  // object-fit: contain;
+  // background-position: center center;
+  // background-repeat: no-repeat;
 }
 
 .record-img {
-  object-fit: contain;
   position: relative;
-  
+  // object-fit: contain;
 }
 
 .record-img:before {
@@ -49,10 +48,10 @@
   width: 100%;
 }
 
-// .single-record:hover .record-img:before {
-//   visibility: visible;
-//   transform: translateY(0%);
-// }
+.single-record:hover .record-img:before {
+  visibility: visible;
+  transform: translateY(0%);
+}
 
 .record-img img {
 width: 100%;
@@ -64,10 +63,10 @@ transition: 0.9s
   // transform: scale(1.1);
 }
 
-.overlay-text {
+.overlay-text:before {
   position: absolute;
   z-index: 15;
-  color: black;
+  color: #293845;
   top: 30%;
   text-align: center;
   padding-left: 30px;
@@ -76,7 +75,6 @@ transition: 0.9s
   transition: all 0.4s ease;
   // font-family: 'Futura-Std';
 }
-
 
 .single-record:hover .overlay-text {
   opacity: 1;
@@ -87,27 +85,23 @@ transition: 0.9s
   text-transform: uppercase;
   // font-weight: 600;
   transition: all 1s ease;
-  font-size: 30px;
-  margin: 5px 0 15px;
+  // font-size: 30px;
+  // margin: 5px 0 15px;
   position: relative;
-  top: -22px;
+  top: -100px;
 }
 
 .single-record:hover h3 {
   top: 0;
-  .overlay-text {
-    top: 0;
-  }
 }
 
-.overlay-text h3 {
-  opacity: 1;
+.overlay-text {
   position: relative;
-  bottom: -22px;
-  margin: 0 auto;
+  // bottom: -22px;
   transition: all 1s ease;
+  // margin: 0 auto;
 }
 
-.single-record:hover p {
+.single-record:hover {
   bottom: 0
 }
