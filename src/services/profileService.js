@@ -32,7 +32,7 @@ function addRecord(record) {
 function removeRecord(recordsId) {
   console.log(recordsId)
   return fetch(`${BASE_URL}/${recordsId}`, {
-    method: "PATCH",
+    method: "DELETE",
     headers: {
       'Authorization': `Bearer ${tokenService.getToken()}`,
       }    
