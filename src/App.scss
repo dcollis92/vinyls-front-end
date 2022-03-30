@@ -23,3 +23,10 @@ body {
 h1 {
   font-style: italic;
 }
+
+@media screen
+and (max-device-width: 930px) {
+  body {
+    font-size: 0.8rem;
+  }
+}
