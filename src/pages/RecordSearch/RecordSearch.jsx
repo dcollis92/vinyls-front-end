@@ -37,18 +37,17 @@ const RecordSearch = ({records, handleAddRecord}) => {
           </div>
           <div className='row'>
           {artistResults.map(record =>
-            // <div className=''>
               <div className='col-md-4 col-sm-6 col-xs-12'>
                 <div className='single-record'>
                   <div className='record-img'>
                     <Artist key={record.title} record={record} />
                   </div>
-                </div>
-                <div className='overlay-text'>
-                  <h3> {record.title} </h3>
+                  <div className='overlay-text'>
+                    <h3>{record.title}</h3>
+                    <p>click here</p>
+                  </div>
                 </div>
               </div>
-            // </div> 
           )}
           </div>
           <div className='section-header text-center'>
@@ -56,20 +55,19 @@ const RecordSearch = ({records, handleAddRecord}) => {
           </div>
           <div className='row'>
           {searchResults.map(record =>
-            // <div className=''>
               <div className='col-md-4'>
                 <div className='single-record'>
-                  <div className='record-img'>
+                  <div className='record-img '>
                     <Record key={record.title} record={record} handleAddRecord={handleAddRecord}/>
                   </div>
-                </div>
-                <div className='overlay-text'>
-                  <h3>{record.title}</h3>
+                  <div className='overlay-text'>
+                    <h3>{record.title}</h3>
+                    <p>click here</p>
+                  </div>
                 </div>
                 {/* <button onClick={() => handleAddRecord(record)}
       className="btn">Add to Collection</button> */}
               </div>
-            // </div> 
           )}
           </div>
         </>
