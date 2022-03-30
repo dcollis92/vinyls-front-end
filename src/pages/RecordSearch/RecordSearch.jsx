@@ -32,10 +32,13 @@ const RecordSearch = ({records}) => {
         </div>
           {records.length ?
         <>
+          <div className='section-header text-center'>
           <h2>Artists</h2>
+          </div>
+          <section className='result-container'>
           {artistResults.map(record =>
-            <div className='row'>
-              <div className='col-md-4 col-sm-6 col-xs-12'>
+            // <div className=''>
+              <div className=''>
                 <div className='single-record'>
                   <div className='record-img'>
                     <Artist key={record.title} record={record} />
@@ -47,24 +50,28 @@ const RecordSearch = ({records}) => {
                 {/* <button onClick={() => handleAddRecord(record)}
       className="btn">Add to Collection</button> */}
               </div>
-            </div> 
+            // </div> 
           )}
+          </section>
+          <div className='section-header text-center'>
           <h2>Records</h2>
+          </div>
+          <section className='result-container'>
           {searchResults.map(record =>
-            <div className='row'>
-              <div className='col-md-4 col-sm-6 col-xs-12'>
+            // <div className=''>
+              <div className=''>
                 <div className='single-record'>
                   <div className='record-img'>
                     <Record key={record.title} record={record} />
                   </div>
                 </div>
                 <div className='overlay-text'>
-                  <h3>{record.title}</h3>
+                  <h3>Hello</h3>
                 </div>
               </div>
-              <div className="w-100"></div>
-            </div> 
+            // </div> 
           )}
+          </section>
         </>
         :
         <h2 className='text-center'>No Matching Records</h2>
