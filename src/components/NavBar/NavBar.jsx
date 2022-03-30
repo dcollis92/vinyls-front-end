@@ -32,10 +32,10 @@ const NavBar = (props) => {
           <Nav className="me-auto">
             <Nav.Link href="/recordlist">
               <i className="fas fa-record-vinyl"></i> 
-              {' '}Records</Nav.Link>
+              {' '}My Record Collection</Nav.Link>
             <Nav.Link href="/profiles">
               <i className="fas fa-user"></i>
-              {' '}Profiles</Nav.Link>
+              {' '}Other Profiles</Nav.Link>
             <Nav.Link href="/changePassword">
               <i className="fas fa-unlock"></i>
               {' '}Change Password</Nav.Link>
