@@ -30,7 +30,7 @@ const NavBar = (props) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/recordlist">
+            <Nav.Link href="/usercollection">
               <i className="fas fa-record-vinyl"></i> 
               {' '}My Record Collection</Nav.Link>
             <Nav.Link href="/profiles">
