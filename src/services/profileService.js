@@ -29,9 +29,9 @@ function addRecord(record) {
   .then(res => res.json())
 }
 
-function removeRecord(recordsId) {
-  console.log(recordsId)
-  return fetch(`${BASE_URL}/${recordsId}`, {
+function removeRecord(recordId) {
+  console.log(recordId)
+  return fetch(`${BASE_URL}/${recordId}`, {
     method: "PATCH",
     headers: {
       'Authorization': `Bearer ${tokenService.getToken()}`,

@@ -36,10 +36,10 @@
   width: 100%;
 }
 
-.single-record:hover .record-img:before {
-   visibility: visible;
-   transform: translateY(0%);
- }
+// .single-record:hover .record-img:before {
+//    visibility: visible;
+//    transform: translateY(0%);
+//  }
 
 .record-img img {
 width: 100%;
@@ -60,10 +60,10 @@ transition: 0.9s
   transition: all 0.4s ease;
 }
 
-.single-record:hover .overlay-text {
-  opacity: 1;
-  visibility: visible;
-}
+// .single-record:hover .overlay-text {
+//   opacity: 1;
+//   visibility: visible;
+// }
 
 .overlay-text h3 {
   text-transform: uppercase;
