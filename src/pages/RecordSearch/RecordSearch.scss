@@ -1,15 +1,87 @@
-img {
-  max-width: 250px;
-  max-height: 250px;
-}
-
 .section-header {
+  margin-top: 10%;
   margin-bottom: 5%;
 }
 
 .single-record {
   position: relative;
   overflow: hidden;
-  
+  transition: all 0.3s ease;
 }
 
+.record-img {
+  // max-width: 250px;
+  // max-height: 250px;
+  position: relative;
+}
+
+.record-img:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  transform: translateX(-100%);
+  transition: all 0.4s ease;
+  visibility: hidden;
+  content: '';
+  background: rgba(223,230,237,0.9);
+  height: 100%;
+  width: 100%;
+}
+
+.single-record:hover .record-img:before {
+  visibility: visible;
+  transform: translateY(0%);
+}
+
+.record-img img {
+width: 100%;
+z-index: 10;
+transition: 0.9s
+}
+
+.single-record:hover img {
+  // transform: scale(1.1);
+}
+
+.overlay-text {
+  position: absolute;
+  z-index: 15;
+  color: white;
+  top: 30%;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  opacity: 0;
+  transform: all 0.4s ease;
+  // font-family: 'Futura-Std';
+}
+
+.single-record:hover .overlay-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay-text h3 {
+  text-transform: uppercase;
+  // font-weight: 600;
+  transition: all 1s ease;
+  font-size: 30px;
+  margin: 5px 0 15px;
+  position: relative;
+  top: -22px;
+}
+
+.single-record:hover h3 {
+  top: 0;
+}
+
+.overlay-text p {
+  position: relative;
+  bottom: -22px;
+  transition: all 1s ease;
+}
+
+.single-record:hover p {
+  bottom: 0
+}
