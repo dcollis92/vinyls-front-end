@@ -10,7 +10,7 @@ const UserCollection = ({records, handleRemoveRecord, handleAddRecord, profile})
   console.log(profile.records)
 
   
-
+  
 
   return (
     <>
@@ -20,15 +20,17 @@ const UserCollection = ({records, handleRemoveRecord, handleAddRecord, profile})
         <div className=''>
           {profile?.records?.map(record =>
           <>
-          <Record handleRemoveRecord={handleRemoveRecord} profile={profile} handleAddRecord={handleAddRecord} key={record.id} id={record._id} record={record}/>  
-          <Button onClick={() => handleRemoveRecord(profile._id, record._id)} profile={profile} variant="outline-success">Remove</Button>          
+          <Record handleRemoveRecord={handleRemoveRecord} profile={profile} key={record.id} id={record._id} record={record}/>
+            
+          <Button onClick={() => handleRemoveRecord=(profile._id, record._id)} profile={profile} key={record.id} id={record._id} record={record}variant="outline-success">Remove</Button>          
           </>
           )}
+          
         </div>
         
       </div>  
     </>
-  );
+  ); 
 }
 
 export default UserCollection;
