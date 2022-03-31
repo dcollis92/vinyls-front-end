@@ -22,6 +22,7 @@ const App = () => {
   const navigate = useNavigate()
   const [records, setRecords] = useState([])
   const [search, setSearch] = useState({query: ''})
+  const [dbRecords, setDbRecords] = useState([])
 
   useEffect(() => {
     if (user) {
@@ -32,16 +33,18 @@ const App = () => {
     }
   }, [user])
 
+  
+
   // const handleRecordSearch = () => {
   //   recordService.getAllRecords(search.query)
   //   .then(recordResults => setRecords(recordResults.results))
   // }
 
-  // useEffect(queryString => {
-  //   console.log('hitting UE');
-  //   recordService.getAllRecords(queryString)
-  //   .then(recordResults => setRecords(recordResults.results))
-  // }, [])
+  useEffect(() => {
+    console.log('yaya it eworkds');
+    recordService.getRecordsDb()
+    .then(recordDbResults => setDbRecords(recordDbResults))
+  }, [])
 
   const handleSetSearch = evt => {
     console.log('hitting handlesetsearch');
