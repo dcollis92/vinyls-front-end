@@ -14,11 +14,16 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile}) => {
   return (
     <main className='record-details'>
       <div className='album-display row'>
-        <h2 className='text-center'>Album Details</h2>
-        <div className='cover-display col'>
-          <div className='album-cover'>
-            <Record key={record.title} record={record} handleAddRecord={handleAddRecord} handleRemoveRecord={handleRemoveRecord} profile={profile} />
+        <h1 className='album-header text-center'>
+          Album Details
+        </h1>
+        <div className='cover-display col-lg text-center'>
+          <div className='single-record'>
+            <div className='record-img'>
+              <Record key={record.title} record={record} handleAddRecord={handleAddRecord} handleRemoveRecord={handleRemoveRecord} profile={profile} />
+            </div>
           </div>
+          <div className='star-rating'></div>
           <div className='buttons'>
             <Button onClick={() => handleAddRecord(record)} 
               profile={profile} variant="outline-success">
@@ -27,28 +32,45 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile}) => {
               (profile.records._id)} profile={profile} variant="outline-success">Remove</Button> */}
           </div>
         </div>
-        <div className='details-display col'>
+        <div className='details-display col-lg'>
           <div className='categories'>
-            <h3>Artist</h3>
-            <h3>Album</h3>
-            <h3>Year</h3>
-            <h3>Label</h3>
-            <h3>Track Listing</h3>
+            <div className='artist'>
+              <h3>Artist</h3>
+            </div>
+            <div className='album'>
+              <h3>Album</h3>
+            </div>
+            <div className='year'>
+              <h3>Year</h3>
+            </div>
+            <div className='label'>
+              <h3>Label</h3>
+            </div>
+            <div className='tracklist'>
+              <h3>Tracklist</h3>
+            </div>
           </div>
           <div className='release-info'>
-            <h3>Black Sabbath</h3>
-            <h3>Black Sabbath</h3>
-            <h3>1970</h3>
-            <h3>Warner Bros</h3>
-            <h3>Track Listing</h3>
-              <ul>
-                <li>Black Sabbath</li>
-                <li>The Wizard</li>
-                <li>N.I.B.</li>
-                <li>Evil Woman</li>
-                <li>Sleeping Village</li>
-                <li>Warning</li>
-              </ul>
+            <div className='artist'>
+              <h3>Black Sabbath</h3>
+            </div>
+            <div className='album'>
+              <h3>Album</h3>
+            </div>
+            <div className='year'>
+              <h3>1970</h3>
+            </div>
+            <div className='label'>
+              <h3>Warner Bros</h3>
+            </div>
+            <div className='tracklist'>
+              <h6>Black Sabbath</h6>
+              <h6>The Wizard</h6>
+              <h6>N.I.B.</h6>
+              <h6>Evil Woman</h6>
+              <h6>Sleeping Village</h6>
+              <h6>Warning</h6>
+            </div>  
           </div>
         </div>
       </div>
