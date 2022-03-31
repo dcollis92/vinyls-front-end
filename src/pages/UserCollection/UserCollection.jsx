@@ -13,11 +13,16 @@ const UserCollection = ({records, handleRemoveRecord, handleAddRecord, profile})
   
 
   return (
-    <>
-      <h2>Record Collection</h2>
-      <div>
-  
-        <div className=''>
+    <main>
+      <div className='user-collection container'>
+        <div className='row'>
+          <div className='col-md-12'>
+            <div className='results-header text-center'>
+              <h1>Record Collection</h1>
+            </div>
+          </div>
+        </div>
+        <div className='row'>
           {profile?.records?.map(record =>
           <>
           <Record handleRemoveRecord={handleRemoveRecord} profile={profile} key={record.id} id={record._id} record={record}/>
@@ -25,11 +30,10 @@ const UserCollection = ({records, handleRemoveRecord, handleAddRecord, profile})
           <Button onClick={() => handleRemoveRecord=(profile._id, record._id)} profile={profile} key={record.id} id={record._id} record={record}variant="outline-success">Remove</Button>          
           </>
           )}
-          
         </div>
-        
-      </div>  
-    </>
+    
+      </div> 
+    </main>
   ); 
 }
 

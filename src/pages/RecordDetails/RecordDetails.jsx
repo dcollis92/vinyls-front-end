@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom'
 import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
+import StarRating from '../../components/StarRating/StarRating';
 
 
 const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile}) => {
@@ -17,52 +18,49 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile}) => {
         <h1 className='album-header text-center'>
           Album Details
         </h1>
-        <div className='cover-display col-lg text-center'>
+        <div className='cover-display col-md text-center'>
           <div className='single-record'>
             <div className='record-img'>
               <Record key={record.title} record={record} handleAddRecord={handleAddRecord} handleRemoveRecord={handleRemoveRecord} profile={profile} />
             </div>
           </div>
-          <div className='star-rating'></div>
           <div className='buttons'>
-            <Button onClick={() => handleAddRecord(record)} 
-              profile={profile} variant="outline-success">
-              Add to Collection</Button>
-            {/* <Button onClick={() => handleRemoveRecord
-              (profile.records._id)} profile={profile} 
-              variant="outline-success">Remove</Button> */}
+              <StarRating />
+              <Button onClick={() => handleAddRecord(record)} 
+                profile={profile} variant="outline-success">
+                Add to Collection</Button>
           </div>
         </div>
-        <div className='details-display col-lg'>
+        <div className='details-display col-md'>
           <div className='categories'>
             <div className='artist'>
-              <h3>Artist</h3>
+              <h4>Artist</h4>
             </div>
             <div className='album'>
-              <h3>Album</h3>
+              <h4>Album</h4>
             </div>
             <div className='year'>
-              <h3>Year</h3>
+              <h4>Year</h4>
             </div>
             <div className='label'>
-              <h3>Label</h3>
+              <h4>Label</h4>
             </div>
             <div className='tracklist'>
-              <h3>Tracklist</h3>
+              <h4>Tracklist</h4>
             </div>
           </div>
           <div className='release-info'>
             <div className='artist'>
-              <h3>Black Sabbath</h3>
+              <h4>Black Sabbath</h4>
             </div>
             <div className='album'>
-              <h3>Album</h3>
+              <h4>Album</h4>
             </div>
             <div className='year'>
-              <h3>1970</h3>
+              <h4>1970</h4>
             </div>
             <div className='label'>
-              <h3>Warner Bros</h3>
+              <h4>Warner Bros</h4>
             </div>
             <div className='tracklist'>
               <h6>Black Sabbath</h6>
