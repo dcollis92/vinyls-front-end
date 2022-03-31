@@ -33,8 +33,6 @@ const App = () => {
     }
   }, [user])
 
-  
-
   // const handleRecordSearch = () => {
   //   recordService.getAllRecords(search.query)
   //   .then(recordResults => setRecords(recordResults.results))

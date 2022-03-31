@@ -1,5 +1,5 @@
 import './RecordDetails.scss';
-import { Button } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom'
 import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
@@ -25,10 +25,18 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile}) => {
             </div>
           </div>
           <div className='buttons'>
-              <StarRating />
-              <Button onClick={() => handleAddRecord(record)} 
-                profile={profile} variant="outline-success">
-                Add to Collection</Button>
+            <Button 
+              onClick={() => handleAddRecord (record)} 
+              profile={profile} variant="outline-success">
+              Add to Collection</Button>
+            <StarRating  />
+            <Form>
+                <Form.Group className="mb-3" 
+                  controlId="review-form">
+                  <Form.Label>Add Review</Form.Label>
+                  <Form.Control as="textarea" rows={3} placeholder="this record rules..."/>
+                </Form.Group>
+              </Form>
           </div>
         </div>
         <div className='details-display col-md'>

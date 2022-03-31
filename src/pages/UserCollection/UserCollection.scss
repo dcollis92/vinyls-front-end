@@ -116,6 +116,13 @@
   }
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Portrait */
 // @media only screen 
 //   and (min-device-width: 320px) 
