@@ -30,9 +30,9 @@ function addRecord(record) {
 }
 
 
-function removeRecord(profileId, recordsId) {
-  console.log(profileId, recordsId)
-  return fetch(`${BASE_URL}/${profileId}/${recordsId}`, {
+function removeRecord(profileId, recordId) {
+  console.log(profileId, recordId)
+  return fetch(`${BASE_URL}/${profileId}/${recordId}`, {
     method: "DELETE",
     headers: {
       'Authorization': `Bearer ${tokenService.getToken()}`,

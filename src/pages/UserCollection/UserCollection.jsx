@@ -6,9 +6,8 @@ import Record from '../../components/Record/Record'
 
 const UserCollection = ({records, handleRemoveRecord, handleAddRecord, profile}) => {
   
-  console.log(profile)
-  console.log(profile.records)
-
+  console.log(profile._id)
+  
   
   
 
@@ -22,7 +21,7 @@ const UserCollection = ({records, handleRemoveRecord, handleAddRecord, profile})
           <>
           <Record handleRemoveRecord={handleRemoveRecord} profile={profile} key={record.id} id={record._id} record={record}/>
             
-          <Button onClick={() => handleRemoveRecord=(profile._id, record._id)} profile={profile} key={record.id} id={record._id} record={record}variant="outline-success">Remove</Button>          
+          <Button onClick={() => handleRemoveRecord(profile._id, record._id)} profile={profile} variant="outline-success">Remove</Button>          
           </>
           )}
           
