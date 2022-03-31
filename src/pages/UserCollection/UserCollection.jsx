@@ -18,6 +18,7 @@ const UserCollection = ({handleRemoveRecord}) => {
   }, [])
 
   return (
+
     currProfile?
     <>
       <h2>Record Collection</h2>
@@ -25,6 +26,7 @@ const UserCollection = ({handleRemoveRecord}) => {
         <Profile key={currProfile.name} />
         <h2>{currProfile.name}</h2>
         <h2>{currProfile?.records?.map(record =>
+
           <>
           <Record handleRemoveRecord={handleRemoveRecord} profile={currProfile} key={record.id} id={record._id} record={record}/>
           
@@ -38,6 +40,7 @@ const UserCollection = ({handleRemoveRecord}) => {
     <>
     <div>loading....</div>
     </>
+
   ); 
 }
 

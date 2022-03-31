@@ -1,4 +1,5 @@
 
+
 .record-details {
   padding: 10%;
   
@@ -16,7 +17,6 @@
   .single-record {
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
     padding: 5px;
     border-radius: 5%;
   }
@@ -30,8 +30,6 @@
     top: 0;
     left: 0;
     z-index: 11;
-    transform: translateY(-100%);
-    transition: all 0.4s ease;
     visibility: hidden;
     content: '';
     background: rgba(223,230,237,0.9);
@@ -41,7 +39,6 @@
 
   .single-record:hover .record-img:before {
     visibility: visible;
-    transform: translateX(0%);
     border-radius: 5%;
   }
 
@@ -50,7 +47,6 @@
     border: 5px solid #9eadba;
     width: 100%;
     z-index: 10;
-    transition: 0.9s
   }
 
   .single-record:hover {
@@ -62,7 +58,6 @@
   .overlay-text h3 {
     text-transform: uppercase;
     font-weight: 600;
-    transition: all 1s ease;
     margin: 5px 0 15px;
     position: relative;
     top: -22px;
@@ -99,10 +94,11 @@
 .categories {
   display: inline-grid;
   text-align: end;
+  text-overflow: ellipsis;
   width: 50%;
   height: 100%;
   padding-right: 10px;
-  border-right: 5px solid #293845;
+  border-right: 3px solid #293845;
   .artist, .album, .year, .label {
     height: 5vw;
     justify-content: end;
@@ -110,7 +106,7 @@
     display: flex;
   }
   .tracklist {
-    height: 15vw;
+    height: 25vw;
   }
 }
 
@@ -120,14 +116,21 @@
   width: 50%;
   height: 100%;
   padding-left: 10px;
-  border-left: 5px solid #293845;
+  border-left: 3px solid #293845;
   .artist, .album, .year, .label {
     height: 5vw;
     align-items: center;
     display: flex;
   }
   .tracklist {
-    height: 15vw;
+    height: 25vw;
     padding: 3px;
   }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
