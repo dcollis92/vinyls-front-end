@@ -19,15 +19,15 @@ function getRecordDetails(id) {
    .then(res => res.json())
  }
 
-function addComment(recordCommentId) {
-  console.log(recordCommentId)
-  return fetch(`${BASE_URL}/addComment`, {
+function addComment(recordId, comment) {
+  console.log(recordId, comment)
+  return fetch(`${BASE_URL}/${recordId}/comments`, {
     method: "POST",
     headers: {
       'Authorization': `Bearer ${tokenService.getToken()}`,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(recordCommentId)
+    body: JSON.stringify(comment)
   })
   .then(res => res.json())
 }

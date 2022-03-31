@@ -6,7 +6,7 @@ import Artist from '../../components/Artist/Artist';
 import StarRating from '../../components/StarRating/StarRating';
 
 
-const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile}) => {
+const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddComment}) => {
 
   const location = useLocation()
   const record = location.state.record
