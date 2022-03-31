@@ -60,30 +60,30 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord, profile}) =
           <h2>Records</h2>
           </div>
           <div className='row'>
-          {searchResults.map(record =>
+            {searchResults.map(record =>
               <div className='col-md-4 col-sm-6 col-xs-12 text-center'>
                 <div className='single-record'>
-                  <div className='record-img '>
+                  <div className='record-img'>
                     <Record key={record.title} record={record} handleAddRecord={handleAddRecord}
-                    handleRemoveRecord={handleRemoveRecord}
-                    />
+                    handleRemoveRecord={handleRemoveRecord}/>
                   </div>
                   <div className='overlay-text'>
                     <h3>{record.title}</h3>
-                    <p><Link
-                      to='/record'
-                      state={{record}}
-                      className='card-link'>
-                      click here</Link></p>
+                      <p>
+                        <Link to='/record'
+                        state={{record}}
+                        className='card-link'>
+                        click here</Link>
+                      </p>
                   </div>
                 </div>
                 <Button onClick={() => handleAddRecord(record)} 
                   profile={profile} variant="outline-success">
                   Add to Collection</Button>
                 <Button onClick={() => handleRemoveRecord
-                (profile.records._id)} profile={profile} variant="outline-success">Remove</Button>  
+                  (profile.records._id)} profile={profile} variant="outline-success">Remove</Button>  
               </div>
-          )}
+            )}
           </div>
         </>
         :
