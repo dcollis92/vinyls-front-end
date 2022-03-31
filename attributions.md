@@ -20,17 +20,17 @@ Information can be found at [Discogs API](https://www.discogs.com/developers).
 STYLE TO-DO:
 Album Details:
 >>>>div 1: album cover
-    - div-image
-    - div-star rating
-    - div-buttons
+- [x] div-image
+- div-star rating
+- [x] div-buttons
     
 >>>>div 2: details
     display:
-      - arist
-      - Album
-      - year
-      - label
-      - track listing
+- [x] arist
+- [x] Album
+- [x] year
+- [x] label
+- [x] track listing
       
 User's Collection:
 Same style as Search Results
