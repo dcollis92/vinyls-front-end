@@ -1,24 +1,133 @@
-.record details {
+
+.record-details {
+  padding: 10%;
+  
+  .section-header {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 10%;
+  }
+
+  .album-header {
+    margin-bottom: 5%;
+    justify-content: center;
+  }
+
+  .single-record {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 5%;
+  }
+
+  .record-img {
+    position: relative;
+  }
+
+  .record-img:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    transform: translateY(-100%);
+    transition: all 0.4s ease;
+    visibility: hidden;
+    content: '';
+    background: rgba(223,230,237,0.9);
+    height: 100%;
+    width: 100%;
+  }
+
+  .single-record:hover .record-img:before {
+    visibility: visible;
+    transform: translateX(0%);
+    border-radius: 5%;
+  }
+
+  .record-img img {
+    border-radius: 5%;
+    border: 5px solid #9eadba;
+    width: 100%;
+    z-index: 10;
+    transition: 0.9s
+  }
+
+  .single-record:hover {
+    opacity: 1;
+    visibility: visible;
+    border-radius: 5%;
+  }
+
+  .overlay-text h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 1s ease;
+    margin: 5px 0 15px;
+    position: relative;
+    top: -22px;
+  }
+
+  .single-record:hover  {
+    top: 0;
+  }
+
+  .single-record:hover p {
+    bottom: 0
+  }
+
+  input, button, link {
+    font-family: 'Futura Std';
+    font-style: italic;
+    border: 2px solid #9eadba;
+    color: #293845;
+    margin: 2%;
+  }
+
+  .btn-outline-success {
+    border: 2px solid #9eadba;
+  }
+
+  .btn-outline-success:hover {
+    background-color: #293845;
+    border: 2px solid #9eadba;
+    color: #dfe6ed;
+  }
   
 }
 
-div {
-  border: solid 2px black;
+.categories {
+  padding: 5px;
+  display: inline-grid;
+  text-align: end;
+  width: 50%;
+  height: 100%;
+  border-right: 5px solid #293845;
+  .artist, .album, .year, .label {
+    height: 5vw;
+    justify-content: end;
+    align-items: center;
+    display: flex;
+  }
+  .tracklist {
+    height: 15vw;
+  }
 }
 
-input, button, link {
-  font-family: 'Futura Std';
-  font-style: italic;
-  border: 2px solid #9eadba;
-  color: #293845;
-}
-
-.btn-outline-success {
-  border: 2px solid #9eadba;
-}
-
-.btn-outline-success:hover {
-  background-color: #293845;
-  border: 2px solid #9eadba;
-  color: #dfe6ed;
+.release-info {
+  padding: 5px;
+  display: inline-grid;
+  text-align: start;
+  width: 50%;
+  height: 100%;
+  border-left: 5px solid #293845;
+  .artist, .album, .year, .label {
+    height: 5vw;
+    align-items: center;
+    display: flex;
+  }
+  .tracklist {
+    height: 15vw;
+    padding: 3px;
+  }
 }
