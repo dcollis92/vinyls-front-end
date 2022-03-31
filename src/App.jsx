@@ -81,6 +81,15 @@ const App = () => {
       setProfile(updatedProfile)
     })
   }
+
+  const handleAddComment = (recordId, comment) => {
+    recordService.addComment(recordId, comment)
+    .then(updatedRecord => {
+      setDbRecords(updatedRecord)
+    })
+  }
+
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout}
@@ -117,6 +126,7 @@ const App = () => {
         records={records} 
         profile={profile}         
         handleAddRecord={handleAddRecord} handleRemoveRecord={handleRemoveRecord}
+        handleAddComment={handleAddComment}
         />} /> 
         <Route path="/artist"
         element={<ArtistDetails records={records} 

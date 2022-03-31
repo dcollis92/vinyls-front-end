@@ -6,7 +6,7 @@ import Artist from '../../components/Artist/Artist';
 import StarRating from '../../components/StarRating/StarRating';
 
 
-const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile}) => {
+const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddComment}) => {
 
   const location = useLocation()
   const record = location.state.record
@@ -30,11 +30,12 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile}) => {
               profile={profile} variant="outline-success">
               Add to Collection</Button>
             <StarRating  />
-            <Form>
+            <Form >
                 <Form.Group className="mb-3" 
                   controlId="review-form">
                   <Form.Label>Add Review</Form.Label>
-                  <Form.Control as="textarea" rows={3} placeholder="this record rules..."/>
+                  <Form.Control as="textarea" rows={3} placeholder="this record rules..."
+                  />
                 </Form.Group>
               </Form>
           </div>
