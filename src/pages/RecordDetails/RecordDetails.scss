@@ -97,11 +97,11 @@
 }
 
 .categories {
-  padding: 5px;
   display: inline-grid;
   text-align: end;
   width: 50%;
   height: 100%;
+  padding-right: 10px;
   border-right: 5px solid #293845;
   .artist, .album, .year, .label {
     height: 5vw;
@@ -115,11 +115,11 @@
 }
 
 .release-info {
-  padding: 5px;
   display: inline-grid;
   text-align: start;
   width: 50%;
   height: 100%;
+  padding-left: 10px;
   border-left: 5px solid #293845;
   .artist, .album, .year, .label {
     height: 5vw;
