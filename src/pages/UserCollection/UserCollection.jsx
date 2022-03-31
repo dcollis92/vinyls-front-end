@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 import Record from '../../components/Record/Record'
 
 const UserCollection = ({records, handleRemoveRecord, handleAddRecord, profile}) => {
-  console.log(profile)
+
+console.log(profile.records)
 
   return (
     <>
@@ -11,7 +12,7 @@ const UserCollection = ({records, handleRemoveRecord, handleAddRecord, profile})
   
         <div className=''>
           {profile.records.map(record =>
-            <Record handleRemoveRecord={handleRemoveRecord} profile={profile} handleAddRecord={handleAddRecord} key={record.id} record={record}/>  
+            <Record handleRemoveRecord={handleRemoveRecord} profile={profile} handleAddRecord={handleAddRecord} key={record.id} id={record._id} record={record}/>  
           )}
         </div>
     </>

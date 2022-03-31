@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom"
 
 
-const Record = ({record, handleRemoveRecord, handleAddRecord, profile}) => {
+const Record = ({record, handleRemoveRecord, handleAddRecord, profile, id}) => {
 
+
+
+  console.log(profile);
   
+
   return (
     <>
       <div className="record">
@@ -17,7 +21,7 @@ const Record = ({record, handleRemoveRecord, handleAddRecord, profile}) => {
 {/*       
       {profile.records.some(profileRecord => profileRecord.master_id === record.master_id) 
       ? */}
-      <button onClick={() => handleRemoveRecord(profile.records._id)} profile={profile} className="btn">Remove</button>  
+      <button onClick={() => handleRemoveRecord(profile._id, id)} profile={profile} className="btn">Remove</button>  
       
       <button onClick={() => handleAddRecord(record)} profile={profile}
         className="btn">Add to Collection</button>  

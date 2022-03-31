@@ -4,7 +4,7 @@ import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
 // import { Card } from 'react-bootstrap'
 
-const RecordSearch = ({records, handleAddRecord}) => {
+const RecordSearch = ({records, handleAddRecord, handleRemoveRecord, profile}) => {
   const [searchResults, setSearchResults] = useState([])
   const [artistResults, setArtistResults] = useState([])
 
@@ -58,7 +58,9 @@ const RecordSearch = ({records, handleAddRecord}) => {
               <div className='col-md-4'>
                 <div className='single-record'>
                   <div className='record-img '>
-                    <Record key={record.title} record={record} handleAddRecord={handleAddRecord}/>
+                    <Record key={record.title} record={record} handleAddRecord={handleAddRecord}
+                    handleRemoveRecord={handleRemoveRecord}
+                    />
                   </div>
                   <div className='overlay-text'>
                     <h3>{record.title}</h3>
