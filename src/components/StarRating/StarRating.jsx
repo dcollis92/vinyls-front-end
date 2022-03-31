@@ -1,8 +1,6 @@
 import './StarRating.scss';
 
-
 // <!-- Pure CSS Star Widget -->
-
 const StarRating = (props) => {
 
   return (
