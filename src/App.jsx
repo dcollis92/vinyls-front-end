@@ -121,7 +121,8 @@ const App = () => {
         element={<ArtistDetails records={records} 
         />}/>   
         <Route path="/usercollection"
-        element={<UserCollection records={records} 
+        element={<UserCollection records={records}
+        user={user} 
         profile={profile}
         handleRemoveRecord={handleRemoveRecord}
         handleAddRecord={handleAddRecord} 

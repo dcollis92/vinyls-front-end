@@ -29,7 +29,8 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile}) => {
               profile={profile} variant="outline-success">
               Add to Collection</Button>
             {/* <Button onClick={() => handleRemoveRecord
-              (profile.records._id)} profile={profile} variant="outline-success">Remove</Button> */}
+              (profile.records._id)} profile={profile} 
+              variant="outline-success">Remove</Button> */}
           </div>
         </div>
         <div className='details-display col-lg'>
