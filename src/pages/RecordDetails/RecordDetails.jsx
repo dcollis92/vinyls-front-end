@@ -1,5 +1,5 @@
 import './RecordDetails.scss';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, FloatingLabel } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom'
 import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
@@ -24,37 +24,14 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
               <Record key={record.title} record={record} handleAddRecord={handleAddRecord} handleRemoveRecord={handleRemoveRecord} profile={profile} />
             </div>
           </div>
-          <div className='buttons'>
-            <Button 
-              onClick={() => handleAddRecord (record)} 
-              profile={profile} variant="outline-success">
-              Add to Collection</Button>
-            <StarRating  />
-            <Form >
-                <Form.Group className="mb-3" 
-                  controlId="review-form">
-                  <Form.Label>Add Review</Form.Label>
-                  <Form.Control as="textarea" rows={3} placeholder="this record rules..."
-                  />
-                </Form.Group>
-              </Form>
-          </div>
         </div>
         <div className='details-display col-md'>
           <div className='categories'>
-            <div className='artist'>
-              <h4>Artist</h4>
-            </div>
-            <div className='album'>
-              <h4>Album</h4>
-            </div>
-            <div className='year'>
-              <h4>Year</h4>
-            </div>
-            <div className='label'>
-              <h4>Label</h4>
-            </div>
-            <div className='tracklist'>
+            <div className='artist'><h4>Artist</h4></div>
+            <div className='album'><h4>Album</h4></div>
+            <div className='year'><h4>Year</h4></div>
+            <div className='label'><h4>Label</h4></div>
+            <div className='tracklist'> 
               <h4>Tracklist</h4>
             </div>
           </div>
@@ -81,6 +58,21 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
             </div>  
           </div>
         </div>
+        <div className='row'>
+          <div className='buttons col-xl text-center'>
+              <Button 
+                onClick={() => handleAddRecord (record)} 
+                profile={profile} variant="outline-success">
+                Add to Collection</Button>
+              <StarRating  />
+              <FloatingLabel controlId="reviews" label="Write a Review">
+                <Form.Control
+                  as="textarea"
+                  // placeholder="Write a review here"
+                  style={{ height: '100px' }} />
+              </FloatingLabel>
+            </div>
+          </div>
       </div>
     </main>
   )
