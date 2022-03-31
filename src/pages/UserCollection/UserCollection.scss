@@ -61,7 +61,7 @@
     z-index: 15;
     color: #293845;
     top: 30%;
-    // text-align: center;
+    text-align: start;
     padding-left: 30px;
     padding-right: 30px;
     opacity: 0;
@@ -77,6 +77,7 @@
   .overlay-text h3 {
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 1.6vw;
     transition: all 1s ease;
     margin: 5px 0 15px;
     position: relative;
