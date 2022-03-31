@@ -18,7 +18,6 @@ Information can be found at [Discogs API](https://www.discogs.com/developers).
 
 <<<FUNCTIONALITY TO-D0:>>>
 
-
 Album Details:
 - [ ] display+add Star Rating
 - [ ] comments/reviews (!!!!!!!!!!)
@@ -60,7 +59,6 @@ User's Collection:
 Profiles:
 - [ ] style names the same as User Collection and Search Results
 - [ ] display avatars instead of results
-
 
 
 BUGS:

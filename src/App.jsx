@@ -32,6 +32,13 @@ const App = () => {
     }
   }, [user])
 
+  useEffect(() => {
+    console.log('hitting user collection database');
+    if (user) {
+
+    }
+  }, [])
+
   // const handleRecordSearch = () => {
   //   recordService.getAllRecords(search.query)
   //   .then(recordResults => setRecords(recordResults.results))

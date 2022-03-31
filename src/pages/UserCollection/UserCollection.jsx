@@ -5,6 +5,7 @@ import { useLocation, Link } from 'react-router-dom'
 import * as profileService from '../../services/profileService'
 import Profile from '../../components/Profile/Profile'
 import Record from '../../components/Record/Record';
+import StarRating from '../../components/StarRating/StarRating';
 
 const UserCollection = ({handleRemoveRecord}) => {
   const [currProfile, setCurrProfile] = useState(null)
@@ -47,7 +48,10 @@ const UserCollection = ({handleRemoveRecord}) => {
                           </p>
                       </div>
                     </div>
-                    <Button onClick={() => handleRemoveRecord(profile._id, record._id)} profile={profile} variant="outline-success">Remove</Button>   
+                    <div className='buttons'>
+                    <StarRating />
+                    <Button onClick={() => handleRemoveRecord(profile._id, record._id)} profile={profile} variant="outline-success">Remove</Button>
+                    </div>   
                   </div>       
                 )}
               </div>

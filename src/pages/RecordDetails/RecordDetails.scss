@@ -58,7 +58,7 @@
   .overlay-text h3 {
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.6vw;
+    // font-size: 1.6vw;
     margin: 5px 0 15px;
     position: relative;
     top: -22px;
@@ -108,12 +108,15 @@
   }
   .tracklist {
     height: 25vw;
+    font-size: 1.6vw;
   }
 }
 
 .release-info {
   display: inline-grid;
   text-align: start;
+  font-size: 5vw;
+
   width: 50%;
   height: 100%;
   padding-left: 10px;
@@ -126,6 +129,7 @@
   .tracklist {
     height: 25vw;
     padding: 3px;
+    
   }
 }
 
