@@ -31,9 +31,9 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
             <div className='album'><h4>Album</h4></div>
             <div className='year'><h4>Year</h4></div>
             <div className='label'><h4>Label</h4></div>
-            <div className='tracklist'> 
+            {/* <div className='tracklist'> 
               <h4>Tracklist</h4>
-            </div>
+            </div> */}
           </div>
           <div className='release-info'>
             <div className='artist'>
@@ -48,18 +48,18 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
             <div className='label'>
               <h4>Warner Bros</h4>
             </div>
-            <div className='tracklist'>
+            {/* <div className='tracklist'>
               <h6>Black Sabbath</h6>
               <h6>The Wizard</h6>
               <h6>N.I.B.</h6>
               <h6>Evil Woman</h6>
               <h6>Sleeping Village</h6>
               <h6>Warning</h6>
-            </div>  
+            </div>   */}
           </div>
         </div>
-        <div className='row'>
-          <div className='buttons col-xl text-center'>
+        <div className='album-display row'>
+          <div className='buttons col-lg text-center'>
               <Button 
                 onClick={() => handleAddRecord (record)} 
                 profile={profile} variant="outline-success">
@@ -75,8 +75,7 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
                   style={{ height: '100px' }} />
               </FloatingLabel>
                 <Button variant="outline-success" type="submit"
-                onClick={handleAddComment}
-                >
+                  onClick={handleAddComment}>
                   Submit
                 </Button>
               </Form>
