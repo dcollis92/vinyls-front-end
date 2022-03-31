@@ -6,11 +6,11 @@ import Artist from '../../components/Artist/Artist';
 import StarRating from '../../components/StarRating/StarRating';
 
 
-const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddComment}) => {
+const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddComment, dbRecords}) => {
 
   const location = useLocation()
   const record = location.state.record
-  console.log(profile.records)
+  console.log(dbRecords)
 
   return (
     <main className='record-details'>
@@ -66,14 +66,16 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
                 Add to Collection</Button>
               <StarRating  />
               <Form>
-                <FloatingLabel controlId="reviews" label="Write a Review">
-                  <Form.Control
-                    as="textarea"
-                    placeholder="Write a review here"
-                    style={{ height: '100px' }} />
-                </FloatingLabel>
-                <Button variant="outline-success"   
-                  type="submit">
+              <FloatingLabel controlId="reviews" label="Write a Review">
+                <Form.Control
+                // value={dbRecords} 
+                name="comment" 
+                  as="textarea"
+                  placeholder="Write a review here"
+                  style={{ height: '100px' }} />
+              </FloatingLabel>
+                <Button variant="outline-success" type="submit"
+                  onClick={handleAddComment}>
                   Submit
                 </Button>
               </Form>

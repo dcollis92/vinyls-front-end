@@ -83,6 +83,7 @@ const App = () => {
   }
 
   const handleAddComment = (recordId, comment) => {
+    console.log('hit', recordId, comment);
     recordService.addComment(recordId, comment)
     .then(updatedRecord => {
       setDbRecords(updatedRecord)
@@ -124,7 +125,8 @@ const App = () => {
         <Route path="/record"
         element={<RecordDetails 
         records={records} 
-        profile={profile}         
+        profile={profile}
+        dbRecords={dbRecords}         
         handleAddRecord={handleAddRecord} handleRemoveRecord={handleRemoveRecord}
         handleAddComment={handleAddComment}
         />} /> 
