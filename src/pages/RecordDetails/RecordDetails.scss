@@ -1,16 +1,19 @@
-// .card {
-//   display: inline-flex;
-//   flex-wrap: wrap;
-//   width: 300px;
-//   // height: 400px;
-//   overflow: hidden;
-//   border: solid 2px #9eadba;
-  
-//   .record {
-//     align-items: center;
-//     justify-content: center;
-//   }
-// }
 
 
 
+input, button, link {
+  font-family: 'Futura Std';
+  font-style: italic;
+  border: 2px solid #9eadba;
+  color: #293845;
+}
+
+.btn-outline-success {
+  border: 2px solid #9eadba;
+}
+
+.btn-outline-success:hover {
+  background-color: #293845;
+  border: 2px solid #9eadba;
+  color: #dfe6ed;
+}

@@ -15,3 +15,28 @@ Those icons and more can be found at [Font Awesome](https://fontawesome.com/).
 
 **Vinyls** uses Discogs API.
 Information can be found at [Discogs API](https://www.discogs.com/developers).
+
+
+STYLE TO-DO:
+Album Details:
+>>>>div 1: album cover
+    - div-image
+    - div-star rating
+    - div-buttons
+    
+>>>>div 2: details
+    display:
+      - arist
+      - Album
+      - year
+      - label
+      - track listing
+      
+User's Collection:
+Same style as Search Results
+>>>>header:
+    - avatar       
+    - name  
+
+BUGS:
+    - current heroku deployment wont let me create a new account. giving me a "not found" upon signing up??
