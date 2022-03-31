@@ -41,6 +41,7 @@ function removeRecord(profileId, recordId) {
   .then(res => res.json())
 }
 
+
 export { 
   getAllProfiles, 
   getProfile,
