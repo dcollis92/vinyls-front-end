@@ -36,7 +36,7 @@ Other Profile's Collection:
 - [ ] display star rating
 
 User's Collection:
-- [ ] display Star Rating
+- [ ] display/populate Star Rating
 
 (IB) Artist Details:
 - [ ] artist's discography
