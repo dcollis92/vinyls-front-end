@@ -36,7 +36,7 @@ const UserCollection = ({handleRemoveRecord}) => {
     </>
     :
     <>
-    <div>loading...</div>
+    <div>loading....</div>
     </>
   ); 
 }
