@@ -1,25 +1,31 @@
 import './UserCollection.scss';
 import { Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import Profile from '../../components/Profile/Profile'
 
-import Record from '../../components/Record/Record'
-
-const UserCollection = ({records, handleRemoveRecord, handleAddRecord, profile}) => {
+const UserCollection = () => {
   
-  console.log(profile._id)
+  const location = useLocation()
+  const profile = location.state.profile
   
-  
-  
-
   return (
     <>
       <h2>Record Collection</h2>
       <div>
+        <Profile key={profile.name} />
+        <h2>{profile.name}</h2>
+      </div>
+
+
+
+      {/* <div>
   
         <div className=''>
           {profile?.records?.map(record =>
           <>
-          <Record handleRemoveRecord={handleRemoveRecord} profile={profile} key={record.id} id={record._id} record={record}/>
+          <Record handleRemoveRecord={handleRemoveRecord} handleAddRecord=
+          {handleAddRecord} profile={profile} key={record.id} id={record._id} record={record}/>
             
           <Button onClick={() => handleRemoveRecord(profile._id, record._id)} profile={profile} variant="outline-success">Remove</Button>          
           </>
@@ -27,7 +33,7 @@ const UserCollection = ({records, handleRemoveRecord, handleAddRecord, profile})
           
         </div>
         
-      </div>  
+      </div>   */}
     </>
   ); 
 }

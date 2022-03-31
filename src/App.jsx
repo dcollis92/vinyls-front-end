@@ -120,13 +120,13 @@ const App = () => {
         <Route path="/artist"
         element={<ArtistDetails records={records} 
         />}/>   
-        <Route path="/usercollection"
+        <Route path="/profile"
         element={<UserCollection records={records}
         user={user} 
         profile={profile}
         handleRemoveRecord={handleRemoveRecord}
         handleAddRecord={handleAddRecord} 
-        />}/>   
+        />}/> 
       </Routes>
     </>
   )
