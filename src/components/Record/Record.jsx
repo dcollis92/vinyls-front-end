@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom"
 
 
-const Record = ({record, handleAddRecord, profile}) => {
- 
+const Record = ({record, handleRemoveRecord, handleAddRecord, profile, id}) => {
+
+  console.log(profile);
+
   
   return (
     <>

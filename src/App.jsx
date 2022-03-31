@@ -73,8 +73,9 @@ const App = () => {
     })
   }
 
-  const handleRemoveRecord = recordsId => {
-    profileService.removeRecord(recordsId)
+  const handleRemoveRecord = (profileId, recordsId) => {
+    console.log(profileId, recordsId);
+    profileService.removeRecord(profileId, recordsId)
     .then(updatedProfile => {
       setProfile(updatedProfile)
     })
@@ -123,6 +124,7 @@ const App = () => {
         element={<UserCollection records={records} 
         profile={profile}
         handleRemoveRecord={handleRemoveRecord}
+        handleAddRecord={handleAddRecord} 
         />}/>   
       </Routes>
     </>
