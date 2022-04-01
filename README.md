@@ -45,8 +45,12 @@ Vinyls is a React Built Web App utilizing a third-party API via Discogs. Vinyls 
 - [Dave Collis](https://github.com/dcollis92) 
 - [Evan Bernard](https://github.com/provideforme) 
 - [Tim Crisp](https://github.com/timcrisp94) 
+
 --- 
-  
+
+# ➡ [Vinyls Playlist](https://open.spotify.com/playlist/1pwFdJ0MOVYPKN2qVvU8OO?si=9feca8dcc30e4e4f)
+- Here's a playlist of what we were listening to while making Vinyls
+
 ---
 
 ## ⚙ Credits 
