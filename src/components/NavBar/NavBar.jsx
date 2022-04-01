@@ -6,7 +6,6 @@ import './NavBar.scss';
 
 
 const NavBar = (props) => {
-
   const navigate = useNavigate()
 
   const handleSubmitSearch = evt => {
