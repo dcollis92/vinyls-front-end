@@ -29,4 +29,9 @@ function removeToken() {
   localStorage.removeItem('token')
 }
 
-export { setToken, getToken, getUserFromToken, removeToken }
+export { 
+  setToken, 
+  getToken, 
+  getUserFromToken, 
+  removeToken 
+}
