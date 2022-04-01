@@ -37,7 +37,15 @@ Vinyls is a React Built Web App utilizing a third-party API via Discogs. Vinyls 
   ![ReactRouter](https://img.shields.io/badge/-React_Router-white?style=for-the-badge&for-the-badge&logo=react-router)
   ![Heroku](https://img.shields.io/badge/-Heroku-white?style=for-the-badge&logo=heroku&logoColor=black)
   ![NodeJS](https://img.shields.io/badge/-Node.JS-white?style=for-the-badge&logo=Node.js)
- 
+
+---
+
+## ⚙ Contributors 
+
+- [Dave Collis](https://github.com/dcollis92) 
+- [Evan Bernard](https://github.com/provideforme) 
+- [Tim Crisp](https://github.com/timcrisp94) 
+--- 
   
 ---
 
