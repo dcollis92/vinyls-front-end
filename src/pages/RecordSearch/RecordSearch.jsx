@@ -35,7 +35,7 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord, profile}) =
           {records.length ?
         <>
           <div className='section-header text-center'>
-          <h2>Artists</h2>
+            <h2>Artists</h2>
           </div>
           <div className='row'>
           {artistResults.map(record =>

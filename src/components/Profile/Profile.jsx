@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 
-const Profile = ({profile}) => {
+const Profile = ({profile, randDogImgId}) => {
 
   
 
@@ -13,6 +13,9 @@ const Profile = ({profile}) => {
           to='/profile'
           state={{profile}}
           className='card-link'>
+            <img className="card-img-top" 
+            src={`https://picsum.photos/id/${randDogImgId}/640/480`} 
+            alt="A happy puppy"/>
         </Link>              
       </div>      
     </>
