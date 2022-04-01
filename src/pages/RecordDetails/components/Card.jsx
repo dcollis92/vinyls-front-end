@@ -1,11 +1,25 @@
 import { useState } from 'react';
+import * as recordService from '../../../services/recordService'
 
 
 const Card = (props) => {
 const [edit, setEdit] = useState(false)
 const [comment, setComment] = useState({
-  commentText: '',
+  commentText: props.comment.commentText,
 })
+
+console.log(props);
+
+
+
+const handleEditComment = () => {
+  recordService.editComment(props.recordId, props.comment._id, comment).then(updatedRecord => {
+    console.log(updatedRecord);
+    props.handleUpdate(updatedRecord)
+    setComment({commentText: "" })
+    setEdit(!edit)
+  })
+}
 
 const handleChange = e => {
   // updateMessage('')
@@ -18,7 +32,10 @@ const handleChange = e => {
   console.log(props);
   return ( 
     <>
-    <button onClick={() => setEdit(!edit)}>edit</button>
+    <button 
+    onClick={() => setEdit(!edit)}
+    
+    >edit</button>
       {!edit ?
         <div >
           <p>{props.comment.commentText}</p>
@@ -31,6 +48,11 @@ const handleChange = e => {
             value={comment.commentText} 
             onChange={(e) => handleChange(e)} 
           />
+          <button 
+          onClick={handleEditComment}
+          >
+            Submit
+          </button>
         </div>
       }
     </>
