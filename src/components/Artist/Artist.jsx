@@ -8,8 +8,7 @@ const Artist = ({record}) => {
         <Link
           to='/artist'
           state={{record}}
-          className='card-link'
-        >
+          className='card-link'>
           <img src={record.cover_image} alt="" />
         </Link>            
       </div>      

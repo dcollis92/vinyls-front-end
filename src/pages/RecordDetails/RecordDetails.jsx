@@ -94,7 +94,7 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
           <div className='single-review'>
             <h4>Users reviews</h4>
             {filteredAlbum !== undefined &&
-            <CommentList album={filteredAlbum} handleUpdate={handleUpdate}/>
+              <CommentList album={filteredAlbum} handleUpdate={handleUpdate}/>
             }
           </div>
         </div>

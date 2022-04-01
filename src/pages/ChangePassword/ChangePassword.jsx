@@ -1,6 +1,6 @@
+import styles from './ChangePassword.module.css'
 import { useState } from 'react'
 import ChangePasswordForm from '../../components/ChangePasswordForm/ChangePasswordForm'
-import styles from './ChangePassword.module.css'
 
 const ChangePassword = props => {
   const [message, setMessage] = useState([''])
@@ -18,4 +18,4 @@ const ChangePassword = props => {
   )
 }
 
-export default ChangePassword
+export default ChangePassword;
