@@ -51,7 +51,7 @@ const handleChange = e => {
           <button 
           onClick={handleEditComment}
           >
-            Submit
+            Submitt
           </button>
         </div>
       }
