@@ -1,17 +1,37 @@
 import './RecordDetails.scss';
+import { useState } from 'react';
 import { Button, Form, FloatingLabel } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom'
 import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
 import StarRating from '../../components/StarRating/StarRating';
+import CommentList from './components/CommentList';
 
 
 const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddComment, dbRecords}) => {
+  const [comment, setComment] = useState({
+    commentText: '',
+  })
 
   const location = useLocation()
+  console.log(location.state)
   const record = location.state.record
-  console.log(dbRecords)
+  
+  const filteredAlbum = dbRecords.find(album =>
+    album.master_id === record.master_id
+    )
 
+    console.log(filteredAlbum);
+
+  
+    const handleChange = e => {
+      // updateMessage('')
+      setComment({
+        ...comment,
+        [e.target.name]: e.target.value,
+      })
+    }
+console.log(comment);
   return (
     <main className='record-details'>
       <div className='album-display row'>
@@ -58,36 +78,39 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
             </div>   */}
           </div>
         </div>
-      </div>
-      <div className='reviews-display row'>
-        <div className='buttons col-md text-center'>
-          <Button 
-            onClick={() => handleAddRecord (record)} 
-            profile={profile} variant="outline-success">
-            Add to Collection</Button>
-          <StarRating />
-          <Form>
-            <FloatingLabel controlId="reviews" label="Write a Review">
-              <Form.Control
-                // value={dbRecords} 
-                name="comment" 
-                as="textarea"
-                placeholder="Write a review here"
-                style={{ height: '100px' }} />
-            </FloatingLabel>
-            <Button variant="outline-success"
-              type="submit"
-              onClick={handleAddComment}>
-              Submit
-            </Button>
-          </Form>
-        </div>
-        <div className='reviews col-md text-center'>
-          <div className='single-review'>
-            <h4>User's review</h4>
-            <p>"This album rocks."</p>
+        <div className='album-display row'>
+          <div className='buttons col-lg text-center'>
+              <Button 
+                onClick={() => handleAddRecord (record)} 
+                profile={profile} variant="outline-success">
+                Add to Collection</Button>
+              <StarRating  />
+              <Form>
+              <FloatingLabel controlId="reviews" label="Write a Review">
+                <Form.Control
+                type="text" 
+                onChange={(e) => handleChange(e)}
+                value={comment.commentText}
+                name="commentText" 
+                  as="textarea"
+                  placeholder="Write a review here"
+                  style={{ height: '100px' }} />
+              </FloatingLabel>
+                <Button variant="outline-success" type="submit"
+                  onClick={(e) => {
+                    handleAddComment(e, filteredAlbum._id, comment)
+                    setComment({commentText: ''})
+                  } }>
+                  Submit
+                </Button>
+              </Form>
+            </div>
           </div>
-        </div>
+          {filteredAlbum !== undefined &&
+          
+          <CommentList album={filteredAlbum} />
+          }
+
       </div>
     </main>
   )

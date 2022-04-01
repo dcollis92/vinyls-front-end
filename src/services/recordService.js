@@ -32,4 +32,17 @@ function addComment(recordId, comment) {
   .then(res => res.json())
 }
 
-export { getAllRecords, getRecordDetails, getRecordsDb, addComment }
+function editComment(recordId, comment){
+  console.log(recordId, comment)
+  return fetch(`${BASE_URL}/${recordId}/comments`, {
+    method: "POST",
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(comment)
+  })
+  .then(res => res.json())
+}
+
+export { getAllRecords, getRecordDetails, getRecordsDb, addComment, editComment }
