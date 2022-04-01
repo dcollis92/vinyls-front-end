@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const Profile = ({profile, randDogImgId}) => {
 
- 
+
   return (
     <>
       <div className="profile">
