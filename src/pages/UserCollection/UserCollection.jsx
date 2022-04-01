@@ -9,7 +9,7 @@ import StarRating from '../../components/StarRating/StarRating';
 
 const dogIds = [1025,1012,1062,1084,169,200,219,237,244,275,40,433,577,582,593,611,659,718,783,790,824,837,881,937,943]
 
-const UserCollection = ({handleRemoveRecord}) => {
+const UserCollection = ({user, handleRemoveRecord}) => {
   const [currProfile, setCurrProfile] = useState(null)
 
   const location = useLocation()
@@ -55,8 +55,11 @@ const UserCollection = ({handleRemoveRecord}) => {
                       </div>
                     </div>
                     <div className='buttons mx-auto'>
-                    <StarRating />
-                    <Button onClick={() => handleRemoveRecord(profile._id, record._id)} profile={profile} variant="outline-success">Remove</Button>
+                      {user? 
+                    <Button onClick={() => handleRemoveRecord(profile._id, record._id)} profile={profile} variant="outline-success">Remove</Button> 
+                    :
+                      <h2> </h2>
+                        }
                     </div>   
                   </div> 
                 )}

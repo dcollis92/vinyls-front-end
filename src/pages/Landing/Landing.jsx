@@ -1,7 +1,7 @@
 import './Landing.scss';
 import { Button, } from 'react-bootstrap';
 import { useState, useEffect } from 'react'
-import { useLocation, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import * as profileService from '../../services/profileService'
 import Profile from '../../components/Profile/Profile'
 import Record from '../../components/Record/Record';
@@ -43,8 +43,7 @@ const Landing = ({handleRemoveRecord, user, userProfile}) => {
                           </p>
                       </div>
                     </div>
-                    <div className='buttons'>
-                    <StarRating />
+                    <div className='buttons mx-auto'>
                     <Button onClick={() => handleRemoveRecord(userProfile._id, record._id)} profile={userProfile} variant="outline-success">Remove</Button>
                     </div>   
                   </div>       

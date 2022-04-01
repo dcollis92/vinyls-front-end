@@ -38,7 +38,8 @@ const LoginForm = props => {
           <Form.Label 
             htmlFor="email" 
             className={styles.label}>
-            Email Address</Form.Label>
+            Email Address
+          </Form.Label>
           <Form.Control 
             type="email" 
             autoComplete="off"
@@ -52,7 +53,8 @@ const LoginForm = props => {
             <Form.Label 
               htmlFor="password"
               className={styles.label}>
-              Password</Form.Label>
+              Password
+            </Form.Label>
             <Form.Control 
               type="password" 
               autoComplete="off"
@@ -63,11 +65,11 @@ const LoginForm = props => {
               placeholder="Enter Password" />
           </Form.Group>
           <Button 
-            // disabled={isFormInvalid()} 
             className={styles.button}
             variant="primary" 
             type="submit">
-            Log In</Button>
+            Log In
+          </Button>
           <Button href="/">Cancel</Button>
       </Form>
     </main>

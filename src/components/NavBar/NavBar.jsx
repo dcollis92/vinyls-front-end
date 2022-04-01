@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import * as recordService from '../../services/recordService'
 import { Nav, Navbar, Button, Form, FormControl, Container }  from 'react-bootstrap';
-import Profile from '../../components/Profile/Profile'
 
 
 import './NavBar.scss';
@@ -25,10 +24,9 @@ const NavBar = (props) => {
         <Container>
         <Navbar.Brand href="/">
           <img alt="" src="./vinyls-logo.png"
-          width="100%"
-          className="d-inline-block align-top"
-        />{' '}</Navbar.Brand>
-        
+          width="70%"
+          className="d-inline-block align-top"/>
+          {' '}</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

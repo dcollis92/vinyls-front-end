@@ -12,7 +12,6 @@ const Artist = ({record}) => {
         >
           <img src={record.cover_image} alt="" />
         </Link>            
-        {/* <p>{record.title}</p> */}
       </div>      
     </>
   );
