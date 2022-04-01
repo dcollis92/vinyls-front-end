@@ -44,16 +44,17 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
         </div>
         <div className='details-display col-md'>
           <div className='categories'>
-            <div className='album'><h4>Album</h4></div>
-            <div className='year'><h4>Year</h4></div>
+            <div className='year'><h5>Year</h5></div>
+            <div className='album'><h5>Album</h5></div>
           </div>
           <div className='release-info'>
-            <div className='album'>
-              <h4>{record.title}</h4>
-            </div>
             <div className='year'>
-              <h4>{record.year}</h4>
+              <h5>{record.year}</h5>
             </div>
+            <div className='album'>
+              <h5>{record.title}</h5>
+            </div>
+            
           </div>
         </div>
       </div>
