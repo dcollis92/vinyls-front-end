@@ -25,17 +25,21 @@ const UserCollection = ({handleRemoveRecord}) => {
       {currProfile?
         <>
           <div className='user-collection container'>
-            <div className='row'>
-              <div className='col-md-12'>
+            <div className=''>
+              <div className=''>
                 <div className='section-header text-center'>
-                <Profile key={currProfile.name} profile={profile} randDogImgId={dogIds[Math.floor(Math.random()*(dogIds.length))]}/>
-                  <h2>{currProfile.name}'s Record Collection</h2>
+                  <div className ='profile-img mx-auto'>
+                    <Profile key={currProfile.name} profile={profile} randDogImgId={dogIds[Math.floor(Math.random()*(dogIds.length))]}/>
+                  </div>
+                  <div className='user-info'>
+                    <h2>{currProfile.name}'s Record Collection</h2>
+                  </div>
                 </div>
               </div>
             </div>
               <div className='row'>
                 {currProfile?.records?.map(record =>
-                  <div className='col-md-4 col-sm-6 col-xs-12'>
+                  <div className='col-md-4 col-sm-6 col-xs-12 text-center'>
                     <div className='single-record'>
                       <div className='record-img'>
                         <Record handleRemoveRecord={handleRemoveRecord} profile={currProfile} key={record.id} id={record._id} record={record}/>
@@ -50,18 +54,18 @@ const UserCollection = ({handleRemoveRecord}) => {
                           </p>
                       </div>
                     </div>
-                    <div className='buttons'>
+                    <div className='buttons mx-auto'>
                     <StarRating />
                     <Button onClick={() => handleRemoveRecord(profile._id, record._id)} profile={profile} variant="outline-success">Remove</Button>
                     </div>   
-                  </div>       
+                  </div> 
                 )}
               </div>
           </div>
         </>
         :
         <>
-        <div>loading....</div>
+        <p>No records yet</p>
         </>
       }
     </main>

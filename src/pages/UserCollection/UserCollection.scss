@@ -1,17 +1,11 @@
-// .record-list {
-//   align-items: baseline;
-//   justify-content: space-evenly;
-// }
 
 .user-collection {
   .section-header {
+    padding: 5%;
+  }
+
+  .user-info {
     padding-top: 2%;
-    padding-bottom: 2%;
-    border-radius: 10%;
-    max-width: 250px;
-    max-height: 250px;
-    align-items: center;
-    justify-content: center;
   }
 
   .results-header {
@@ -51,7 +45,7 @@
     border-radius: 5%;
   }
 
-  .record-img img {
+  .profile-img, .record-img img {
     border-radius: 5%;
     border: 5px solid #9eadba;
     width: 100%;
@@ -118,14 +112,28 @@
     border: 2px solid #9eadba;
     color: #dfe6ed;
   }
+  .profile-img {
+    max-width: 250px;
+    max-height: 250px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    img {
+      filter: grayscale(1);
+    }
+  }
 }
 
 .buttons {
+  padding: 5px;
   display: flex;
+  display: block;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: start;
 }
+
+
 
 /* Portrait */
 // @media only screen 
