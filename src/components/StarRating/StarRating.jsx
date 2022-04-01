@@ -1,6 +1,9 @@
 import './StarRating.scss';
 import { useState } from 'react';
 
+// DISCLAIMER
+// We are still working on this piece, this has so much deadcode BUT will be implimented ASAP. 
+
 const StarRating = (props) => {
   const [rating, setRating] = useState('')
 
