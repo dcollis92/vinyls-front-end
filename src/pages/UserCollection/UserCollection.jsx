@@ -1,5 +1,5 @@
 import './UserCollection.scss';
-import { Button, } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react'
 import { useLocation, Link } from 'react-router-dom'
 import * as profileService from '../../services/profileService'
@@ -54,10 +54,13 @@ const UserCollection = ({user, handleRemoveRecord}) => {
                       </div>
                     </div>
                     <div className='buttons mx-auto'>
-                      {user? 
-                        <Button onClick={() => handleRemoveRecord(profile._id, record._id)} profile={profile} variant="outline-success">Remove</Button> 
-                      :
-                        <h2> </h2>
+                      {currProfile === user.profile ?
+                        <>
+                          <Button onClick={() => handleRemoveRecord(profile._id, record._id)} profile={profile} variant="outline-success">Remove</Button>
+                        </>
+                        :
+                        <>
+                        </>
                       }
                     </div>   
                   </div> 
