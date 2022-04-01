@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import Profile from '../../components/Profile/Profile'
 
 
-
 const dogIds = [1025,1012,1062,1084,169,200,219,237,244,275,40,433,577,582,593,611,659,718,783,790,824,837,881,937,943]
 
 const Profiles = () => {

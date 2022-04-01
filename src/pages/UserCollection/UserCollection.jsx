@@ -7,6 +7,8 @@ import Profile from '../../components/Profile/Profile'
 import Record from '../../components/Record/Record';
 import StarRating from '../../components/StarRating/StarRating';
 
+const dogIds = [1025,1012,1062,1084,169,200,219,237,244,275,40,433,577,582,593,611,659,718,783,790,824,837,881,937,943]
+
 const UserCollection = ({handleRemoveRecord}) => {
   const [currProfile, setCurrProfile] = useState(null)
 
@@ -26,7 +28,7 @@ const UserCollection = ({handleRemoveRecord}) => {
             <div className='row'>
               <div className='col-md-12'>
                 <div className='section-header text-center'>
-                  <Profile key={currProfile.name} />
+                <Profile key={currProfile.name} profile={profile} randDogImgId={dogIds[Math.floor(Math.random()*(dogIds.length))]}/>
                   <h2>{currProfile.name}'s Record Collection</h2>
                 </div>
               </div>
