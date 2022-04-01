@@ -19,7 +19,7 @@ Information can be found at [Discogs API](https://www.discogs.com/developers).
 <<<FUNCTIONALITY TO-D0:>>>
 
 Album Details:
-- [ ] display+add Star Rating
+- [x] display+add Star Rating
 - [x] comments/reviews (!!!!!!!!!!)
 - [ ] populate/call artist name
 - [ ] populate/call album title
@@ -55,11 +55,12 @@ Album Details:
      
 User's Collection:
 >>>>header:
-- [ ] avatar       
+- [x] avatar       
 - [ ] star-rating
+- [ ] reviews-display row not centered?
 
 Profiles:
-- [ ] style names the same as User Collection and Search Results
+- [x] style names the same as User Collection and Search Results
 - [ ] display avatars instead of results
 
 

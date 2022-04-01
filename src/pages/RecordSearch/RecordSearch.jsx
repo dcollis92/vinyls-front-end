@@ -44,11 +44,13 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord, profile}) =
                   </div>
                   <div className='overlay-text'>
                     <h3>{record.title}</h3>
-                    <p><Link
+                    <p>
+                      {/* <Link
                       to='/artist'
                       state={{record}}
                       className='card-link'>
-                      click here</Link></p>
+                      click here</Link> */}
+                      </p>
                   </div>
                 </div>
               </div>
