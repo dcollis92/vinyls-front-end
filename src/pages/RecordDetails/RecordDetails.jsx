@@ -1,4 +1,5 @@
 import './RecordDetails.scss';
+import { useState } from 'react';
 import { Button, Form, FloatingLabel } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom'
 import Record from '../../components/Record/Record';
@@ -7,11 +8,29 @@ import StarRating from '../../components/StarRating/StarRating';
 
 
 const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddComment, dbRecords}) => {
+  const [comment, setComment] = useState({
+    commentText: '',
+  })
 
   const location = useLocation()
+  console.log(location.state)
   const record = location.state.record
-  console.log(dbRecords)
+  
+  const filteredAlbum = dbRecords.filter(album =>
+    album.master_id === record.master_id
+    )
 
+    console.log(filteredAlbum);
+
+  
+    const handleChange = e => {
+      // updateMessage('')
+      setComment({
+        ...comment,
+        [e.target.name]: e.target.value,
+      })
+    }
+console.log(comment);
   return (
     <main className='record-details'>
       <div className='album-display row'>
@@ -68,14 +87,19 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
               <Form>
               <FloatingLabel controlId="reviews" label="Write a Review">
                 <Form.Control
-                // value={dbRecords} 
-                name="comment" 
+                type="text" 
+                onChange={(e) => handleChange(e)}
+                value={comment.commentText}
+                name="commentText" 
                   as="textarea"
                   placeholder="Write a review here"
                   style={{ height: '100px' }} />
               </FloatingLabel>
                 <Button variant="outline-success" type="submit"
-                  onClick={handleAddComment}>
+                  onClick={(e) => {
+                    handleAddComment(e, filteredAlbum[0]._id, comment)
+                    setComment({commentText: ''})
+                  } }>
                   Submit
                 </Button>
               </Form>

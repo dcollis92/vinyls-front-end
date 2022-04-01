@@ -82,14 +82,15 @@ const App = () => {
     })
   }
 
-  const handleAddComment = (recordId, comment) => {
-    console.log('hit', recordId, comment);
-    recordService.addComment(recordId, comment)
-    .then(updatedRecord => {
-      setDbRecords(updatedRecord)
+  const handleAddComment = (e, recordId, comment) => {
+    e.preventDefault()
+    recordService.addComment(recordId, comment).then(updatedRecord => {
+      console.log(updatedRecord);
+      setDbRecords(dbRecords.map(r => r._id === updatedRecord._id ? updatedRecord : r))
     })
+    console.log('hi', recordId, comment);
   }
-
+  console.log(dbRecords);
 
   return (
     <>
