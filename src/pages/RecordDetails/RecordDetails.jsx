@@ -8,7 +8,7 @@ import StarRating from '../../components/StarRating/StarRating';
 import CommentList from './components/CommentList';
 
 
-const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddComment, dbRecords}) => {
+const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddComment, dbRecords, handleUpdate}) => {
   const [comment, setComment] = useState({
     commentText: '',
   })
@@ -35,9 +35,9 @@ console.log(comment);
   return (
     <main className='record-details'>
       <div className='album-display row'>
-        <h1 className='album-header text-center'>
-          Album Details
-        </h1>
+        <div className='album-header text-center'>
+          <h1>Album Details</h1>
+        </div>
         <div className='cover-display col-md text-center'>
           <div className='single-record'>
             <div className='record-img'>
@@ -63,7 +63,7 @@ console.log(comment);
               <h4>Album</h4>
             </div>
             <div className='year'>
-              <h4>1970</h4>
+              <h4>{record.year}</h4>
             </div>
             <div className='label'>
               <h4>Warner Bros</h4>
@@ -78,39 +78,42 @@ console.log(comment);
             </div>   */}
           </div>
         </div>
-        <div className='album-display row'>
-          <div className='buttons col-lg text-center'>
-              <Button 
-                onClick={() => handleAddRecord (record)} 
-                profile={profile} variant="outline-success">
-                Add to Collection</Button>
-              <StarRating  />
-              <Form>
-              <FloatingLabel controlId="reviews" label="Write a Review">
-                <Form.Control
+      </div>
+      <div className='album-display row'>
+        <div className='buttons col-lg text-center'>
+          <Button 
+            onClick={() => handleAddRecord (record)} 
+            profile={profile} variant="outline-success">
+            Add to Collection</Button>
+          <StarRating  />
+          <Form>
+            <FloatingLabel controlId="reviews" label="Write a Review">
+              <Form.Control
                 type="text" 
                 onChange={(e) => handleChange(e)}
                 value={comment.commentText}
                 name="commentText" 
-                  as="textarea"
-                  placeholder="Write a review here"
-                  style={{ height: '100px' }} />
-              </FloatingLabel>
-                <Button variant="outline-success" type="submit"
-                  onClick={(e) => {
-                    handleAddComment(e, filteredAlbum._id, comment)
-                    setComment({commentText: ''})
-                  } }>
-                  Submit
-                </Button>
-              </Form>
-            </div>
+                as="textarea"
+                placeholder="Write a review here"
+                style={{ height: '100px' }} />
+            </FloatingLabel>
+            <Button variant="outline-success" type="submit"
+              onClick={(e) => {
+                handleAddComment(e, filteredAlbum._id, comment)
+                setComment({commentText: ''})
+              }}>
+              Submit
+            </Button>
+          </Form>
+        </div>
+        <div className='reviews col-md text-center'>
+          <div className='single-review'>
+            <h4>Users reviews</h4>
+            {filteredAlbum !== undefined &&
+            <CommentList album={filteredAlbum} handleUpdate={handleUpdate}/>
+            }
           </div>
-          {filteredAlbum !== undefined &&
-          
-          <CommentList album={filteredAlbum} />
-          }
-
+        </div>
       </div>
     </main>
   )
