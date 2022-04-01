@@ -27,7 +27,7 @@
     top: 0;
     left: 0;
     z-index: 11;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
     transition: all 0.4s ease;
     visibility: hidden;
     content: '';
@@ -38,7 +38,7 @@
 
   .single-profile:hover .profile-img:before {
     visibility: visible;
-    transform: translateY(0%);
+    transform: translateX(0%);
     border-radius: 5%;
   }
 
