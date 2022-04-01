@@ -54,7 +54,7 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
           </div>
           <div className='release-info'>
             <div className='artist'>
-              <h4>Black Sabbath</h4>
+              <h4>{record.title}</h4>
             </div>
             <div className='album'>
               <h4>Album</h4>

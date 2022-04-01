@@ -1,0 +1,150 @@
+
+.user-collection {
+  .section-header {
+    padding: 5%;
+  }
+
+  .user-info {
+    padding-top: 2%;
+  }
+
+  .results-header {
+    margin-top: 5%;
+    justify-content: center;
+  }
+
+  .single-record {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 5%;
+  }
+
+  .record-img {
+    position: relative;
+  }
+
+  .record-img:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    transform: translateX(-100%);
+    transition: all 0.4s ease;
+    visibility: hidden;
+    content: '';
+    background: rgba(223,230,237,0.9);
+    height: 100%;
+    width: 100%;
+  }
+
+  .single-record:hover .record-img:before {
+    visibility: visible;
+    transform: translateY(0%);
+    border-radius: 5%;
+  }
+
+  .profile-img, .record-img img {
+    border-radius: 5%;
+    border: 5px solid #9eadba;
+    width: 100%;
+    z-index: 10;
+    transition: 0.9s
+  }
+
+  .overlay-text {
+    position: absolute;
+    text-overflow: ellipsis;
+    z-index: 15;
+    color: #293845;
+    top: 30%;
+    text-align: start;
+    padding-left: 30px;
+    padding-right: 30px;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .single-record:hover .overlay-text {
+    opacity: 1;
+    visibility: visible;
+    border-radius: 5%;
+  }
+
+  .overlay-text h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.6vw;
+    transition: all 1s ease;
+    margin: 5px 0 15px;
+    position: relative;
+    top: -22px;
+  }
+
+  .single-record:hover h3 {
+    top: 0;
+  }
+
+  .overlay-text p {
+    position: relative;
+    bottom: -22px;
+    transition: all 1s ease;
+  }
+
+  .single-record:hover p {
+    bottom: 0
+  }
+
+  input, button, link {
+    font-family: 'Futura Std';
+    font-style: italic;
+    border: 2px solid #9eadba;
+    color: #293845;
+  }
+
+  .btn-outline-success {
+    border: 2px solid #9eadba;
+  }
+
+  .btn-outline-success:hover {
+    background-color: #293845;
+    border: 2px solid #9eadba;
+    color: #dfe6ed;
+  }
+  .profile-img {
+    max-width: 250px;
+    max-height: 250px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    img {
+      filter: grayscale(1);
+    }
+  }
+}
+
+.buttons {
+  padding: 5px;
+  display: flex;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+
+
+/* Portrait */
+// @media only screen 
+//   and (min-device-width: 320px) 
+//   and (max-device-width: 480px)
+//   and (-webkit-min-device-pixel-ratio: 2)
+//   and (orientation: portrait) {
+//     main {
+//       font-size: 50%;
+//     }
+//     .overlay-text {
+//       font-size: 50%;
+//     }
+// }

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import * as recordService from '../../services/recordService'
 import { Nav, Navbar, Button, Form, FormControl, Container }  from 'react-bootstrap';
+import Profile from '../../components/Profile/Profile'
+
+
 import './NavBar.scss';
 
 
@@ -29,12 +32,12 @@ const NavBar = (props) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/profile">
+            <Nav.Link href="/">
               <i className="fas fa-record-vinyl"></i> 
               {' '}My Record Collection</Nav.Link>
             <Nav.Link href="/profiles">
               <i className="fas fa-user"></i>
-              {' '}Other Profiles</Nav.Link>
+              {' '}Profiles</Nav.Link>
             <Nav.Link href="/changePassword">
               <i className="fas fa-unlock"></i>
               {' '}Change Password</Nav.Link>
@@ -69,10 +72,10 @@ const NavBar = (props) => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/login">
-            <i class="fas fa-key"></i>
+            <i className="fas fa-key"></i>
             {' '}Log In</Nav.Link>
             <Nav.Link href="/signup">
-            <i class="fas fa-user-plus"></i>
+            <i className="fas fa-user-plus"></i>
             {' '}Sign Up</Nav.Link>
           </Nav>
         </Navbar.Collapse>

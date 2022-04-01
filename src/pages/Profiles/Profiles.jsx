@@ -49,7 +49,7 @@ const Profiles = () => {
           </div>
           </>
       :
-        <p>No profiles yet</p>
+        <p className='text-center'>loading</p>
       }
       </div>
     </main>
