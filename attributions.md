@@ -49,7 +49,9 @@ Search Results:
 <<<STYLE TO-DO:>>>
 Album Details:
 >>>>div 1: cover-display
-- [ ] gray design back bar
+- [ ] (IB) gray design back bar
+- [ ] reviews-display row not centered?
+- [ ] need to make font responsive
      
 User's Collection:
 >>>>header:

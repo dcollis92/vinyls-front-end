@@ -58,29 +58,36 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
             </div>   */}
           </div>
         </div>
-        <div className='album-display row'>
-          <div className='buttons col-lg text-center'>
-              <Button 
-                onClick={() => handleAddRecord (record)} 
-                profile={profile} variant="outline-success">
-                Add to Collection</Button>
-              <StarRating  />
-              <Form>
-              <FloatingLabel controlId="reviews" label="Write a Review">
-                <Form.Control
+      </div>
+      <div className='reviews-display row'>
+        <div className='buttons col-md text-center'>
+          <Button 
+            onClick={() => handleAddRecord (record)} 
+            profile={profile} variant="outline-success">
+            Add to Collection</Button>
+          <StarRating />
+          <Form>
+            <FloatingLabel controlId="reviews" label="Write a Review">
+              <Form.Control
                 // value={dbRecords} 
                 name="comment" 
-                  as="textarea"
-                  placeholder="Write a review here"
-                  style={{ height: '100px' }} />
-              </FloatingLabel>
-                <Button variant="outline-success" type="submit"
-                  onClick={handleAddComment}>
-                  Submit
-                </Button>
-              </Form>
-            </div>
+                as="textarea"
+                placeholder="Write a review here"
+                style={{ height: '100px' }} />
+            </FloatingLabel>
+            <Button variant="outline-success"
+              type="submit"
+              onClick={handleAddComment}>
+              Submit
+            </Button>
+          </Form>
+        </div>
+        <div className='reviews col-md text-center'>
+          <div className='single-review'>
+            <h4>User's review</h4>
+            <p>"This album rocks."</p>
           </div>
+        </div>
       </div>
     </main>
   )
