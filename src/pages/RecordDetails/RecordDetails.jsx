@@ -76,38 +76,40 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
           </div>
         </div>
       </div>
+
       <div className='album-display row'>
         <div className='buttons col-lg text-center'>
           <Button 
             onClick={() => handleAddRecord (record)} 
             profile={profile} variant="outline-success">
             Add to Collection</Button>
-          <CurrentRating filteredAlbum={filteredAlbum}  />
-          <StarRating  
-          handleAddRating={handleAddRating}
-          handleChangeRating={handleChangeRating}
-          filteredAlbum={filteredAlbum}
-          />
-          <Form>
-            <FloatingLabel controlId="reviews" label="Write a Review">
-              <Form.Control
-                type="text" 
-                onChange={(e) => handleChange(e)}
-                value={comment.commentText}
-                name="commentText" 
-                as="textarea"
-                placeholder="Write a review here"
-                style={{ height: '100px' }} />
-            </FloatingLabel>
-            <Button variant="outline-success" type="submit"
-              onClick={(e) => {
-                handleAddComment(e, filteredAlbum._id, comment)
-                setComment({commentText: ''})
-              }}>
-              Submit
-            </Button>
-          </Form>
         </div>
+          {filteredAlbum ?
+          <>
+          <CurrentRating filteredAlbum={filteredAlbum} />
+            <StarRating
+              handleAddRating={handleAddRating}
+              handleChangeRating={handleChangeRating}
+              filteredAlbum={filteredAlbum} />
+            <Form>
+              <FloatingLabel controlId="reviews" label="Write a Review">
+                <Form.Control
+                  type="text"
+                  onChange={(e) => handleChange(e)}
+                  value={comment.commentText}
+                  name="commentText"
+                  as="textarea"
+                  placeholder="Write a review here"
+                  style={{ height: '100px' }} />
+              </FloatingLabel>
+              <Button variant="outline-success" type="submit"
+                onClick={(e) => {
+                  handleAddComment(e, filteredAlbum._id, comment);
+                  setComment({ commentText: '' });
+                } }>
+                Submit
+              </Button>
+            </Form>
         <div className='reviews col-md text-center'>
           <div className='single-review'>
             <h4>Users reviews</h4>
@@ -116,6 +118,10 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
             }
           </div>
         </div>
+          </>
+          :
+          <p>No Reviews Yet</p>
+            }
       </div>
     </main>
   )
