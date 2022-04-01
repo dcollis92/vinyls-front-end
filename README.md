@@ -11,11 +11,11 @@ Vinyls is a React Built Web App utilizing a third-party API via Discogs. Vinyls 
 
 ---
 
-## ➡ Use the App here
-# ➡ [Vinyls Back End](https://vinyls-back-end.herokuapp.com)
-# ➡ [Vinyls Front End](https://vinyls-front-end.herokuapp.com/)
+## Use the App Below
+#### ➡ [Vinyls Back End](https://vinyls-back-end.herokuapp.com)
+#### ➡ [Vinyls Front End](https://vinyls-front-end.herokuapp.com/)
 
-## ➡ [Trello board can be found here](https://trello.com/b/N3n1ROPA/unit-3-propsal)
+#### ➡ [Trello board can be found here](https://trello.com/b/N3n1ROPA/unit-3-propsal)
 
 ---
 
@@ -43,7 +43,7 @@ Vinyls is a React Built Web App utilizing a third-party API via Discogs. Vinyls 
 
 ## ⚙ Credits 
 
-- [Attributions]() listed here.
+- [Attributions](https://github.com/dcollis92/vinyls-front-end/blob/main/attributions.md) listed here.
 
 ---
 

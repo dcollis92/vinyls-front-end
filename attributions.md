@@ -2,62 +2,11 @@
 
 ## Vinyls uses... 
   
-**Vinyls** uses 'Futura', created by Omnibus-Type and Ryoichi Tsunekawa respectively. 
+- **Vinyls** uses 'Futura', created by Omnibus-Type and Ryoichi Tsunekawa respectively. 
 Original font can be found at: [Font Geeks](https://fontsgeek.com/fonts/Futura-Std-Heavy-Oblique).
 
-**Vinyls** uses an Pure CSS Star Rating Widget by James Barnett. 
-Original source code can be found at: [Codepen](https://codepen.io/jamesbarnett/pen/najzYK).
-
-**Vinyls** uses icons from Font Awesome's free library. 
+- **Vinyls** uses icons from Font Awesome's free library. 
 Those icons and more can be found at [Font Awesome](https://fontawesome.com/).
 
-**Vinyls** uses Discogs API.
+- **Vinyls** uses Discogs API.
 Information can be found at [Discogs API](https://www.discogs.com/developers).
-
-<<<FUNCTIONALITY TO-D0:>>>
-
-Album Details:
-- [x] display+add Star Rating
-- [x] comments/reviews (!!!!!!!!!!)
-- [ ] populate/call artist name
-- [ ] populate/call album title
-- [x] populate/call year
-- [ ] (IB) populate/call label
-- [ ] (IB) populate/call tracklist
-
-Navbar:
-- [ ] My Record Collection does not go to the inidividual user. Path needs adjustment.
-- [ ] Search Bar: clear after search. 
-  
-Other Profile's Collection:
-- [ ] Only the owner can delete/rate releases in their collection.
-- [ ] display star rating
-
-User's Collection:
-- [ ] display/populate Star Rating
-
-(IB) Artist Details:
-- [ ] artist's discography
-- [ ] artist bio
-
-Search Results:
-- [ ] (IB) Adjust search results to display all artist releases.
-
-
-<<<STYLE TO-DO:>>>
-Album Details:
->>>>div 1: cover-display
-- [ ] (IB) gray design back bar
-- [ ] reviews-display row not centered?
-- [ ] need to make font responsive
-     
-User's Collection:
->>>>header:
-- [x] avatar       
-- [ ] star-rating
-- [ ] reviews-display row not centered?
-
-Profiles:
-- [x] style names the same as User Collection and Search Results
-- [ ] display avatars instead of results
-

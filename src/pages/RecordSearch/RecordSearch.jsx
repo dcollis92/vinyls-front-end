@@ -1,7 +1,6 @@
 import './RecordSearch.scss';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"
-import { Button } from 'react-bootstrap'
 import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
 
@@ -44,13 +43,7 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord, profile}) =
                   </div>
                   <div className='overlay-text'>
                     <h3>{record.title}</h3>
-                    <p>
-                      {/* <Link
-                      to='/artist'
-                      state={{record}}
-                      className='card-link'>
-                      click here</Link> */}
-                      </p>
+                    <p></p>
                   </div>
                 </div>
               </div>

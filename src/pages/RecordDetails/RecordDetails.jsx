@@ -44,35 +44,16 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
         </div>
         <div className='details-display col-md'>
           <div className='categories'>
-            <div className='artist'><h4>Artist</h4></div>
             <div className='album'><h4>Album</h4></div>
             <div className='year'><h4>Year</h4></div>
-            <div className='label'><h4>Label</h4></div>
-            {/* <div className='tracklist'> 
-              <h4>Tracklist</h4>
-            </div> */}
           </div>
           <div className='release-info'>
-            <div className='artist'>
-              <h4>{record.title}</h4>
-            </div>
             <div className='album'>
-              <h4>Album</h4>
+              <h4>{record.title}</h4>
             </div>
             <div className='year'>
               <h4>{record.year}</h4>
             </div>
-            <div className='label'>
-              <h4>Warner Bros</h4>
-            </div>
-            {/* <div className='tracklist'>
-              <h6>Black Sabbath</h6>
-              <h6>The Wizard</h6>
-              <h6>N.I.B.</h6>
-              <h6>Evil Woman</h6>
-              <h6>Sleeping Village</h6>
-              <h6>Warning</h6>
-            </div>   */}
           </div>
         </div>
       </div>
@@ -81,13 +62,13 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
           <Button 
             onClick={() => handleAddRecord (record)} 
             profile={profile} variant="outline-success">
-            Add to Collection</Button>
+            Add to Collection
+          </Button>
           <CurrentRating filteredAlbum={filteredAlbum}  />
           <StarRating  
           handleAddRating={handleAddRating}
           handleChangeRating={handleChangeRating}
-          filteredAlbum={filteredAlbum}
-          />
+          filteredAlbum={filteredAlbum} />
           <Form>
             <FloatingLabel controlId="reviews" label="Write a Review">
               <Form.Control

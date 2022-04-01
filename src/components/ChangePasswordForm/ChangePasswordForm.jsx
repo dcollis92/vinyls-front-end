@@ -47,7 +47,8 @@ const ChangePasswordForm = props => {
           <Form.Label 
             htmlFor="password" 
             className={styles.label}>
-            Current Password</Form.Label>
+            Current Password
+          </Form.Label>
           <Form.Control 
             type="password" 
             autoComplete="off"
@@ -61,7 +62,8 @@ const ChangePasswordForm = props => {
           <Form.Label 
             htmlFor="newPassword" 
             className={styles.label}>
-            New Password</Form.Label>
+            New Password
+          </Form.Label>
           <Form.Control 
             type="password" 
             autoComplete="off"
@@ -75,7 +77,8 @@ const ChangePasswordForm = props => {
           <Form.Label 
             htmlFor="newPasswordConf" 
             className={styles.label}>
-            New Password</Form.Label>
+            New Password
+          </Form.Label>
           <Form.Control 
             type="password" 
             autoComplete="off"
@@ -90,7 +93,8 @@ const ChangePasswordForm = props => {
           className={styles.button}
           variant="primary" 
           type="submit">
-          Change Password</Button>
+          Change Password
+        </Button>
         <Button href="/">Cancel</Button>
       </Form>
     </main>
