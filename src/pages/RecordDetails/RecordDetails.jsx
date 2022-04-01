@@ -63,7 +63,7 @@ console.log(comment);
               <h4>Album</h4>
             </div>
             <div className='year'>
-              <h4>1970</h4>
+              <h4>{record.year}</h4>
             </div>
             <div className='label'>
               <h4>Warner Bros</h4>
