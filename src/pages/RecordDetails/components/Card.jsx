@@ -8,13 +8,10 @@ const [comment, setComment] = useState({
   commentText: props.comment.commentText,
 })
 
-console.log(props);
-
 
 
 const handleEditComment = () => {
   recordService.editComment(props.recordId, props.comment._id, comment).then(updatedRecord => {
-    console.log(updatedRecord);
     props.handleUpdate(updatedRecord)
     setComment({commentText: "" })
     setEdit(!edit)
@@ -28,8 +25,6 @@ const handleChange = e => {
     [e.target.name]: e.target.value,
   })
 }
-  console.log('this is card', comment);
-  console.log(props);
   return ( 
     <>
     <button 

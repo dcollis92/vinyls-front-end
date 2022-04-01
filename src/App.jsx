@@ -72,6 +72,7 @@ const App = () => {
     .then(updatedProfile => {
       setProfile(updatedProfile)
     })
+    window.location.reload()
   }
 
   const handleRemoveRecord = (profileId, recordsId) => {
@@ -88,13 +89,20 @@ const App = () => {
       console.log(updatedRecord);
       setDbRecords(dbRecords.map(r => r._id === updatedRecord._id ? updatedRecord : r))
     })
-    console.log('hi', recordId, comment);
   }
   
   const handleUpdate = (updatedRecord) => {
     setDbRecords(dbRecords.map(r => r._id === updatedRecord._id ? updatedRecord : r))
   }
 
+  const handleAddRating = (recordId, rating) => {
+    console.log(rating);
+    recordService.addRating(recordId, rating).then(updatedRecord => {
+      console.log(updatedRecord);
+      setDbRecords(dbRecords.map(r => r._id === updatedRecord._id ? updatedRecord : r))
+    })
+    console.log('hi', recordId, rating);
+  }
 
 
   return (
@@ -137,6 +145,7 @@ const App = () => {
         handleRemoveRecord={handleRemoveRecord}
         handleAddComment={handleAddComment}
         handleUpdate={handleUpdate}
+        handleAddRating={handleAddRating}
         />} /> 
         <Route path="/artist"
         element={<ArtistDetails records={records} 

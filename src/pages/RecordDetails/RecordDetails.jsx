@@ -6,15 +6,14 @@ import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
 import StarRating from '../../components/StarRating/StarRating';
 import CommentList from './components/CommentList';
+import CurrentRating from '../../components/StarRating/CurrentRating';
 
-
-const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddComment, dbRecords, handleUpdate}) => {
+const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddComment, dbRecords, handleUpdate, handleAddRating, handleChangeRating}) => {
   const [comment, setComment] = useState({
     commentText: '',
   })
-
+  
   const location = useLocation()
-  console.log(location.state)
   const record = location.state.record
   
   const filteredAlbum = dbRecords.find(album =>
@@ -25,13 +24,13 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
 
   
     const handleChange = e => {
-      // updateMessage('')
       setComment({
         ...comment,
         [e.target.name]: e.target.value,
       })
     }
-console.log(comment);
+
+
   return (
     <main className='record-details'>
       <div className='album-display row'>
@@ -85,7 +84,12 @@ console.log(comment);
             onClick={() => handleAddRecord (record)} 
             profile={profile} variant="outline-success">
             Add to Collection</Button>
-          <StarRating  />
+          <CurrentRating filteredAlbum={filteredAlbum}  />
+          <StarRating  
+          handleAddRating={handleAddRating}
+          handleChangeRating={handleChangeRating}
+          filteredAlbum={filteredAlbum}
+          />
           <Form>
             <FloatingLabel controlId="reviews" label="Write a Review">
               <Form.Control
