@@ -48,8 +48,14 @@ Wireframe albumpage
 ## ⚙ Contributors 
 
 - [Dave Collis](https://github.com/dcollis92) 
+  - CSS Designer
+  - Github Manager
 - [Evan Bernard](https://github.com/provideforme) 
+  - Database Manager
+  - SCRUM Manager
 - [Tim Crisp](https://github.com/timcrisp94) 
+  - API Manager
+  - Documentor
 
 --- 
 
