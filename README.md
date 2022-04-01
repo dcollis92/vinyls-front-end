@@ -48,7 +48,7 @@ Vinyls is a React Built Web App utilizing a third-party API via Discogs. Vinyls 
 
 --- 
 
-# ➡ [Vinyls Playlist](https://open.spotify.com/playlist/1pwFdJ0MOVYPKN2qVvU8OO?si=9feca8dcc30e4e4f)
+## ➡ [Vinyls Playlist](https://open.spotify.com/playlist/1pwFdJ0MOVYPKN2qVvU8OO?si=9feca8dcc30e4e4f)
 - Here's a playlist of what we were listening to while making Vinyls
 
 ---
