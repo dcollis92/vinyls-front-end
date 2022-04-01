@@ -11,7 +11,7 @@ const Profile = ({profile, randDogImgId}) => {
           to='/profile'
           state={{profile}}
           className='card-link'>
-            <img className="card-img-top" 
+            <img className="card-img-top mx-auto" 
             src={`https://picsum.photos/id/${randDogImgId}/640/480`} 
             alt="A happy puppy"/>
         </Link>              

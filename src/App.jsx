@@ -33,25 +33,16 @@ const App = () => {
     }
   }, [user])
 
-  // const handleRecordSearch = () => {
-  //   recordService.getAllRecords(search.query)
-  //   .then(recordResults => setRecords(recordResults.results))
-  // }
-
-  useEffect(() => {
-    console.log('yaya it eworkds');
+  useEffect(() => {    
     recordService.getRecordsDb()
     .then(recordDbResults => setDbRecords(recordDbResults))
   }, [])
 
-  const handleSetSearch = evt => {
-    console.log('hitting handlesetsearch');
+  const handleSetSearch = evt => {    
     setSearch({...search, [evt.target.name] : evt.target.value})
   }
 
-
-  const handleSubmitSearch = evt => {
-    console.log('hitting handlesubmitsearch');
+  const handleSubmitSearch = evt => {    
     recordService.getAllRecords(search.query)
     .then(recordResults => setRecords(recordResults.results))
     navigate('/recordSearch')
@@ -103,7 +94,6 @@ const App = () => {
     })
     console.log('hi', recordId, rating);
   }
-
 
   return (
     <>

@@ -12,7 +12,6 @@ const StarRating = (props) => {
   }
   console.log(rating)
   return (
-
     <>
       <input onChange={(e) => handleChangeRating(e)} type="number" placeholder='rating' min="0" max="5" />
       <button onClick={() => props.handleAddRating(props.filteredAlbum._id, rating)}>submit</button>
@@ -35,7 +34,6 @@ const StarRating = (props) => {
     //   </fieldset>  
     // </main>
   );
-
 }
  
 export default StarRating;

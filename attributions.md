@@ -20,10 +20,10 @@ Information can be found at [Discogs API](https://www.discogs.com/developers).
 
 Album Details:
 - [ ] display+add Star Rating
-- [ ] comments/reviews (!!!!!!!!!!)
+- [x] comments/reviews (!!!!!!!!!!)
 - [ ] populate/call artist name
 - [ ] populate/call album title
-- [ ] populate/call year
+- [x] populate/call year
 - [ ] (IB) populate/call label
 - [ ] (IB) populate/call tracklist
 

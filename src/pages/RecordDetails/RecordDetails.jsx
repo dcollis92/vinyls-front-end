@@ -19,17 +19,15 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
   const filteredAlbum = dbRecords.find(album =>
     album.master_id === record.master_id
     )
-
-    console.log(filteredAlbum);
-
   
+
     const handleChange = e => {
+
       setComment({
         ...comment,
         [e.target.name]: e.target.value,
       })
     }
-
 
   return (
     <main className='record-details'>

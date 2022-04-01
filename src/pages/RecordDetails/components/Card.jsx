@@ -9,7 +9,6 @@ const [comment, setComment] = useState({
 })
 
 
-
 const handleEditComment = () => {
   recordService.editComment(props.recordId, props.comment._id, comment).then(updatedRecord => {
     props.handleUpdate(updatedRecord)
@@ -18,8 +17,7 @@ const handleEditComment = () => {
   })
 }
 
-const handleChange = e => {
-  // updateMessage('')
+const handleChange = e => {  
   setComment({
     ...comment,
     [e.target.name]: e.target.value,
@@ -46,7 +44,7 @@ const handleChange = e => {
           <button 
           onClick={handleEditComment}
           >
-            Submitt
+            Submit
           </button>
         </div>
       }

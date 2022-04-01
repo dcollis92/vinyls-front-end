@@ -46,6 +46,7 @@ function editComment(recordId, commentId, c){
   .then(res => res.json())
 }
 
+
 function addRating(recordId, rating) {
   console.log('hello', recordId, rating)
   const formData = {rating: parseInt(rating)}
@@ -60,4 +61,12 @@ function addRating(recordId, rating) {
   .then(res => res.json())
 }
 
-export { getAllRecords, getRecordDetails, getRecordsDb, addComment, editComment, addRating }
+export { 
+  getAllRecords, 
+  getRecordDetails, 
+  getRecordsDb, 
+  addComment, 
+  editComment, 
+  addRating 
+}
+

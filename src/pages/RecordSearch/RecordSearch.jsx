@@ -10,7 +10,6 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord, profile}) =
   const [searchResults, setSearchResults] = useState([])
   const [artistResults, setArtistResults] = useState([])
 
-
   useEffect(()=> {
     const results = records.filter(record => record.type === "master")
     setSearchResults(results)
@@ -21,7 +20,6 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord, profile}) =
     setArtistResults(results)
   }, [records])
   
-
   return (
     <main>
       <div className='search-display container'>
