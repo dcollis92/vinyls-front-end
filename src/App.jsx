@@ -101,7 +101,7 @@ const App = () => {
       search={search}
       handleSubmitSearch={handleSubmitSearch} handleSetSearch={handleSetSearch} />
       <Routes>
-        <Route path="/" element={<Landing user={user} 
+        <Route path="/" element={<Landing user={user} userProfile={profile}
         />} />
         <Route
           path="/signup"

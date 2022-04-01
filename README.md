@@ -1,8 +1,8 @@
 # VINYLS
 
-![Vinyls homepage]()
+![Vinyls homepage](https://i.imgur.com/oa4pn0l.png)
 
-Bio
+Vinyls is a React Built Web App utilizing a third-party API via Discogs. Vinyls takes the Discogs search engine and focuses on the UI experience around the joy of record collecting, seperate from the data driven experience of Discogs analytics. With more changes to be implimented in the near future, 
 
   ![homepage wireframe](https://i.imgur.com/Tnhg3sV.png)
   ![albumpage wireframe](https://i.imgur.com/BP7TUFr.png)
@@ -11,7 +11,9 @@ Bio
 
 ---
 
-## ➡ [Use the app here]()
+## ➡ Use the App here
+# ➡ [Vinyls Back End](https://vinyls-back-end.herokuapp.com)
+# ➡ [Vinyls Front End](https://vinyls-front-end.herokuapp.com/)
 
 ## ➡ [Trello board can be found here](https://trello.com/b/N3n1ROPA/unit-3-propsal)
 
@@ -20,7 +22,7 @@ Bio
 ## ⚙ Technologies Used 
 
   ![HTML5](https://img.shields.io/badge/-HTML5-white?style=for-the-badge&logo=html5)
-  ![CSS3](https://img.shields.io/badge/-CSS3-white?style=for-the-badge&logo=css3&logoColor=1572B6)
+  ![Sass](https://img.shields.io/badge/-Sass-white?style=for-the-badge&logo=Sass)
   ![ExpressJS](https://img.shields.io/badge/-Express-white?style=for-the-badge&for-the-badge&logo=Express&logoColor=black)
   ![Git](https://img.shields.io/badge/-Git-white?style=for-the-badge&logo=git)
 
@@ -35,6 +37,7 @@ Bio
   ![ReactRouter](https://img.shields.io/badge/-React_Router-white?style=for-the-badge&for-the-badge&logo=react-router)
   ![Heroku](https://img.shields.io/badge/-Heroku-white?style=for-the-badge&logo=heroku&logoColor=black)
   ![NodeJS](https://img.shields.io/badge/-Node.JS-white?style=for-the-badge&logo=Node.js)
+ 
   
 ---
 
@@ -45,16 +48,21 @@ Bio
 ---
 
 ## ⚙ Recent Changes 
-
-- 
-- 
+- Added a rating and comment section for the user to add to each album in their collection.
+- Updated CSS layout for overall website to introduce transitional hover effects/overlaying text.
 
 ## ⚙ Ice Box 
 
 - [ ] Users can create lists for their records
 - [ ] Users can add and follow their friends on the app
+- [ ] Populate an Artist Page with their bio and discography 
+- [ ] Populate tracklist info for each release
+- [ ] clear Search bar after each Search
+- [ ] display the other users ratings to share
+- [ ] adjust Search parameters for full Discogs searchability.
 - [x] Font design
+- [x] Hover Effects/Overlay text
 - [ ] Light/Dark Mode
-- [ ] Fix Safari/mobile functionality
+- [ ] Adapt overall Safari+mobile functionality
 - [ ] Accessibility features (keyboard input, colorblind settings)
 - [ ] Modernized UX applicable to competitive databases
