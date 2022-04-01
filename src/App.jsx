@@ -90,7 +90,12 @@ const App = () => {
     })
     console.log('hi', recordId, comment);
   }
-  console.log(dbRecords);
+  
+  const handleUpdate = (updatedRecord) => {
+    setDbRecords(dbRecords.map(r => r._id === updatedRecord._id ? updatedRecord : r))
+  }
+
+
 
   return (
     <>
@@ -128,8 +133,10 @@ const App = () => {
         records={records} 
         profile={profile}
         dbRecords={dbRecords}         
-        handleAddRecord={handleAddRecord} handleRemoveRecord={handleRemoveRecord}
+        handleAddRecord={handleAddRecord} 
+        handleRemoveRecord={handleRemoveRecord}
         handleAddComment={handleAddComment}
+        handleUpdate={handleUpdate}
         />} /> 
         <Route path="/artist"
         element={<ArtistDetails records={records} 

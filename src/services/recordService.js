@@ -32,15 +32,16 @@ function addComment(recordId, comment) {
   .then(res => res.json())
 }
 
-function editComment(recordId, comment){
-  console.log(recordId, comment)
-  return fetch(`${BASE_URL}/${recordId}/comments`, {
-    method: "POST",
+function editComment(recordId, commentId, c){
+  console.log(recordId, commentId)
+  console.log(c);
+  return fetch(`${BASE_URL}/${recordId}/comments/${commentId}`, {
+    method: "PUT",
     headers: {
       'Authorization': `Bearer ${tokenService.getToken()}`,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(comment)
+    body: JSON.stringify(c)
   })
   .then(res => res.json())
 }
