@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom'
 import Record from '../../components/Record/Record';
 import Artist from '../../components/Artist/Artist';
 import StarRating from '../../components/StarRating/StarRating';
+import CommentList from './components/CommentList';
 
 
 const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddComment, dbRecords}) => {
@@ -16,7 +17,7 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
   console.log(location.state)
   const record = location.state.record
   
-  const filteredAlbum = dbRecords.filter(album =>
+  const filteredAlbum = dbRecords.find(album =>
     album.master_id === record.master_id
     )
 
@@ -97,7 +98,7 @@ console.log(comment);
               </FloatingLabel>
                 <Button variant="outline-success" type="submit"
                   onClick={(e) => {
-                    handleAddComment(e, filteredAlbum[0]._id, comment)
+                    handleAddComment(e, filteredAlbum._id, comment)
                     setComment({commentText: ''})
                   } }>
                   Submit
@@ -105,6 +106,10 @@ console.log(comment);
               </Form>
             </div>
           </div>
+          {filteredAlbum !== undefined &&
+          
+          <CommentList album={filteredAlbum} />
+          }
       </div>
     </main>
   )
