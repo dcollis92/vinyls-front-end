@@ -8,16 +8,6 @@
     padding-top: 2%;
   }
 
-  .results-header img {
-    margin: 5% auto;
-    justify-content: center;
-    border-radius: 5%;
-    border: 5px solid #9eadba;
-    width: 100%;
-    z-index: 10;
-    transition: 0.9s
-  }
-
   .single-record {
     position: relative;
     overflow: hidden;
@@ -46,7 +36,7 @@
 
   .single-record:hover .record-img:before {
     visibility: visible;
-    transform: translateY(0%);
+    transform: translateX(0%);
     border-radius: 5%;
   }
 
@@ -127,6 +117,9 @@
       filter: grayscale(1);
     }
   }
+  .new-user {
+    font-size: 5vw;
+  }
 }
 
 .buttons {
@@ -137,6 +130,8 @@
   align-items: center;
   justify-content: start;
 }
+
+
 
 
 

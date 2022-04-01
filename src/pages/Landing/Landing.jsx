@@ -53,10 +53,19 @@ const Landing = ({handleRemoveRecord, user, userProfile}) => {
         :
         <>
         <div className='user-collection container'>
-          <div className='results-header text-center'>
-            <img src="https://i.imgur.com/Jbr5DyI.jpg" alt="" />
-            <h1>Welcome to VINYLS</h1>
-            <h2>Please Make an Account or Log In.</h2>
+          <div className='results-header  text-center'>
+            <div className='single-record'>
+              <div className='record-img'>
+                <img src="https://i.imgur.com/Jbr5DyI.jpg" alt="" />
+              </div>
+              <div className='overlay-text'>
+                <h3 className='new-user'>
+                  
+                </h3>
+                <p className='new-user'>Welcome to VINYLS</p>
+                <p className='new-user'>Please Make an Account or Log In</p>
+              </div>
+            </div>
           </div>
         </div>
         </>
