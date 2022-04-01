@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom'
-import * as recordService from '../../services/recordService'
-import { Nav, Navbar, Button, Form, FormControl, Container }  from 'react-bootstrap';
-
-
 import './NavBar.scss';
+import React from 'react';
+import { useNavigate } from 'react-router-dom'
+import { Nav, Navbar, Button, Form, FormControl, Container }  from 'react-bootstrap';
 
 
 const NavBar = (props) => {

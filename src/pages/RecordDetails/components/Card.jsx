@@ -40,16 +40,14 @@ const handleChange = e => {
             type="text"
             name="commentText" 
             value={comment.commentText} 
-            onChange={(e) => handleChange(e)} 
-          />
+            onChange={(e) => handleChange(e)}/>
           {props.comment.commenter? 
-          <button 
-          onClick={handleEditComment}
-          >
+            <button 
+            onClick={handleEditComment}>
             Submit
-          </button>
+            </button>
           :
-          <h2> </h2>
+            <h2> </h2>
           }
         </div>
       }

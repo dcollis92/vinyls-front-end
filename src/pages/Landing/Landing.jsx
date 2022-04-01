@@ -1,7 +1,6 @@
 import './Landing.scss';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
-import * as profileService from '../../services/profileService'
 import Profile from '../../components/Profile/Profile'
 import Record from '../../components/Record/Record';
 
