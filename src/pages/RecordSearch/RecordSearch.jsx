@@ -36,8 +36,8 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord, profile}) =
             <h2>Artists</h2>
           </div>
           <div className='row'>
-          {artistResults.map(record =>
-              <div className='col-md-4 col-sm-6 col-xs-12'>
+          {artistResults.map((record, idx) =>
+              <div className='col-md-4 col-sm-6 col-xs-12' key={idx}>
                 <div className='single-record'>
                   <div className='record-img'>
                     <Artist key={record.title} record={record} />
@@ -58,8 +58,8 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord, profile}) =
           <h2>Records</h2>
           </div>
           <div className='row'>
-            {searchResults.map(record =>
-              <div className='col-md-4 col-sm-6 col-xs-12 text-center'>
+            {searchResults.map((record, idx) =>
+              <div className='col-md-4 col-sm-6 col-xs-12 text-center' key={idx}> 
                 <div className='single-record'>
                   <div className='record-img'>
                     <Record key={record.title} record={record} handleAddRecord={handleAddRecord}
@@ -75,9 +75,6 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord, profile}) =
                       </p>
                   </div>
                 </div>
-                <Button onClick={() => handleAddRecord(record)} 
-                  profile={profile} variant="outline-success">
-                  Add to Collection</Button>
               </div>
             )}
           </div>

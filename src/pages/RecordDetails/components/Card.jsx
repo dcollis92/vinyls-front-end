@@ -8,9 +8,9 @@ const [comment, setComment] = useState({
   commentText: props.comment.commentText,
 })
 
+
 const handleEditComment = () => {
   recordService.editComment(props.recordId, props.comment._id, comment).then(updatedRecord => {
-    console.log(updatedRecord);
     props.handleUpdate(updatedRecord)
     setComment({commentText: "" })
     setEdit(!edit)

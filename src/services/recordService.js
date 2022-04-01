@@ -46,10 +46,27 @@ function editComment(recordId, commentId, c){
   .then(res => res.json())
 }
 
+
+function addRating(recordId, rating) {
+  console.log('hello', recordId, rating)
+  const formData = {rating: parseInt(rating)}
+  return fetch(`${BASE_URL}/${recordId}/ratings`, {
+    method: "POST",
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(res => res.json())
+}
+
 export { 
   getAllRecords, 
   getRecordDetails, 
   getRecordsDb, 
   addComment, 
-  editComment 
+  editComment, 
+  addRating 
 }
+
