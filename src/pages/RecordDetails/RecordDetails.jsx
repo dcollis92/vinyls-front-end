@@ -110,6 +110,7 @@ console.log(comment);
           
           <CommentList album={filteredAlbum} />
           }
+
       </div>
     </main>
   )

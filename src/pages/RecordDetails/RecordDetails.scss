@@ -88,63 +88,62 @@
     border: 2px solid #9eadba;
     color: #dfe6ed;
   }
-  
+}
+
+.categories, 
+.release-info, 
+.buttons, 
+.reviews {
+  display: inline-grid;
+  width: 50%;
+  height: 100%;
+  text-overflow: ellipsis;
+
+  .artist, .album, .year, .label {
+    height: 5vw;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .categories {
-  display: inline-grid;
   text-align: end;
-  text-overflow: ellipsis;
-  width: 50%;
-  height: 100%;
   padding-right: 10px;
   border-right: 3px solid #293845;
+
   .artist, .album, .year, .label {
-    height: 5vw;
     justify-content: end;
-    align-items: center;
-    display: flex;
   }
-  .tracklist {
-    height: 25vw;
-    font-size: 1.6vw;
-  }
+
+  // .tracklist {
+  //   height: 25vw;
+  //   font-size: 1.6vw;
+  // }
 }
 
 .release-info {
-  display: inline-grid;
   text-align: start;
   font-size: 5vw;
-
-  width: 50%;
-  height: 100%;
   padding-left: 10px;
   border-left: 3px solid #293845;
-  .artist, .album, .year, .label {
-    height: 5vw;
-    align-items: center;
-    display: flex;
-  }
-  .tracklist {
-    height: 25vw;
-    padding: 3px;
-    
-  }
-  .buttons {
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+
+  // .tracklist {
+  //   height: 25vw;
+  //   padding: 3px;    
+  // }
 }
 
-// .buttons {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
+.buttons {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.reviews {
+  padding: 10px;
+}
 
 // div {
 //   border: solid 2px black;
