@@ -5,7 +5,6 @@ import { useLocation, Link } from 'react-router-dom'
 import * as profileService from '../../services/profileService'
 import Profile from '../../components/Profile/Profile'
 import Record from '../../components/Record/Record';
-import StarRating from '../../components/StarRating/StarRating';
 
 const dogIds = [1025,1012,1062,1084,169,200,219,237,244,275,40,433,577,582,593,611,659,718,783,790,824,837,881,937,943]
 
@@ -56,10 +55,10 @@ const UserCollection = ({user, handleRemoveRecord}) => {
                     </div>
                     <div className='buttons mx-auto'>
                       {user? 
-                    <Button onClick={() => handleRemoveRecord(profile._id, record._id)} profile={profile} variant="outline-success">Remove</Button> 
-                    :
-                      <h2> </h2>
-                        }
+                        <Button onClick={() => handleRemoveRecord(profile._id, record._id)} profile={profile} variant="outline-success">Remove</Button> 
+                      :
+                        <h2> </h2>
+                      }
                     </div>   
                   </div> 
                 )}

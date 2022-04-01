@@ -1,11 +1,9 @@
 import './Landing.scss';
-import { Button, } from 'react-bootstrap';
-import { useState, useEffect } from 'react'
+import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import * as profileService from '../../services/profileService'
 import Profile from '../../components/Profile/Profile'
 import Record from '../../components/Record/Record';
-import StarRating from '../../components/StarRating/StarRating';
 
 const Landing = ({handleRemoveRecord, user, userProfile}) => {
 
@@ -44,7 +42,8 @@ const Landing = ({handleRemoveRecord, user, userProfile}) => {
                       </div>
                     </div>
                     <div className='buttons mx-auto'>
-                    <Button onClick={() => handleRemoveRecord(userProfile._id, record._id)} profile={userProfile} variant="outline-success">Remove</Button>
+                      <Button onClick={() => handleRemoveRecord(userProfile._id, record._id)} profile={userProfile} variant="outline-success">Remove
+                      </Button>
                     </div>   
                   </div>       
                 )}
@@ -53,8 +52,13 @@ const Landing = ({handleRemoveRecord, user, userProfile}) => {
         </>
         :
         <>
-        <h2 className='text-center'>Welcome to VINYLS. Please Make an Account or Log In.</h2>
-
+        <div className='user-collection container'>
+          <div className='results-header text-center'>
+            <img src="https://i.imgur.com/Jbr5DyI.jpg" alt="" />
+            <h1>Welcome to VINYLS</h1>
+            <h2>Please Make an Account or Log In.</h2>
+          </div>
+        </div>
         </>
       }
     </main>

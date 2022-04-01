@@ -8,9 +8,14 @@
     padding-top: 2%;
   }
 
-  .results-header {
-    margin-top: 5%;
+  .results-header img {
+    margin: 5% auto;
     justify-content: center;
+    border-radius: 5%;
+    border: 5px solid #9eadba;
+    width: 100%;
+    z-index: 10;
+    transition: 0.9s
   }
 
   .single-record {

@@ -75,7 +75,9 @@ const RecordSearch = ({records, handleAddRecord, handleRemoveRecord, profile}) =
           </div>
         </>
         :
-        <h2 className='text-center'>No Matching Records</h2>
+        <h2 className='text-center'>
+          No Matching Records. Search Again?
+        </h2>
       }
       </div>
     </main>
