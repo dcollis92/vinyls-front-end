@@ -29,7 +29,6 @@ function addRecord(record) {
   .then(res => res.json())
 }
 
-
 function removeRecord(profileId, recordId) {
   console.log(profileId, recordId)
   return fetch(`${BASE_URL}/${profileId}/${recordId}`, {
@@ -40,7 +39,6 @@ function removeRecord(profileId, recordId) {
   })
   .then(res => res.json())
 }
-
 
 export { 
   getAllProfiles, 

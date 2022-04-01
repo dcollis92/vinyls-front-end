@@ -46,4 +46,10 @@ function editComment(recordId, commentId, c){
   .then(res => res.json())
 }
 
-export { getAllRecords, getRecordDetails, getRecordsDb, addComment, editComment }
+export { 
+  getAllRecords, 
+  getRecordDetails, 
+  getRecordsDb, 
+  addComment, 
+  editComment 
+}
