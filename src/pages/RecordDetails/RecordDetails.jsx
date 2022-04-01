@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Button, Form, FloatingLabel } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom'
 import Record from '../../components/Record/Record';
-import Artist from '../../components/Artist/Artist';
 import StarRating from '../../components/StarRating/StarRating';
 import CommentList from './components/CommentList';
 import CurrentRating from '../../components/StarRating/CurrentRating';
@@ -44,60 +43,67 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
         </div>
         <div className='details-display col-md'>
           <div className='categories'>
-            <div className='year'><h5>Year</h5></div>
-            <div className='album'><h5>Album</h5></div>
+          <div className='year'><h4>Year</h4></div>
+            <div className='album'><h4>Album Info</h4></div>
           </div>
           <div className='release-info'>
             <div className='year'>
-              <h5>{record.year}</h5>
+              <h4>{record.year}</h4>
             </div>
             <div className='album'>
-              <h5>{record.title}</h5>
+              <h4>{record.title}</h4>
             </div>
-            
           </div>
         </div>
       </div>
+
       <div className='album-display row'>
         <div className='buttons col-lg text-center'>
           <Button 
             onClick={() => handleAddRecord (record)} 
             profile={profile} variant="outline-success">
-            Add to Collection
-          </Button>
-          <CurrentRating filteredAlbum={filteredAlbum}  />
-          <StarRating  
-          handleAddRating={handleAddRating}
-          handleChangeRating={handleChangeRating}
-          filteredAlbum={filteredAlbum} />
-          <Form>
-            <FloatingLabel controlId="reviews" label="Write a Review">
-              <Form.Control
-                type="text" 
-                onChange={(e) => handleChange(e)}
-                value={comment.commentText}
-                name="commentText" 
-                as="textarea"
-                placeholder="Write a review here"
-                style={{ height: '100px' }} />
-            </FloatingLabel>
-            <Button variant="outline-success" type="submit"
-              onClick={(e) => {
-                handleAddComment(e, filteredAlbum._id, comment)
-                setComment({commentText: ''})
-              }}>
-              Submit
-            </Button>
-          </Form>
+            Add to Collection</Button>
         </div>
-        <div className='reviews col-md text-center'>
-          <div className='single-review'>
-            <h4>Users reviews</h4>
-            {filteredAlbum !== undefined &&
-              <CommentList album={filteredAlbum} handleUpdate={handleUpdate}/>
-            }
-          </div>
-        </div>
+          {filteredAlbum ?
+            <>
+              <CurrentRating filteredAlbum={filteredAlbum} />
+              <StarRating
+                handleAddRating={handleAddRating}
+                handleChangeRating={handleChangeRating}
+                filteredAlbum={filteredAlbum} />
+              <Form>
+                <FloatingLabel controlId="reviews" label="Write a Review">
+                  <Form.Control
+                    type="text"
+                    onChange={(e) => handleChange(e)}
+                    value={comment.commentText}
+                    name="commentText"
+                    as="textarea"
+                    placeholder="Write a review here"
+                    style={{ height: '100px' }} />
+                </FloatingLabel>
+                <Button variant="outline-success" type="submit"
+                  onClick={(e) => {
+                    handleAddComment(e, filteredAlbum._id, comment);
+                    setComment({ commentText: '' });
+                  } }>
+                  Submit
+                </Button>
+              </Form>
+              <div className='reviews col-md text-center'>
+                <div className='single-review'>
+                  <h4>Users reviews</h4>
+                  {filteredAlbum !== undefined &&
+                  <CommentList album={filteredAlbum} handleUpdate={handleUpdate}/>
+                  }
+                </div>
+              </div>
+            </>
+          :
+            <>
+              <p>No Reviews Yet</p>
+            </>
+          }
       </div>
     </main>
   )

@@ -20,7 +20,15 @@ const Landing = ({handleRemoveRecord, user, userProfile}) => {
                     <Profile key={userProfile.name} profile={userProfile} randDogImgId={dogIds[Math.floor(Math.random()*(dogIds.length))]}/>
                   </div>
                   <div className='user-info mx-auto'>
-                    <h2>{user.name}'s Collection</h2>
+                    {userProfile?.records?.length ?
+                      <>
+                        <h2>{user.name}'s Collection</h2>
+                      </>
+                    :
+                      <>
+                        <h2>Start Adding To Your Collection, {user.name}!</h2>
+                      </>
+                    }
                   </div>
                 </div>
               </div>
