@@ -65,6 +65,7 @@ Vinyls is a React Built Web App utilizing a third-party API via Discogs. Vinyls 
 
 ## ⚙ Ice Box 
 
+- [ ] Impliment this [Codepen](https://codepen.io/dcollis92/pen/jOYLNeE) component.
 - [ ] Users can create lists for their records
 - [ ] Users can add and follow their friends on the app
 - [ ] Populate an Artist Page with their bio and discography 
