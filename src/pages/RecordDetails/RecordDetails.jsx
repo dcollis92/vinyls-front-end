@@ -14,10 +14,16 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
   
   const location = useLocation()
   const record = location.state.record
+
+  const title = record.title.split(' - ')
+  const artist = title[0]
+  const album = title[1] 
   
   const filteredAlbum = dbRecords.find(album =>
     album.master_id === record.master_id
     )
+
+  
   
 
     const handleChange = e => {
@@ -43,15 +49,19 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
         </div>
         <div className='details-display col-md'>
           <div className='categories'>
-          <div className='year'><h4>Year</h4></div>
-            <div className='album'><h4>Album Info</h4></div>
+            <div className='album'><h4>Artist</h4></div>
+            <div className='album'><h4>Release</h4></div>
+            <div className='year'><h4>Year</h4></div>
           </div>
           <div className='release-info'>
-            <div className='year'>
-              <h4>{record.year}</h4>
+          <div className='artist'>
+              <h4>{artist}</h4>
             </div>
             <div className='album'>
-              <h4>{record.title}</h4>
+              <h4>{album}</h4>
+            </div>
+            <div className='year'>
+              <h4>{record.year}</h4>
             </div>
           </div>
         </div>
