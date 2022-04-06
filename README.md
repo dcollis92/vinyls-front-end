@@ -5,7 +5,7 @@ Vinyl's Homepage
 Vinyl's Homepage
 ![profile page](https://i.imgur.com/NWFgh5h.png)
 
-Vinyls is a React Built Web App utilizing a third-party API via Discogs. Vinyls takes the Discogs search engine and focuses on the UI experience around the joy of record collecting, seperate from the data driven experience of Discogs analytics. With more changes to be implimented in the near future, 
+Vinyls is a React Built Web App utilizing a third-party API via Discogs. Vinyls takes the Discogs search engine and focuses on the UI experience around the joy of record collecting, seperate from the data driven experience of Discogs analytics. With more changes to be implimented in the near future, we hope to make Vinyls a home for the record collector desiring a straight forward UI. 
 
 Wireframe homepage
   ![homepage wireframe](https://i.imgur.com/Tnhg3sV.png)

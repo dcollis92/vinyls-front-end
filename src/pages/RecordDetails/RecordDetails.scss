@@ -96,14 +96,18 @@
   width: 50%;
   height: 100%;
   text-overflow: ellipsis;
-
+  .artist {
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
   .album {
-    height: 20vw;
+    height: 100px;
     display: flex;
     align-items: center;
   }
   .year {
-    height: 10vw;
+    height: 100px;
     display: flex;
     align-items: center;
   }
@@ -115,7 +119,7 @@
   padding-right: 10px;
   border-right: 3px solid #293845;
 
-  .album, .year {
+  .artist, .album, .year {
     justify-content: end;
   }
 }
