@@ -3,7 +3,7 @@ OVERALL:
 - [ ] slow load time. Need to assess BigO issues
 
 FRONT END:
-- [ ] ternary to prevent editing comments from other users
+- [ ] Edit Comment ternary works, but removes commenter id from comment object.
 - [ ] q: some records not adding to collection?
 - [ ] adjust search parameters, currently wonky
 - [ ] assess state

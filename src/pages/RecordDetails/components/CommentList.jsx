@@ -12,10 +12,13 @@ const CommentList = (props) => {
         recordId={recordId} 
         key={idx}
         handleUpdate={props.handleUpdate}
+        profile={props.profile}
+        user={props.user}
         />
       ))}
     </>
   )
 }
+
 
 export default CommentList

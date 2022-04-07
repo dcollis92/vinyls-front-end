@@ -7,7 +7,7 @@ import StarRating from '../../components/StarRating/StarRating';
 import CommentList from './components/CommentList';
 import CurrentRating from '../../components/StarRating/CurrentRating';
 
-const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddComment, dbRecords, handleUpdate, handleAddRating, handleChangeRating}) => {
+const RecordDetails = ({user, handleAddRecord, handleRemoveRecord, profile, handleAddComment, dbRecords, handleUpdate, handleAddRating, handleChangeRating}) => {
   const [comment, setComment] = useState({
     commentText: '',
   })
@@ -104,7 +104,10 @@ const RecordDetails = ({handleAddRecord, handleRemoveRecord, profile, handleAddC
                 <div className='single-review'>
                   <h4>Users reviews</h4>
                   {filteredAlbum !== undefined &&
-                  <CommentList album={filteredAlbum} handleUpdate={handleUpdate}/>
+                  <CommentList album={filteredAlbum} 
+                  handleUpdate={handleUpdate} 
+                  profile={profile}
+                  user={user}/>
                   }
                 </div>
               </div>
