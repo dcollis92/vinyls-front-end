@@ -20,7 +20,7 @@ function getRecordDetails(id) {
  }
 
 function addComment(recordId, comment) {
-  console.log(recordId, comment)
+  console.log('add comment', recordId, comment)
   return fetch(`${BASE_URL}/${recordId}/comments`, {
     method: "POST",
     headers: {
@@ -33,7 +33,7 @@ function addComment(recordId, comment) {
 }
 
 function editComment(recordId, commentId, c){
-  console.log(recordId, commentId)
+  console.log('edit comment', recordId, commentId)
   console.log(c);
   return fetch(`${BASE_URL}/${recordId}/comments/${commentId}`, {
     method: "PUT",

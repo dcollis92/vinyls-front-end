@@ -35,10 +35,10 @@ const Landing = ({handleRemoveRecord, user, userProfile}) => {
             </div>
               <div className='row'>
                 {userProfile?.records?.map(record =>
-                  <div className='col-md-4 col-sm-6 col-xs-12'>
+                  <div className='col-md-4 col-sm-6 col-xs-12' key={record.id}>
                     <div className='single-record'>
                       <div className='record-img'>
-                        <Record handleRemoveRecord={handleRemoveRecord} profile={userProfile} key={record.id} id={record._id} record={record}/>
+                        <Record handleRemoveRecord={handleRemoveRecord} profile={userProfile} id={record._id} record={record}/>
                       </div>
                       <div className='overlay-text'>
                         <h3>{record.title}</h3>

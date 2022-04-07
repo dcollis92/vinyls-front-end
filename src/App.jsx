@@ -130,6 +130,7 @@ const App = () => {
         />} />
         <Route path="/record"
         element={<RecordDetails 
+        user={user}  
         records={records} 
         profile={profile}
         dbRecords={dbRecords}         
