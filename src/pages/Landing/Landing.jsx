@@ -17,7 +17,7 @@ const Landing = ({handleRemoveRecord, user, userProfile}) => {
               <div className='col-md-12'>
                 <div className='section-header text-center'>
                   <div className='profile-img mx-auto'>
-                    <Profile key={userProfile.name} profile={userProfile} randDogImgId={dogIds[Math.floor(Math.random()*(dogIds.length))]}/>
+                    <Profile key={userProfile} profile={userProfile} randDogImgId={dogIds[Math.floor(Math.random()*(dogIds.length))]}/>
                   </div>
                   <div className='user-info mx-auto'>
                     {userProfile?.records?.length ?
