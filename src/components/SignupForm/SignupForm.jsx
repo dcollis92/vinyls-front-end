@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from './SignupForm.module.css'
+import './SignupForm.scss';
 import * as authService from '../../services/authService'
 import { Form, Button } from 'react-bootstrap'
 
@@ -39,16 +39,16 @@ const SignupForm = props => {
   }
 
   return (
-    <main>
-      <div className={styles.div}>
+    <main className='signup-form'>
+      <div className='div'>
         <Form 
           autoComplete="off"
           onSubmit={handleSubmit}
-          className={styles.container}>
+          className='container'>
             <Form.Group className="mb-3">
             <Form.Label 
               htmlFor="name" 
-              className={styles.label}>
+              className='label'>
               Username</Form.Label>
             <Form.Control 
               type="text" 
@@ -62,7 +62,7 @@ const SignupForm = props => {
             <Form.Group className="mb-3">
             <Form.Label 
               htmlFor="email" 
-              className={styles.label}>
+              className='label'>
               Email Address</Form.Label>
             <Form.Control 
               type="email" 
@@ -79,7 +79,7 @@ const SignupForm = props => {
             <Form.Group className="mb-3">
               <Form.Label 
                 htmlFor="password"
-                className={styles.label}>
+                className='label'>
                 Password</Form.Label>
               <Form.Control 
                 type="password" 
@@ -93,7 +93,7 @@ const SignupForm = props => {
             <Form.Group className="mb-3">
               <Form.Label 
                 htmlFor="confirm"
-                className={styles.label}>
+                className='label'>
                 Password</Form.Label>
               <Form.Control 
                 type="password" 
@@ -106,11 +106,11 @@ const SignupForm = props => {
             </Form.Group>
             <Button 
               disabled={isFormInvalid()} 
-              className={styles.button}
+              className='button'
               variant="primary" 
               type="submit">
               Sign Up</Button>
-            <Button className={styles.button}
+            <Button className='button'
               href="/">Cancel</Button>
         </Form>
       </div>
