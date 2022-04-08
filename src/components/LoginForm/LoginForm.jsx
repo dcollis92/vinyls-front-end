@@ -30,48 +30,51 @@ const LoginForm = props => {
 
   return (
     <main>
-      <Form 
-        autoComplete="off"
-        onSubmit={handleSubmit}
-        className={styles.container} >
-          <Form.Group className="mb-3">
-          <Form.Label 
-            htmlFor="email" 
-            className={styles.label}>
-            Email Address
-          </Form.Label>
-          <Form.Control 
-            type="email" 
-            autoComplete="off"
-            id="email"
-            value={formData.email}
-            name="email"
-            onChange={handleChange}
-            placeholder="Enter Email" />
-          </Form.Group>
-          <Form.Group className="mb-3">
+      <div className={styles.div}>
+        <Form 
+          autoComplete="off"
+          onSubmit={handleSubmit}
+          className={styles.container} >
+            <Form.Group className="mb-3">
             <Form.Label 
-              htmlFor="password"
+              htmlFor="email" 
               className={styles.label}>
-              Password
+              Email Address
             </Form.Label>
             <Form.Control 
-              type="password" 
+              type="email" 
               autoComplete="off"
-              id="password"
-              value={formData.pw}
-              name="pw"
+              id="email"
+              value={formData.email}
+              name="email"
               onChange={handleChange}
-              placeholder="Enter Password" />
-          </Form.Group>
-          <Button 
-            className={styles.button}
-            variant="primary" 
-            type="submit">
-            Log In
-          </Button>
-          <Button href="/">Cancel</Button>
-      </Form>
+              placeholder="Enter Email" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label 
+                htmlFor="password"
+                className={styles.label}>
+                Password
+              </Form.Label>
+              <Form.Control 
+                type="password" 
+                autoComplete="off"
+                id="password"
+                value={formData.pw}
+                name="pw"
+                onChange={handleChange}
+                placeholder="Enter Password" />
+            </Form.Group>
+            <Button 
+              className={styles.button}
+              variant="primary" 
+              type="submit">
+              Log In
+            </Button>
+            <Button className={styles.button} 
+              href="/">Cancel</Button>
+        </Form>
+      </div>
     </main>
   )
 }

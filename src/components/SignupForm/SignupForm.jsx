@@ -40,77 +40,80 @@ const SignupForm = props => {
 
   return (
     <main>
-      <Form 
-        autoComplete="off"
-        onSubmit={handleSubmit}
-        className={styles.container}>
-          <Form.Group className="mb-3">
-          <Form.Label 
-            htmlFor="name" 
-            className={styles.label}>
-            Username</Form.Label>
-          <Form.Control 
-            type="text" 
-            autoComplete="off"
-            id="name"
-            value={name}
-            name="name"
-            onChange={handleChange}
-            placeholder="Enter Username" />
-          </Form.Group>
-          <Form.Group className="mb-3">
-          <Form.Label 
-            htmlFor="email" 
-            className={styles.label}>
-            Email Address</Form.Label>
-          <Form.Control 
-            type="email" 
-            autoComplete="off"
-            id="email"
-            value={email}
-            name="email"
-            onChange={handleChange}
-            placeholder="Enter Email" />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-          </Form.Group>
-          <Form.Group className="mb-3">
+      <div className={styles.div}>
+        <Form 
+          autoComplete="off"
+          onSubmit={handleSubmit}
+          className={styles.container}>
+            <Form.Group className="mb-3">
             <Form.Label 
-              htmlFor="password"
+              htmlFor="name" 
               className={styles.label}>
-              Password</Form.Label>
+              Username</Form.Label>
             <Form.Control 
-              type="password" 
+              type="text" 
               autoComplete="off"
-              id="password"
-              value={password}
-              name="password"
+              id="name"
+              value={name}
+              name="name"
               onChange={handleChange}
-              placeholder="Enter Password" />
-          </Form.Group>
-          <Form.Group className="mb-3">
+              placeholder="Enter Username" />
+            </Form.Group>
+            <Form.Group className="mb-3">
             <Form.Label 
-              htmlFor="confirm"
+              htmlFor="email" 
               className={styles.label}>
-              Password</Form.Label>
+              Email Address</Form.Label>
             <Form.Control 
-              type="password" 
+              type="email" 
               autoComplete="off"
-              id="confirm"
-              value={passwordConf}
-              name="passwordConf"
+              id="email"
+              value={email}
+              name="email"
               onChange={handleChange}
-              placeholder="Re-Enter Password" />
-          </Form.Group>
-          <Button 
-            disabled={isFormInvalid()} 
-            className={styles.button}
-            variant="primary" 
-            type="submit">
-            Sign Up</Button>
-          <Button href="/">Cancel</Button>
-      </Form>
+              placeholder="Enter Email" />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label 
+                htmlFor="password"
+                className={styles.label}>
+                Password</Form.Label>
+              <Form.Control 
+                type="password" 
+                autoComplete="off"
+                id="password"
+                value={password}
+                name="password"
+                onChange={handleChange}
+                placeholder="Enter Password" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label 
+                htmlFor="confirm"
+                className={styles.label}>
+                Password</Form.Label>
+              <Form.Control 
+                type="password" 
+                autoComplete="off"
+                id="confirm"
+                value={passwordConf}
+                name="passwordConf"
+                onChange={handleChange}
+                placeholder="Re-Enter Password" />
+            </Form.Group>
+            <Button 
+              disabled={isFormInvalid()} 
+              className={styles.button}
+              variant="primary" 
+              type="submit">
+              Sign Up</Button>
+            <Button className={styles.button}
+              href="/">Cancel</Button>
+        </Form>
+      </div>
     </main> 
   )
 }
