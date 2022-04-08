@@ -1,4 +1,4 @@
-import styles from './Login.module.css'
+import './Login.scss'
 import { useState } from 'react'
 import LoginForm from '../../components/LoginForm/LoginForm'
 
@@ -11,7 +11,7 @@ const LoginPage = props => {
   }
 
   return (
-    <main className={styles.container}>
+    <main className='login-container'>
       <h1>Log In</h1>
       <p>{message}</p>
       <LoginForm

@@ -1,4 +1,4 @@
-import styles from './ChangePassword.module.css'
+import './ChangePassword.scss'
 import { useState } from 'react'
 import ChangePasswordForm from '../../components/ChangePasswordForm/ChangePasswordForm'
 
@@ -10,7 +10,7 @@ const ChangePassword = props => {
   }
 
   return (
-    <main className={styles.container}>
+    <main className='changepassword-container'>
       <h1>Change Password</h1>
       <p>{message}</p>
       <ChangePasswordForm {...props} updateMessage={updateMessage} />
