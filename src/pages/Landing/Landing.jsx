@@ -91,7 +91,6 @@ const Landing = ({ handleRemoveRecord, user, userProfile }) => {
                   <img src="https://i.imgur.com/Jbr5DyI.jpg" alt="" />
                 </div>
                 <div className="overlay-text">
-                  <h3 className="new-user"></h3>
                   <p className="new-user">Welcome to VINYLS</p>
                   <p className="new-user">Please Make an Account or Log In</p>
                 </div>
