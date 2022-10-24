@@ -1,4 +1,3 @@
-import "./ArtistDetails.scss";
 import { useLocation } from "react-router-dom";
 import Artist from "../../components/Artist/Artist";
 
