@@ -1,5 +1,3 @@
-import "./StarRating.scss";
-
 const CurrentRating = (props) => {
   const ratings = props.filteredAlbum?.ratings;
 
