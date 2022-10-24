@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import * as recordService from "../../../services/recordService";
-import * as profileService from "../../../services/profileService";
+
 
 const Card = (props) => {
-  const [edit, setEdit] = useState(false);
-  const [currProfile, setCurrProfile] = useState(null);
+  const [edit, setEdit] = useState(false);  
   const [comment, setComment] = useState({
     commentText: props.comment.commentText,
   });
@@ -25,12 +24,6 @@ const Card = (props) => {
       [e.target.name]: e.target.value,
     });
   };
-
-  useEffect(() => {
-    profileService
-      .getProfile(props.profile._id)
-      .then((profile) => setCurrProfile(profile));
-  }, []);
 
   return (
     <>
