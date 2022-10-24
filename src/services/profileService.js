@@ -17,7 +17,6 @@ function getProfile(id) {
 }
 
 function addRecord(record) {
-  console.log(record)
   return fetch(`${BASE_URL}/addRecord`, {
     method: "POST",
     headers: {
@@ -30,7 +29,6 @@ function addRecord(record) {
 }
 
 function removeRecord(profileId, recordId) {
-  console.log(profileId, recordId)
   return fetch(`${BASE_URL}/${profileId}/${recordId}`, {
     method: "DELETE",
     headers: {
