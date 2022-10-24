@@ -6,10 +6,8 @@ const CurrentRating = (props) => {
   const ratings = props.filteredAlbum?.ratings
   
   const avg = ratings?.reduce((total, r) => {
-    console.log(r);
     r.rating = !r.rating ? 0 : r.rating
    return total + parseInt(r.rating)}, 0) 
-  console.log(avg);
   const stars = Math.round(avg / ratings?.length)
 
   return (

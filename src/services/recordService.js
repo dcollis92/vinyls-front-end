@@ -4,7 +4,6 @@ const BASE_URL = `${process.env.REACT_APP_BACKEND_SERVER_URL}/api/records`
 
 
 async function getAllRecords(searchParams) {
-  console.log(searchParams)
   const res = await fetch(`${BASE_URL}?word=${searchParams}`)
   return await res.json()
   }
@@ -20,7 +19,6 @@ function getRecordDetails(id) {
  }
 
 function addComment(recordId, comment) {
-  console.log('add comment', recordId, comment)
   return fetch(`${BASE_URL}/${recordId}/comments`, {
     method: "POST",
     headers: {
@@ -33,8 +31,6 @@ function addComment(recordId, comment) {
 }
 
 function editComment(recordId, commentId, c){
-  console.log('edit comment', recordId, commentId)
-  console.log(c);
   return fetch(`${BASE_URL}/${recordId}/comments/${commentId}`, {
     method: "PUT",
     headers: {
@@ -48,7 +44,6 @@ function editComment(recordId, commentId, c){
 
 
 function addRating(recordId, rating) {
-  console.log('hello', recordId, rating)
   const formData = {rating: parseInt(rating)}
   return fetch(`${BASE_URL}/${recordId}/ratings`, {
     method: "POST",

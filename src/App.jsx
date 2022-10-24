@@ -68,7 +68,6 @@ const App = () => {
   }
 
   const handleRemoveRecord = (profileId, recordsId) => {
-    console.log(profileId, recordsId);
     profileService.removeRecord(profileId, recordsId)
     .then(updatedProfile => {
       setProfile(updatedProfile)
@@ -79,7 +78,6 @@ const App = () => {
   const handleAddComment = (e, recordId, comment) => {
     e.preventDefault()
     recordService.addComment(recordId, comment).then(updatedRecord => {
-      console.log(updatedRecord);
       setDbRecords(dbRecords.map(r => r._id === updatedRecord._id ? updatedRecord : r))
     })
   }
@@ -89,12 +87,9 @@ const App = () => {
   }
 
   const handleAddRating = (recordId, rating) => {
-    console.log(rating);
     recordService.addRating(recordId, rating).then(updatedRecord => {
-      console.log(updatedRecord);
       setDbRecords(dbRecords.map(r => r._id === updatedRecord._id ? updatedRecord : r))
     })
-    console.log('hi', recordId, rating);
   }
 
   return (
