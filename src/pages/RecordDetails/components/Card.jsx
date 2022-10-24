@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import * as recordService from "../../../services/recordService";
 import * as profileService from "../../../services/profileService";
 
-
 const Card = (props) => {
   const [edit, setEdit] = useState(false);
   const [currProfile, setCurrProfile] = useState(null);

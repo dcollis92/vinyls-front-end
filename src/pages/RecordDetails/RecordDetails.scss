@@ -1,6 +1,6 @@
 .record-details {
   padding: 10%;
-  
+
   .section-header {
     padding-top: 2%;
     padding-bottom: 2%;
@@ -29,8 +29,8 @@
     left: 0;
     z-index: 11;
     visibility: hidden;
-    content: '';
-    background: rgba(223,230,237,0.9);
+    content: "";
+    background: rgba(223, 230, 237, 0.9);
     height: 100%;
     width: 100%;
   }
@@ -61,16 +61,18 @@
     top: -22px;
   }
 
-  .single-record:hover  {
+  .single-record:hover {
     top: 0;
   }
 
   .single-record:hover p {
-    bottom: 0
+    bottom: 0;
   }
 
-  input, button, link {
-    font-family: 'Futura Std';
+  input,
+  button,
+  link {
+    font-family: "Futura Std";
     font-style: italic;
     border: 2px solid #9eadba;
     color: #293845;
@@ -88,9 +90,9 @@
   }
 }
 
-.categories, 
-.release-info, 
-.buttons, 
+.categories,
+.release-info,
+.buttons,
 .reviews {
   display: inline-grid;
   width: 50%;
@@ -111,7 +113,6 @@
     display: flex;
     align-items: center;
   }
-  
 }
 
 .categories {
@@ -119,7 +120,9 @@
   padding-right: 10px;
   border-right: 3px solid #293845;
 
-  .artist, .album, .year {
+  .artist,
+  .album,
+  .year {
     justify-content: end;
   }
 }

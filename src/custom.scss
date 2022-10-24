@@ -5,8 +5,8 @@ $--color-button-hover: #23272f;
 
 /* make the customizations */
 $theme-colors: (
-    "secondary": #dfe6ed,
-    "danger": black,
+  "secondary": #dfe6ed,
+  "danger": black,
 );
 
 // body {
@@ -15,9 +15,6 @@ $theme-colors: (
 //     color: #dfe6ed;
 //   }
 // }
-
-
-
 
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";

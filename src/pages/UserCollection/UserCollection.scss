@@ -1,4 +1,3 @@
-
 .user-collection {
   .section-header {
     padding: 5%;
@@ -33,8 +32,8 @@
     transform: translateX(-100%);
     transition: all 0.4s ease;
     visibility: hidden;
-    content: '';
-    background: rgba(223,230,237,0.9);
+    content: "";
+    background: rgba(223, 230, 237, 0.9);
     height: 100%;
     width: 100%;
   }
@@ -45,12 +44,13 @@
     border-radius: 5%;
   }
 
-  .profile-img, .record-img img {
+  .profile-img,
+  .record-img img {
     border-radius: 5%;
     border: 5px solid #9eadba;
     width: 100%;
     z-index: 10;
-    transition: 0.9s
+    transition: 0.9s;
   }
 
   .overlay-text {
@@ -93,11 +93,13 @@
   }
 
   .single-record:hover p {
-    bottom: 0
+    bottom: 0;
   }
 
-  input, button, link {
-    font-family: 'Futura Std';
+  input,
+  button,
+  link {
+    font-family: "Futura Std";
     font-style: italic;
     border: 2px solid #9eadba;
     color: #293845;
@@ -132,4 +134,3 @@
   align-items: center;
   justify-content: start;
 }
-
