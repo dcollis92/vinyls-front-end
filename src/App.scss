@@ -16,7 +16,7 @@
 // }
 
 body {
-  font-family: 'Futura Std';
+  font-family: "Futura Std";
   color: #293845;
 }
 
@@ -24,8 +24,7 @@ h1 {
   font-style: italic;
 }
 
-@media screen
-and (max-device-width: 930px) {
+@media screen and (max-device-width: 930px) {
   body {
     font-size: 0.8rem;
   }
