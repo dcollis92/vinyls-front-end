@@ -7,7 +7,8 @@ import Profile from "../../components/Profile/Profile";
 import Record from "../../components/Record/Record";
 
 const dogIds = [
-  1025, 1012, 1062, 1084, 169, 200, 219, 237, 244, 275, 40, 433, 577, 582, 593, 611, 659, 718, 783, 790, 824, 837, 881, 937, 943,
+  1025, 1012, 1062, 1084, 169, 200, 219, 237, 244, 275, 40, 433, 577, 582, 593,
+  611, 659, 718, 783, 790, 824, 837, 881, 937, 943,
 ];
 
 const UserCollection = ({ user, handleRemoveRecord }) => {
@@ -54,10 +55,11 @@ const UserCollection = ({ user, handleRemoveRecord }) => {
                   <div className="single-record">
                     <div className="record-img">
                       <Record
-                        handleRemoveRecord={handleRemoveRecord}
-                        profile={currProfile}
+                        key={record._id}
                         id={record._id}
                         record={record}
+                        handleRemoveRecord={handleRemoveRecord}
+                        profile={currProfile}
                       />
                     </div>
                     <div className="overlay-text">

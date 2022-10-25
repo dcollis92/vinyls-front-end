@@ -1,9 +1,8 @@
 import { useState } from "react";
 import * as recordService from "../../../services/recordService";
 
-
 const Card = (props) => {
-  const [edit, setEdit] = useState(false);  
+  const [edit, setEdit] = useState(false);
   const [comment, setComment] = useState({
     commentText: props.comment.commentText,
   });
