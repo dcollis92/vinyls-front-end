@@ -1,14 +1,13 @@
 import "./StarRating.scss";
 import { useState } from "react";
 
-
 const StarRating = (props) => {
   const [rating, setRating] = useState("");
 
   const handleChangeRating = (e) => {
     setRating(e.target.value);
   };
-  console.log(rating);
+
   return (
     <>
       <input
